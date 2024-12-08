@@ -1,0 +1,77 @@
+import yaml
+import os
+from pyecharts.charts import WordCloud
+from pyecharts import options as opts
+
+def count_repos_in_yaml(filename):
+    """读取 YAML 文件并统计仓库 ID 数量"""
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            data = yaml.safe_load(file)
+            repo_count = 0
+            repo_details = {}  # 存储项目的具体信息
+            if 'data' in data and 'platforms' in data['data']:
+                for platform in data['data']['platforms']:
+                    platform_name = platform.get('name', '未知平台')
+                    # 遍历每个平台的仓库
+                    for repo in platform.get('repos', []):
+                        repo_name = repo.get('name', '未知仓库')
+                        repo_url = f"https://github.com/{repo_name}"
+                        repo_count += 1
+                        
+                        # 只存储简单类型数据，避免字典作为值
+                        repo_details[repo_name] = {
+                            'platform': platform_name,  # 平台名称
+                            'repo_url': repo_url,       # 仓库链接
+                        }
+            return repo_count, repo_details
+    except Exception as e:
+        print(f"Error reading {filename}: {e}")
+        return 0, {}
+
+def generate_word_cloud(data, repo_details):
+    """根据给定的数据生成交互式词云"""
+    wordcloud = (
+        WordCloud()
+        .add(
+            series_name="github开源技术热点",
+            data_pair=[(tech_stack, count) for tech_stack, count in data.items()],
+            tooltip_opts=opts.TooltipOpts(
+                formatter=lambda params: f"{params['name']}<br/>"
+                                         f"仓库数: {params['value']}<br/>"
+                                         f"平台: {repo_details.get(params['name'], {}).get('platform', '未知')}"
+                                         f"<br/>链接: {repo_details.get(params['name'], {}).get('repo_url', '无')}"
+            ),
+            word_size_range=[20, 80],
+        )
+        .set_global_opts(
+            title_opts=opts.TitleOpts(title="编程语言和技术栈词云"),
+            tooltip_opts=opts.TooltipOpts(is_show=True),  # 启用悬浮框
+        )
+    )
+    
+    # 渲染输出到 HTML 文件
+    wordcloud.render("wordcloud_with_tooltip.html")
+
+def main(directory):
+    """处理指定目录下的所有 YAML 文件并生成词云"""
+    tech_stack_counts = {}
+    repo_details = {}
+    
+    for filename in os.listdir(directory):
+        if filename.endswith('.yml'):
+            path = os.path.join(directory, filename)
+            count, details = count_repos_in_yaml(path)
+            tech_stack_name = filename.replace('.yml', '')  # 使用文件名作为技术栈名称
+            tech_stack_counts[tech_stack_name] = count
+            repo_details[tech_stack_name] = details
+
+    if tech_stack_counts:
+        generate_word_cloud(tech_stack_counts, repo_details)
+    else:
+        print("没有有效的 YAML 数据。")
+
+# 指定包含 YAML 文件的目录路径
+if __name__ == "__main__":
+    directory = r'D:\华师大\openSoda 比赛\word_cloud_data'  # 修改为你自己的目录
+    main(directory)
