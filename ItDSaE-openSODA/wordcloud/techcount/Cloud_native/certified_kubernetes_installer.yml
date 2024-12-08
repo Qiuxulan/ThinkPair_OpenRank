@@ -1,0 +1,47 @@
+name: Cloud Native - Platform - Certified Kubernetes Installer
+type: Tech-2
+data:
+  platforms:
+    - name: GitHub
+      type: Code Hosting
+      repos:
+        - id: 304223078
+          name: alvistack/vagrant-kubernetes
+        - id: 388260896
+          name: aws/eks-anywhere
+        - id: 129878089
+          name: slzcc/crane
+        - id: 140261100
+          name: cybozu-go/cke
+        - id: 117377862
+          name: gardener/gardener
+        - id: 148545807
+          name: kubernetes-sigs/kind
+        - id: 62091339
+          name: kubernetes/kops
+        - id: 110401202
+          name: easzlab/kubeasz
+        - id: 248386471
+          name: kubesphere/kubekey
+        - id: 158171016
+          name: KubeOperator/KubeOperator
+        - id: 155974736
+          name: kubermatic/kubeone
+        - id: 114474246
+          name: darxkies/k8s-tew
+        - id: 43613404
+          name: kubernetes-sigs/kubespray
+        - id: 26314357
+          name: openstack/magnum
+        - id: 56353740
+          name: kubernetes/minikube
+        - id: 102576190
+          name: puppetlabs/puppetlabs-kubernetes
+        - id: 108337180
+          name: rancher/rke
+        - id: 109451092
+          name: siderolabs/talos
+        - id: 142926510
+          name: particuleio/symplegma
+        - id: 146337367
+          name: wise2c-devops/breeze

@@ -1,0 +1,37 @@
+name: Cloud Native - Serverless - Framework
+type: Tech-2
+data:
+  platforms:
+    - name: GitHub
+      type: Code Hosting
+      repos:
+        - id: 97773247
+          name: architect/functions
+        - id: 70530854
+          name: aws/serverless-application-model
+        - id: 59868262
+          name: aws/chalice
+        - id: 192632000
+          name: dapr/dapr
+        - id: 208698479
+          name: apache/incubator-eventmesh
+        - id: 62978868
+          name: TIBCOSoftware/flogo
+        - id: 362672151
+          name: mosn/layotto
+        - id: 140669486
+          name: midwayjs/midway
+        - id: 317676879
+          name: nitrictech/nitric
+        - id: 34302698
+          name: serverless/serverless
+        - id: 44479969
+          name: mweagle/Sparta
+        - id: 68877113
+          name: spring-cloud/spring-cloud-function
+        - id: 285092252
+          name: serverless-stack/sst
+        - id: 225625782
+          name: apache/flink-statefun
+        - id: 116817549
+          name: webiny/webiny-js

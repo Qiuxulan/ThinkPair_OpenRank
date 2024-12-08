@@ -1,0 +1,45 @@
+name: Cloud Native - Runtime - Cloud Native Network
+type: Tech-2
+data:
+  platforms:
+    - name: GitHub
+      type: Code Hosting
+      repos:
+        - id: 217420145
+          name: antrea-io/antrea
+        - id: 48109239
+          name: cilium/cilium
+        - id: 86123872
+          name: cni-genie/CNI-Genie
+        - id: 33429211
+          name: containernetworking/cni
+        - id: 152550404
+          name: nokia/danm
+        - id: 386570418
+          name: FabEdge/fabedge
+        - id: 96556718
+          name: FDio/vpp
+        - id: 21704134
+          name: flannel-io/flannel
+        - id: 162610275
+          name: squat/kilo
+        - id: 177068961
+          name: kubeovn/kube-ovn
+        - id: 88471725
+          name: cloudnativelabs/kube-router
+        - id: 97228445
+          name: ligato/vpp-agent
+        - id: 76367175
+          name: k8snetworkplumbingwg/multus-cni
+        - id: 127937836
+          name: networkservicemesh/networkservicemesh
+        - id: 18383364
+          name: openvswitch/ovs
+        - id: 63882194
+          name: projectcalico/calico
+        - id: 175095528
+          name: submariner-io/submariner
+        - id: 12347995
+          name: Juniper/contrail-controller
+        - id: 23059575
+          name: weaveworks/weave

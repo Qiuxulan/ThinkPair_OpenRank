@@ -1,0 +1,19 @@
+name: Cloud Native - Wasm - Toolchain
+type: Tech-2
+data:
+  platforms:
+    - name: GitHub
+      type: Code Hosting
+      repos:
+        - id: 1357796
+          name: emscripten-core/emscripten
+        - id: 75821432
+          name: llvm/llvm-project
+        - id: 163517929
+          name: hyperledger-labs/solang
+        - id: 304483748
+          name: suborbital/subo
+        - id: 359427864
+          name: wapc/wapc-js
+        - id: 121253762
+          name: rustwasm/wasm-pack

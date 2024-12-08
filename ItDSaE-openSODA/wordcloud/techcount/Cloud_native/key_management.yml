@@ -1,0 +1,37 @@
+name: Cloud Native - Provisioning - Key Management
+type: Tech-2
+data:
+  platforms:
+    - name: GitHub
+      type: Code Hosting
+      repos:
+        - id: 73948366
+          name: AthenZ/athenz
+        - id: 117408191
+          name: Authing/Authing
+        - id: 62174977
+          name: cyberark/conjur
+        - id: 11125589
+          name: keycloak/keycloak
+        - id: 105262714
+          name: oauth2-proxy/oauth2-proxy
+        - id: 36071697
+          name: ory/hydra
+        - id: 276756059
+          name: vmware-tanzu/pinniped
+        - id: 163722349
+          name: pomerium/pomerium
+        - id: 99618772
+          name: spiffe/spiffe
+        - id: 100061496
+          name: spiffe/spire
+        - id: 32866430
+          name: square/keywhiz
+        - id: 145011089
+          name: buzzfeed/sso
+        - id: 31558937
+          name: gravitational/teleport
+        - id: 351043495
+          name: SpectralOps/Teller
+        - id: 31288958
+          name: hashicorp/vault

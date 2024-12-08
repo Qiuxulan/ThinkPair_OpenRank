@@ -1,0 +1,179 @@
+name: Operating System
+type: Tech-0
+data:
+  platforms:
+    - name: GitHub
+      type: Code Hosting
+      repos:
+        - id: 2325298
+          name: torvalds/linux
+        - id: 160083795
+          name: SerenityOS/serenity
+        - id: 34275705
+          name: redox-os/redox
+        - id: 95133665
+          name: s-matyukevich/raspberry-pi-os
+        - id: 105627846
+          name: reactos/reactos
+        - id: 179385712
+          name: bottlerocket-os/bottlerocket
+        - id: 11572519
+          name: NodeOS/NodeOS
+        - id: 1259258
+          name: klange/toaruos
+        - id: 334777857
+          name: ravynsoft/ravynos
+        - id: 21562567
+          name: includeos/IncludeOS
+        - id: 36428094
+          name: tock/tock
+        - id: 3407114
+          name: oshi/oshi
+        - id: 368522797
+          name: nuta/kerla
+        - id: 24905898
+          name: armbian/build
+        - id: 122112163
+          name: nebulet/nebulet
+        - id: 278865472
+          name: archcraft-os/archcraft
+        - id: 97989275
+          name: theseus-os/Theseus
+        - id: 145472407
+          name: skiftOS/skift
+        - id: 27672462
+          name: PureDarwin/PureDarwin
+        - id: 267446578
+          name: joshiemoore/snakeware
+        - id: 145966066
+          name: FydeOS/chromium_os-raspberry_pi
+        - id: 1904156
+          name: haiku/haiku
+        - id: 221905326
+          name: vlang/vinix
+        - id: 39068568
+          name: Harvey-OS/harvey
+        - id: 22577159
+          name: ivandavidov/minimal
+        - id: 894162
+          name: illumos/illumos-gate
+        - id: 55986591
+          name: amaneureka/AtomOS
+        - id: 5879057
+          name: KnightOS/KnightOS
+        - id: 41581791
+          name: AnarchyLinux/installer
+        - id: 61721573
+          name: jens-maus/RaspberryMatic
+        - id: 194619493
+          name: ffwff/lilith
+        - id: 216283035
+          name: hermitcore/rusty-hermit
+        - id: 181022316
+          name: unikraft/unikraft
+        - id: 63081862
+          name: managarm/managarm
+        - id: 186245191
+          name: LemonOSProject/LemonOS
+        - id: 88021715
+          name: halfer53/winix
+        - id: 373449678
+          name: brutal-org/brutal
+        - id: 35725043
+          name: dzavalishin/phantomuserland
+        - id: 78610786
+          name: hyperledger/cello
+        - id: 32414048
+          name: nieklinnenbank/FreeNOS
+        - id: 29999505
+          name: 1j01/98
+        - id: 135060910
+          name: hermitcore/libhermit-rs
+        - id: 381741497
+          name: Zeal-Operating-System/ZealOS
+        - id: 288752550
+          name: Supercip971/WingOS
+        - id: 443815792
+          name: nifanfa/MOOS
+        - id: 71775220
+          name: PDP-10/its
+        - id: 471539
+          name: xboot/xboot
+        - id: 237669372
+          name: adi1090x/CustomArch
+        - id: 346250541
+          name: Andy-Python-Programmer/aero
+        - id: 195193555
+          name: opuntiaOS-Project/opuntiaOS
+        - id: 102483713
+          name: frednora/gramado
+        - id: 42043113
+          name: FlingOS/FlingOS
+        - id: 266484942
+          name: KilledByAPixel/OS13k
+        - id: 26831846
+          name: PowerNex/PowerNex
+        - id: 9084577
+          name: klange/ponyos
+        - id: 151748565
+          name: WukLab/LegoOS
+        - id: 56892509
+          name: thethumbler/Aquila
+        - id: 153988174
+          name: pritamzope/OS
+        - id: 161713949
+          name: nuta/resea
+        - id: 23472650
+          name: DISTORTEC/distortos
+        - id: 135759422
+          name: qword-os/qword
+        - id: 212788343
+          name: CorruptedByCPU/Cyjon
+        - id: 172999551
+          name: MQuy/mos
+        - id: 177123135
+          name: ZystemOS/pluto
+        - id: 278410779
+          name: Abb1x/emerald
+        - id: 268658891
+          name: byteduck/duckOS
+        - id: 91887197
+          name: willdurand/ArvernOS
+        - id: 7828683
+          name: Antergos/Cnchi
+        - id: 48393782
+          name: JehanneOS/jehanne
+        - id: 284319216
+          name: MannyPeterson/HeliOS
+        - id: 78310497
+          name: RWTH-OS/eduOS-rs
+        - id: 87229637
+          name: AndreaOrru/zen
+        - id: 187227261
+          name: aros-development-team/AROS
+        - id: 71289159
+          name: manticoreos/manticore
+        - id: 234117221
+          name: skyzh/core-os-riscv
+        - id: 385489646
+          name: flouthoc/wiser
+        - id: 59369383
+          name: yourtion/YOS
+        - id: 323129390
+          name: mell-o-tron/MellOs
+        - id: 101495023
+          name: IsaacWoods/poplar
+        - id: 35319633
+          name: hermitcore/libhermit
+        - id: 241571550
+          name: ethan4984/rock
+        - id: 343191826
+          name: MandelbrotOS/MandelbrotOS
+        - id: 82973353
+          name: emutos/emutos
+        - id: 97828097
+          name: aura-systems/Aura-Operating-System
+        - id: 65380056
+          name: MarcoCicognani/MeetixOS
+        - id: 445587336
+          name: StevenBaby/onix

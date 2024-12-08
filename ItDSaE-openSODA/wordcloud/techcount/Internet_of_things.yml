@@ -1,0 +1,77 @@
+name: Internet of Things
+type: Tech-0
+data:
+  platforms:
+    - name: GitHub
+      type: Code Hosting
+      repos:
+        - id: 7408108
+          name: RT-Thread/rt-thread
+        - id: 206121828
+          name: FreeRTOS/FreeRTOS
+        - id: 207354223
+          name: FreeRTOS/FreeRTOS-Kernel
+        - id: 82517252
+          name: Samsung/TizenRT
+        - id: 8270972
+          name: ARMmbed/mbed-os
+        - id: 7139506
+          name: tinyos/tinyos-main
+        - id: 95133665
+          name: s-matyukevich/raspberry-pi-os
+        - id: 3199002
+          name: raspberrypi/linux
+        - id: 13096677
+          name: beagleboard/linux
+        - id: 919161
+          name: arduino/Arduino
+        - id: 10476504
+          name: devicehive/devicehive-java-server
+        - id: 17839346
+          name: kaaproject/kaa
+        - id: 18918709
+          name: zettajs/zetta
+        - id: 75277003
+          name: thingsboard/thingsboard
+        - id: 7370241
+          name: RIOT-OS/RIOT
+        - id: 31526467
+          name: Kinoma/kinomajs
+        - id: 45821540
+          name: openwrt/openwrt
+        - id: 50994619
+          name: openremote/openremote
+        - id: 393740911
+          name: ThingsPanel/ThingsPanel-Go
+        - id: 59771425
+          name: zephyrproject-rtos/zephyr
+        - id: 6365284
+          name: contiki-os/contiki
+        - id: 15682781
+          name: sitewhere/sitewhere
+        - id: 158975124
+          name: apache/iotdb
+        - id: 203957456
+          name: OpenAtomFoundation/TencentOS-tiny
+        - id: 174448630
+          name: jetlinks/jetlinks
+        - id: 67934190
+          name: LiteOS/LiteOS
+        - id: 7202769
+          name: emqx/emqx
+        - id: 196353673
+          name: taosdata/TDengine
+        - id: 230403844
+          name: openLuat/LuatOS
+        - id: 101866073
+          name: alibaba/AliOS-Things
+        - id: 156054898
+          name: FMSoftCN/hybridos
+        - id: 92706019
+          name: VincentWei/MiniGUI
+        - id: 65899476
+          name: espressif/esp-idf
+        - id: 70127218
+          name: espressif/arduino-esp32
+        - id: 157947831
+          name: IoTSharp/IoTSharp
