@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术热点词云</title>
+    <style>
+        body {
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        #wordcloud-container {
+            position: relative;
+            text-align: center;
+        }
+
+        #tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .word {
+            cursor: pointer;
+        }
+
+        #wordcloud {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        #wordcloud-container img {
+            width: 100%;
+        }
+
+        #tooltip-content {
+            max-width: 200px;
+        }
+
+        #repositories {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #repositories li {
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center; color: white; margin-top: 50px;">技术热点词云展示</h1>
+
+    <div id="wordcloud-container">
+        <!-- 词云展示 -->
+        <img id="wordcloud" src="wordcloud.png" alt="Word Cloud">
+        <!-- 悬浮框 -->
+        <div id="tooltip">
+            <div id="tooltip-content">
+                <strong>技术描述:</strong><br>
+                <span id="tech-description"></span><br><br>
+                <strong>相关仓库:</strong><br>
+                <ul id="repositories"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 从文件中加载 JSON 数据
+        let hoverframeRepo = {}; // 用于存储仓库相关数据
+        let fetchTopicDescription = {}; // 用于存储技术描述数据
+
+        // 加载 JSON 数据（假设数据已经在同一目录下的文件中）
+        fetch('hoverframe-repo.json')
+            .then(response => response.json())
+            .then(data => {
+                hoverframeRepo = data;
+            })
+            .catch(error => console.error("Error loading hoverframe-repo.json:", error));
+
+        fetch('fetch_topic-description.json')
+            .then(response => response.json())
+            .then(data => {
+                fetchTopicDescription = data;
+            })
+            .catch(error => console.error("Error loading fetch_topic-description.json:", error));
+
+        // 获取所有的关键词
+        const techNames = Object.keys(fetchTopicDescription);
+
+        // 鼠标悬浮时显示描述和仓库名
+        const tooltip = document.getElementById('tooltip');
+        const techDescriptionElem = document.getElementById('tech-description');
+        const repositoriesListElem = document.getElementById('repositories');
+
+        // 用于显示鼠标悬浮效果的函数
+        function showTooltip(event, techName) {
+            const description = fetchTopicDescription[techName];
+            const repositories = hoverframeRepo[techName] || [];
+            // 更新技术描述
+            techDescriptionElem.innerHTML = description;
+            // 更新仓库列表（最多显示10个仓库）
+            repositoriesListElem.innerHTML = repositories.slice(0, 10).map(repo => `<li>${repo}</li>`).join('');
+            
+            // 显示悬浮框并调整位置
+            tooltip.style.display = 'block';
+            tooltip.style.left = event.pageX + 10 + 'px';
+            tooltip.style.top = event.pageY + 10 + 'px';
+        }
+
+        // 鼠标移出时隐藏悬浮框
+        function hideTooltip() {
+            tooltip.style.display = 'none';
+        }
+
+        // 创建词云的每个关键词并添加悬浮效果
+        function createWordCloud() {
+            const wordcloudContainer = document.getElementById('wordcloud');
+            techNames.forEach(techName => {
+                const wordElem = document.createElement('span');
+                wordElem.classList.add('word');
+                wordElem.innerText = techName;
+                wordElem.style.fontSize = `${Math.random() * 20 + 15}px`;  // 随机生成字体大小
+                wordElem.style.margin = '5px';
+                wordElem.style.cursor = 'pointer';
+
+                wordElem.addEventListener('mouseenter', event => showTooltip(event, techName));
+                wordElem.addEventListener('mouseleave', hideTooltip);
+
+                wordcloudContainer.appendChild(wordElem);
+            });
+        }
+
+        // 等待数据加载后再生成词云
+        window.onload = function () {
+            if (hoverframeRepo && fetchTopicDescription) {
+                createWordCloud();
+            } else {
+                console.error("数据未加载完成！");
+            }
+        }
+    </script>
+
+</body>
+</html>

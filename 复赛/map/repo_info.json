@@ -1,0 +1,1652 @@
+[
+    {
+        "repo": "AdguardTeam/AdguardFilters",
+        "owner": "AdguardTeam",
+        "location": "Nicosia, Cyprus",
+        "latitude": 35.1746503,
+        "longitude": 33.3638783
+    },
+    {
+        "repo": "airbytehq/airbyte",
+        "owner": "airbytehq",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "alibaba/nacos",
+        "owner": "alibaba",
+        "location": "Hangzhou, China",
+        "latitude": 30.2489634,
+        "longitude": 120.2052342
+    },
+    {
+        "repo": "angular/angular",
+        "owner": "angular",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "angular/components",
+        "owner": "angular",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "ankidroid/Anki-Android",
+        "owner": "ankidroid",
+        "location": null
+    },
+    {
+        "repo": "ansible/ansible",
+        "owner": "ansible",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "ant-design/ant-design",
+        "owner": "ant-design",
+        "location": "HangZhou, China",
+        "latitude": 30.2489634,
+        "longitude": 120.2052342
+    },
+    {
+        "repo": "apache/airflow",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/apisix",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/arrow",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/beam",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/dolphinscheduler",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/doris",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/flink",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/hudi",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/iceberg",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/pulsar",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/shardingsphere",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/spark",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/superset",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apache/tvm",
+        "owner": "apache",
+        "location": null
+    },
+    {
+        "repo": "apple/swift",
+        "owner": "swiftlang",
+        "location": null
+    },
+    {
+        "repo": "appsmithorg/appsmith",
+        "owner": "appsmithorg",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "archway-network/testnets",
+        "owner": "archway-network",
+        "location": null
+    },
+    {
+        "repo": "argoproj/argo-cd",
+        "owner": "argoproj",
+        "location": null
+    },
+    {
+        "repo": "AUTOMATIC1111/stable-diffusion-webui",
+        "owner": "AUTOMATIC1111",
+        "location": null
+    },
+    {
+        "repo": "Automattic/jetpack",
+        "owner": "Automattic",
+        "location": null
+    },
+    {
+        "repo": "Automattic/wp-calypso",
+        "owner": "Automattic",
+        "location": null
+    },
+    {
+        "repo": "aws/aws-cdk",
+        "owner": "aws",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "aws-amplify/amplify-cli",
+        "owner": "aws-amplify",
+        "location": null
+    },
+    {
+        "repo": "azerothcore/azerothcore-wotlk",
+        "owner": "azerothcore",
+        "location": null
+    },
+    {
+        "repo": "Azure/azure-cli",
+        "owner": "Azure",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "Azure/azure-powershell",
+        "owner": "Azure",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "Azure/azure-rest-api-specs",
+        "owner": "Azure",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "Azure/azure-sdk-for-java",
+        "owner": "Azure",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "Azure/azure-sdk-for-js",
+        "owner": "Azure",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "Azure/azure-sdk-for-net",
+        "owner": "Azure",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "Azure/azure-sdk-for-python",
+        "owner": "Azure",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "backstage/backstage",
+        "owner": "backstage",
+        "location": null
+    },
+    {
+        "repo": "bevyengine/bevy",
+        "owner": "bevyengine",
+        "location": null
+    },
+    {
+        "repo": "bioconda/bioconda-recipes",
+        "owner": "bioconda",
+        "location": null
+    },
+    {
+        "repo": "bitcoin/bitcoin",
+        "owner": "bitcoin",
+        "location": null
+    },
+    {
+        "repo": "bitnami/charts",
+        "owner": "bitnami",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "brave/brave-browser",
+        "owner": "brave",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "brave/brave-core",
+        "owner": "brave",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "ccxt/ccxt",
+        "owner": "ccxt",
+        "location": null
+    },
+    {
+        "repo": "ceph/ceph",
+        "owner": "ceph",
+        "location": "California, USA",
+        "latitude": 36.7014631,
+        "longitude": -118.755997
+    },
+    {
+        "repo": "Chia-Network/chia-blockchain",
+        "owner": "Chia-Network",
+        "location": null
+    },
+    {
+        "repo": "cilium/cilium",
+        "owner": "cilium",
+        "location": null
+    },
+    {
+        "repo": "CleverRaven/Cataclysm-DDA",
+        "owner": "CleverRaven",
+        "location": null
+    },
+    {
+        "repo": "ClickHouse/ClickHouse",
+        "owner": "ClickHouse",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "cms-sw/cmssw",
+        "owner": "cms-sw",
+        "location": null
+    },
+    {
+        "repo": "cockroachdb/cockroach",
+        "owner": "cockroachdb",
+        "location": null
+    },
+    {
+        "repo": "conan-io/conan-center-index",
+        "owner": "conan-io",
+        "location": null
+    },
+    {
+        "repo": "conda-forge/staged-recipes",
+        "owner": "conda-forge",
+        "location": null
+    },
+    {
+        "repo": "containers/podman",
+        "owner": "containers",
+        "location": null
+    },
+    {
+        "repo": "coolsnowwolf/lede",
+        "owner": "coolsnowwolf",
+        "location": null
+    },
+    {
+        "repo": "cypress-io/cypress",
+        "owner": "cypress-io",
+        "location": "Atlanta, GA",
+        "latitude": 33.7489924,
+        "longitude": -84.3902644
+    },
+    {
+        "repo": "darktable-org/darktable",
+        "owner": "darktable-org",
+        "location": null
+    },
+    {
+        "repo": "DataDog/datadog-agent",
+        "owner": "DataDog",
+        "location": "New York",
+        "latitude": 40.7127281,
+        "longitude": -74.0060152
+    },
+    {
+        "repo": "dbeaver/dbeaver",
+        "owner": "dbeaver",
+        "location": null
+    },
+    {
+        "repo": "DefinitelyTyped/DefinitelyTyped",
+        "owner": "DefinitelyTyped",
+        "location": null
+    },
+    {
+        "repo": "demisto/content",
+        "owner": "demisto",
+        "location": "Cupertino, CA, USA",
+        "latitude": 37.3228934,
+        "longitude": -122.0322895
+    },
+    {
+        "repo": "denoland/deno",
+        "owner": "denoland",
+        "location": null
+    },
+    {
+        "repo": "department-of-veterans-affairs/va.gov-team",
+        "owner": "department-of-veterans-affairs",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "desktop/desktop",
+        "owner": "desktop",
+        "location": null
+    },
+    {
+        "repo": "directus/directus",
+        "owner": "directus",
+        "location": "Brooklyn, NY",
+        "latitude": 40.6526006,
+        "longitude": -73.9497211
+    },
+    {
+        "repo": "docker/docs",
+        "owner": "docker",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "dotnet/aspnetcore",
+        "owner": "dotnet",
+        "location": null
+    },
+    {
+        "repo": "dotnet/AspNetCore.Docs",
+        "owner": "dotnet",
+        "location": null
+    },
+    {
+        "repo": "dotnet/docs",
+        "owner": "dotnet",
+        "location": null
+    },
+    {
+        "repo": "dotnet/efcore",
+        "owner": "dotnet",
+        "location": null
+    },
+    {
+        "repo": "dotnet/maui",
+        "owner": "dotnet",
+        "location": null
+    },
+    {
+        "repo": "dotnet/roslyn",
+        "owner": "dotnet",
+        "location": null
+    },
+    {
+        "repo": "dotnet/runtime",
+        "owner": "dotnet",
+        "location": null
+    },
+    {
+        "repo": "education/GitHubGraduation-2022",
+        "owner": "github-education-resources",
+        "location": null
+    },
+    {
+        "repo": "elastic/elasticsearch",
+        "owner": "elastic",
+        "location": null
+    },
+    {
+        "repo": "elastic/kibana",
+        "owner": "elastic",
+        "location": null
+    },
+    {
+        "repo": "electron/electron",
+        "owner": "electron",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "element-fi/elf-council-frontend",
+        "owner": "delvtech",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "element-plus/element-plus",
+        "owner": "element-plus",
+        "location": "Beijing, China",
+        "latitude": 40.190632,
+        "longitude": 116.412144
+    },
+    {
+        "repo": "elementor/elementor",
+        "owner": "elementor",
+        "location": null
+    },
+    {
+        "repo": "envoyproxy/envoy",
+        "owner": "envoyproxy",
+        "location": null
+    },
+    {
+        "repo": "espressif/esp-idf",
+        "owner": "espressif",
+        "location": "Shanghai, China",
+        "latitude": 31.2312707,
+        "longitude": 121.4700152
+    },
+    {
+        "repo": "ethereum/ethereum-org-website",
+        "owner": "ethereum",
+        "location": null
+    },
+    {
+        "repo": "Expensify/App",
+        "owner": "Expensify",
+        "location": "San Francisco, CA, USA; Denver, CO, USA; London, England; Berlin, Germany; Melbourne, Australia; Portland, OR, USA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "repo": "expo/expo",
+        "owner": "expo",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "facebook/react",
+        "owner": "facebook",
+        "location": "Menlo Park, California",
+        "latitude": 37.4519671,
+        "longitude": -122.177992
+    },
+    {
+        "repo": "facebook/react-native",
+        "owner": "facebook",
+        "location": "Menlo Park, California",
+        "latitude": 37.4519671,
+        "longitude": -122.177992
+    },
+    {
+        "repo": "filecoin-project/filecoin-plus-large-datasets",
+        "owner": "filecoin-project",
+        "location": null
+    },
+    {
+        "repo": "files-community/Files",
+        "owner": "files-community",
+        "location": null
+    },
+    {
+        "repo": "firebase/firebase-android-sdk",
+        "owner": "firebase",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "firebase/flutterfire",
+        "owner": "firebase",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "firstcontributions/first-contributions",
+        "owner": "firstcontributions",
+        "location": null
+    },
+    {
+        "repo": "flathub/flathub",
+        "owner": "flathub",
+        "location": null
+    },
+    {
+        "repo": "flutter/engine",
+        "owner": "flutter",
+        "location": null
+    },
+    {
+        "repo": "flutter/flutter",
+        "owner": "flutter",
+        "location": null
+    },
+    {
+        "repo": "flutter/plugins",
+        "owner": "flutter",
+        "location": null
+    },
+    {
+        "repo": "flybywiresim/a32nx",
+        "owner": "flybywiresim",
+        "location": null
+    },
+    {
+        "repo": "freddier/hyperblog",
+        "owner": "freddier",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "gatsbyjs/gatsby",
+        "owner": "gatsbyjs",
+        "location": null
+    },
+    {
+        "repo": "gentoo/gentoo",
+        "owner": "gentoo",
+        "location": null
+    },
+    {
+        "repo": "getsentry/sentry",
+        "owner": "getsentry",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "github/codeql",
+        "owner": "github",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "github/docs",
+        "owner": "github",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "gitpod-io/gitpod",
+        "owner": "gitpod-io",
+        "location": null
+    },
+    {
+        "repo": "go-gitea/gitea",
+        "owner": "go-gitea",
+        "location": null
+    },
+    {
+        "repo": "godotengine/godot",
+        "owner": "godotengine",
+        "location": null
+    },
+    {
+        "repo": "golang/go",
+        "owner": "golang",
+        "location": null
+    },
+    {
+        "repo": "google/it-cert-automation-practice",
+        "owner": "google",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "google-test/signclav2-probe-repo",
+        "owner": "google-test",
+        "location": null
+    },
+    {
+        "repo": "GoogleChrome/developer.chrome.com",
+        "owner": "GoogleChrome",
+        "location": null
+    },
+    {
+        "repo": "gradle/gradle",
+        "owner": "gradle",
+        "location": null
+    },
+    {
+        "repo": "grafana/grafana",
+        "owner": "grafana",
+        "location": "Sweden",
+        "latitude": 67.1234635221075,
+        "longitude": 16.063451870846933
+    },
+    {
+        "repo": "grafana/loki",
+        "owner": "grafana",
+        "location": "Sweden",
+        "latitude": 64.20330108239808,
+        "longitude": 16.66008944582906
+    },
+    {
+        "repo": "gravitational/teleport",
+        "owner": "gravitational",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "grpc/grpc",
+        "owner": "grpc",
+        "location": null
+    },
+    {
+        "repo": "hashicorp/terraform-provider-aws",
+        "owner": "hashicorp",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "hashicorp/terraform-provider-azurerm",
+        "owner": "hashicorp",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "hashicorp/vault",
+        "owner": "hashicorp",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "helix-editor/helix",
+        "owner": "helix-editor",
+        "location": null
+    },
+    {
+        "repo": "home-assistant/core",
+        "owner": "home-assistant",
+        "location": null
+    },
+    {
+        "repo": "home-assistant/frontend",
+        "owner": "home-assistant",
+        "location": null
+    },
+    {
+        "repo": "home-assistant/home-assistant.io",
+        "owner": "home-assistant",
+        "location": null
+    },
+    {
+        "repo": "Homebrew/homebrew-cask",
+        "owner": "Homebrew",
+        "location": null
+    },
+    {
+        "repo": "Homebrew/homebrew-core",
+        "owner": "Homebrew",
+        "location": null
+    },
+    {
+        "repo": "huggingface/transformers",
+        "owner": "huggingface",
+        "location": "New York City, USA; Paris, France",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "repo": "idsb3t1/KEEP-pipeline-tests-resources",
+        "owner": "idsb3t1",
+        "location": null
+    },
+    {
+        "repo": "influxdata/telegraf",
+        "owner": "influxdata",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "IntelRealSense/librealsense",
+        "owner": "IntelRealSense",
+        "location": "Santa Clara, CA",
+        "latitude": 37.3541132,
+        "longitude": -121.955174
+    },
+    {
+        "repo": "istio/istio",
+        "owner": "istio",
+        "location": null
+    },
+    {
+        "repo": "JacksonKearl/testissues",
+        "owner": "JacksonKearl",
+        "location": "Plush, OR",
+        "latitude": 42.4115733,
+        "longitude": -119.9038624
+    },
+    {
+        "repo": "JetBrains/swot",
+        "owner": "JetBrains",
+        "location": "Prague, Czech Republic",
+        "latitude": 50.0874654,
+        "longitude": 14.4212535
+    },
+    {
+        "repo": "jitsi/jitsi-meet",
+        "owner": "jitsi",
+        "location": null
+    },
+    {
+        "repo": "jlord/patchwork",
+        "owner": "jlord",
+        "location": "London, England",
+        "latitude": 51.5074456,
+        "longitude": -0.1277653
+    },
+    {
+        "repo": "joomla/joomla-cms",
+        "owner": "joomla",
+        "location": null
+    },
+    {
+        "repo": "JuliaLang/julia",
+        "owner": "JuliaLang",
+        "location": null
+    },
+    {
+        "repo": "JuliaRegistries/General",
+        "owner": "JuliaRegistries",
+        "location": null
+    },
+    {
+        "repo": "Kaiserreich/Kaiserreich-4",
+        "owner": "Kaiserreich",
+        "location": null
+    },
+    {
+        "repo": "Koenkk/zigbee2mqtt",
+        "owner": "Koenkk",
+        "location": "The Netherlands, Helmond",
+        "latitude": 51.4790956,
+        "longitude": 5.6557686
+    },
+    {
+        "repo": "kubernetes/kubernetes",
+        "owner": "kubernetes",
+        "location": null
+    },
+    {
+        "repo": "kubernetes/minikube",
+        "owner": "kubernetes",
+        "location": null
+    },
+    {
+        "repo": "kubernetes/test-infra",
+        "owner": "kubernetes",
+        "location": null
+    },
+    {
+        "repo": "kubernetes/website",
+        "owner": "kubernetes",
+        "location": null
+    },
+    {
+        "repo": "kubevirt/kubevirt",
+        "owner": "kubevirt",
+        "location": null
+    },
+    {
+        "repo": "laravel/framework",
+        "owner": "laravel",
+        "location": null
+    },
+    {
+        "repo": "leanprover-community/mathlib",
+        "owner": "leanprover-community",
+        "location": null
+    },
+    {
+        "repo": "LeetCode-Feedback/LeetCode-Feedback",
+        "owner": "LeetCode-Feedback",
+        "location": null
+    },
+    {
+        "repo": "lensapp/lens",
+        "owner": "lensapp",
+        "location": "California, United States",
+        "latitude": 36.7014631,
+        "longitude": -118.755997
+    },
+    {
+        "repo": "Lightning-AI/lightning",
+        "owner": "Lightning-AI",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "llvm/llvm-project",
+        "owner": "llvm",
+        "location": null
+    },
+    {
+        "repo": "logseq/logseq",
+        "owner": "logseq",
+        "location": null
+    },
+    {
+        "repo": "macports/macports-ports",
+        "owner": "macports",
+        "location": null
+    },
+    {
+        "repo": "magento/magento2",
+        "owner": "magento",
+        "location": null
+    },
+    {
+        "repo": "MarlinFirmware/Marlin",
+        "owner": "MarlinFirmware",
+        "location": null
+    },
+    {
+        "repo": "mastodon/mastodon",
+        "owner": "mastodon",
+        "location": "Berlin, Germany",
+        "latitude": 52.510885,
+        "longitude": 13.3989367
+    },
+    {
+        "repo": "matplotlib/matplotlib",
+        "owner": "matplotlib",
+        "location": null
+    },
+    {
+        "repo": "matrix-org/synapse",
+        "owner": "matrix-org",
+        "location": null
+    },
+    {
+        "repo": "mattermost/mattermost-webapp",
+        "owner": "mattermost",
+        "location": null
+    },
+    {
+        "repo": "mdn/content",
+        "owner": "mdn",
+        "location": null
+    },
+    {
+        "repo": "mdn/translated-content",
+        "owner": "mdn",
+        "location": null
+    },
+    {
+        "repo": "metabase/metabase",
+        "owner": "metabase",
+        "location": null
+    },
+    {
+        "repo": "MetaMask/eth-phishing-detect",
+        "owner": "MetaMask",
+        "location": null
+    },
+    {
+        "repo": "MetaMask/metamask-extension",
+        "owner": "MetaMask",
+        "location": null
+    },
+    {
+        "repo": "metersphere/metersphere",
+        "owner": "metersphere",
+        "location": "Beijing, China",
+        "latitude": 40.190632,
+        "longitude": 116.412144
+    },
+    {
+        "repo": "microsoft/azuredatastudio",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/fluentui",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/onnxruntime",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/playwright",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/PowerToys",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/terminal",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/TypeScript",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/vcpkg",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/vscode",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/vscode-jupyter",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/winget-pkgs",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "microsoft/WSL",
+        "owner": "microsoft",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "MicrosoftDocs/azure-docs",
+        "owner": "MicrosoftDocs",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "MicrosoftDocs/microsoft-365-docs",
+        "owner": "MicrosoftDocs",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "MicrosoftDocs/msteams-docs",
+        "owner": "MicrosoftDocs",
+        "location": "Redmond, Washington, USA",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "mlflow/mlflow",
+        "owner": "mlflow",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "mozilla-mobile/fenix",
+        "owner": "mozilla-mobile",
+        "location": null
+    },
+    {
+        "repo": "mrdoob/three.js",
+        "owner": "mrdoob",
+        "location": null
+    },
+    {
+        "repo": "mui/material-ui",
+        "owner": "mui",
+        "location": null
+    },
+    {
+        "repo": "mui/mui-x",
+        "owner": "mui",
+        "location": null
+    },
+    {
+        "repo": "neovim/neovim",
+        "owner": "neovim",
+        "location": null
+    },
+    {
+        "repo": "newrelic/docs-website",
+        "owner": "newrelic",
+        "location": "San Francisco, California, USA",
+        "latitude": 37.7792588,
+        "longitude": -122.4193286
+    },
+    {
+        "repo": "nextcloud/desktop",
+        "owner": "nextcloud",
+        "location": null
+    },
+    {
+        "repo": "nextcloud/server",
+        "owner": "nextcloud",
+        "location": null
+    },
+    {
+        "repo": "NixOS/nixpkgs",
+        "owner": "NixOS",
+        "location": null
+    },
+    {
+        "repo": "nodejs/node",
+        "owner": "nodejs",
+        "location": null
+    },
+    {
+        "repo": "nrfconnect/sdk-nrf",
+        "owner": "nrfconnect",
+        "location": "Trondheim, Norway",
+        "latitude": 63.4304475,
+        "longitude": 10.3952118
+    },
+    {
+        "repo": "nrwl/nx",
+        "owner": "nrwl",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "nuxt/framework",
+        "owner": "nuxt",
+        "location": null
+    },
+    {
+        "repo": "o3de/o3de",
+        "owner": "o3de",
+        "location": null
+    },
+    {
+        "repo": "obsproject/obs-studio",
+        "owner": "obsproject",
+        "location": null
+    },
+    {
+        "repo": "odoo/odoo",
+        "owner": "odoo",
+        "location": "Belgium",
+        "latitude": 51.09006565205535,
+        "longitude": 4.947927498589179
+    },
+    {
+        "repo": "open-mmlab/mmdetection",
+        "owner": "open-mmlab",
+        "location": "Beijing, China",
+        "latitude": 40.190632,
+        "longitude": 116.412144
+    },
+    {
+        "repo": "open-telemetry/opentelemetry-collector-contrib",
+        "owner": "open-telemetry",
+        "location": null
+    },
+    {
+        "repo": "OpenAPITools/openapi-generator",
+        "owner": "OpenAPITools",
+        "location": null
+    },
+    {
+        "repo": "opencv/opencv",
+        "owner": "opencv",
+        "location": null
+    },
+    {
+        "repo": "openhab/openhab-addons",
+        "owner": "openhab",
+        "location": "Berlin, Germany",
+        "latitude": 52.510885,
+        "longitude": 13.3989367
+    },
+    {
+        "repo": "openjdk/jdk",
+        "owner": "openjdk",
+        "location": null
+    },
+    {
+        "repo": "openjournals/joss-reviews",
+        "owner": "openjournals",
+        "location": null
+    },
+    {
+        "repo": "openshift/openshift-docs",
+        "owner": "openshift",
+        "location": null
+    },
+    {
+        "repo": "openshift/release",
+        "owner": "openshift",
+        "location": null
+    },
+    {
+        "repo": "openssl/openssl",
+        "owner": "openssl",
+        "location": null
+    },
+    {
+        "repo": "openvinotoolkit/openvino",
+        "owner": "openvinotoolkit",
+        "location": null
+    },
+    {
+        "repo": "openwrt/openwrt",
+        "owner": "openwrt",
+        "location": null
+    },
+    {
+        "repo": "oppia/oppia",
+        "owner": "oppia",
+        "location": null
+    },
+    {
+        "repo": "PaddlePaddle/Paddle",
+        "owner": "PaddlePaddle",
+        "location": null
+    },
+    {
+        "repo": "PaddlePaddle/PaddleOCR",
+        "owner": "PaddlePaddle",
+        "location": null
+    },
+    {
+        "repo": "pandas-dev/pandas",
+        "owner": "pandas-dev",
+        "location": null
+    },
+    {
+        "repo": "php/php-src",
+        "owner": "php",
+        "location": null
+    },
+    {
+        "repo": "pingcap/tidb",
+        "owner": "pingcap",
+        "location": null
+    },
+    {
+        "repo": "PixelExperience/android-issues",
+        "owner": "PixelExperience",
+        "location": "Brasília, Brazil",
+        "latitude": -10.3333333,
+        "longitude": -53.2
+    },
+    {
+        "repo": "postmanlabs/postman-app-support",
+        "owner": "postmanlabs",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "PowerShell/PowerShell",
+        "owner": "PowerShell",
+        "location": "Redmond",
+        "latitude": 47.6694141,
+        "longitude": -122.1238767
+    },
+    {
+        "repo": "ppy/osu",
+        "owner": "ppy",
+        "location": null
+    },
+    {
+        "repo": "PrestaShop/PrestaShop",
+        "owner": "PrestaShop",
+        "location": "Paris, France",
+        "latitude": 48.8588897,
+        "longitude": 2.3200410217200766
+    },
+    {
+        "repo": "prisma/prisma",
+        "owner": "prisma",
+        "location": "Berlin, Germany",
+        "latitude": 52.510885,
+        "longitude": 13.3989367
+    },
+    {
+        "repo": "project-chip/connectedhomeip",
+        "owner": "project-chip",
+        "location": null
+    },
+    {
+        "repo": "prusa3d/PrusaSlicer",
+        "owner": "prusa3d",
+        "location": "Prague, Czech Republic",
+        "latitude": 50.0874654,
+        "longitude": 14.4212535
+    },
+    {
+        "repo": "python/cpython",
+        "owner": "python",
+        "location": null
+    },
+    {
+        "repo": "pytorch/pytorch",
+        "owner": "pytorch",
+        "location": "where the eigens are valued",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "repo": "qbittorrent/qBittorrent",
+        "owner": "qbittorrent",
+        "location": null
+    },
+    {
+        "repo": "qgis/QGIS",
+        "owner": "qgis",
+        "location": null
+    },
+    {
+        "repo": "qmk/qmk_firmware",
+        "owner": "qmk",
+        "location": null
+    },
+    {
+        "repo": "quarkusio/quarkus",
+        "owner": "quarkusio",
+        "location": null
+    },
+    {
+        "repo": "rails/rails",
+        "owner": "rails",
+        "location": null
+    },
+    {
+        "repo": "rancher/rancher",
+        "owner": "rancher",
+        "location": null
+    },
+    {
+        "repo": "rapid7/metasploit-framework",
+        "owner": "rapid7",
+        "location": "Boston, MA",
+        "latitude": 42.3554334,
+        "longitude": -71.060511
+    },
+    {
+        "repo": "ray-project/ray",
+        "owner": "ray-project",
+        "location": null
+    },
+    {
+        "repo": "raycast/extensions",
+        "owner": "raycast",
+        "location": null
+    },
+    {
+        "repo": "redis/redis",
+        "owner": "redis",
+        "location": null
+    },
+    {
+        "repo": "Regalis11/Barotrauma",
+        "owner": "FakeFishGames",
+        "location": "Helsinki, Finland",
+        "latitude": 60.1674881,
+        "longitude": 24.9427473
+    },
+    {
+        "repo": "remix-run/remix",
+        "owner": "remix-run",
+        "location": null
+    },
+    {
+        "repo": "renovatebot/renovate",
+        "owner": "renovatebot",
+        "location": "Tel Aviv, Israel",
+        "latitude": 32.0852997,
+        "longitude": 34.7818064
+    },
+    {
+        "repo": "RocketChat/Rocket.Chat",
+        "owner": "RocketChat",
+        "location": null
+    },
+    {
+        "repo": "RPCS3/rpcs3",
+        "owner": "RPCS3",
+        "location": null
+    },
+    {
+        "repo": "rstudio/rstudio",
+        "owner": "rstudio",
+        "location": "Boston, MA",
+        "latitude": 42.3554334,
+        "longitude": -71.060511
+    },
+    {
+        "repo": "ruffle-rs/ruffle",
+        "owner": "ruffle-rs",
+        "location": null
+    },
+    {
+        "repo": "rust-lang/rust",
+        "owner": "rust-lang",
+        "location": null
+    },
+    {
+        "repo": "scikit-learn/scikit-learn",
+        "owner": "scikit-learn",
+        "location": null
+    },
+    {
+        "repo": "scipy/scipy",
+        "owner": "scipy",
+        "location": null
+    },
+    {
+        "repo": "section-engineering-education/engineering-education",
+        "owner": "section-engineering-education",
+        "location": null
+    },
+    {
+        "repo": "SerenityOS/serenity",
+        "owner": "SerenityOS",
+        "location": null
+    },
+    {
+        "repo": "ShadowMario/FNF-PsychEngine",
+        "owner": "ShadowMario",
+        "location": "Brasília, Brazil",
+        "latitude": -10.3333333,
+        "longitude": -53.2
+    },
+    {
+        "repo": "Skyrat-SS13/Skyrat-tg",
+        "owner": "Skyrat-SS13",
+        "location": null
+    },
+    {
+        "repo": "solana-labs/solana",
+        "owner": "solana-labs",
+        "location": null
+    },
+    {
+        "repo": "solana-labs/token-list",
+        "owner": "solana-labs",
+        "location": null
+    },
+    {
+        "repo": "spack/spack",
+        "owner": "spack",
+        "location": null
+    },
+    {
+        "repo": "spyder-ide/spyder",
+        "owner": "spyder-ide",
+        "location": null
+    },
+    {
+        "repo": "storybookjs/storybook",
+        "owner": "storybookjs",
+        "location": null
+    },
+    {
+        "repo": "strapi/strapi",
+        "owner": "strapi",
+        "location": "Paris, France",
+        "latitude": 48.8588897,
+        "longitude": 2.3200410217200766
+    },
+    {
+        "repo": "sveltejs/kit",
+        "owner": "sveltejs",
+        "location": null
+    },
+    {
+        "repo": "symfony/symfony",
+        "owner": "symfony",
+        "location": null
+    },
+    {
+        "repo": "systemd/systemd",
+        "owner": "systemd",
+        "location": null
+    },
+    {
+        "repo": "tailscale/tailscale",
+        "owner": "tailscale",
+        "location": "Canada",
+        "latitude": 77.50861355334347,
+        "longitude": -81.92710314279574
+    },
+    {
+        "repo": "taosdata/TDengine",
+        "owner": "taosdata",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "TeamNewPipe/NewPipe",
+        "owner": "TeamNewPipe",
+        "location": null
+    },
+    {
+        "repo": "termux/termux-packages",
+        "owner": "termux",
+        "location": null
+    },
+    {
+        "repo": "tgstation/tgstation",
+        "owner": "tgstation",
+        "location": null
+    },
+    {
+        "repo": "TP-Lab/tokens",
+        "owner": "TP-Lab",
+        "location": "Singapore",
+        "latitude": 1.357107,
+        "longitude": 103.8194992
+    },
+    {
+        "repo": "trinodb/trino",
+        "owner": "trinodb",
+        "location": null
+    },
+    {
+        "repo": "trustwallet/assets",
+        "owner": "trustwallet",
+        "location": null
+    },
+    {
+        "repo": "type-challenges/type-challenges",
+        "owner": "type-challenges",
+        "location": null
+    },
+    {
+        "repo": "uBlockOrigin/uAssets",
+        "owner": "uBlockOrigin",
+        "location": null
+    },
+    {
+        "repo": "Ultimaker/Cura",
+        "owner": "Ultimaker",
+        "location": "Amsterdam, Netherlands",
+        "latitude": 52.3730796,
+        "longitude": 4.8924534
+    },
+    {
+        "repo": "ultralytics/yolov5",
+        "owner": "ultralytics",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "unifyai/ivy",
+        "owner": "ivy-llc",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "ValveSoftware/Dota2-Gameplay",
+        "owner": "ValveSoftware",
+        "location": null
+    },
+    {
+        "repo": "ValveSoftware/Proton",
+        "owner": "ValveSoftware",
+        "location": null
+    },
+    {
+        "repo": "vectordotdev/vector",
+        "owner": "vectordotdev",
+        "location": "New York, NY",
+        "latitude": 40.7127281,
+        "longitude": -74.0060152
+    },
+    {
+        "repo": "vercel/next.js",
+        "owner": "vercel",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "vitejs/vite",
+        "owner": "vitejs",
+        "location": null
+    },
+    {
+        "repo": "void-linux/void-packages",
+        "owner": "void-linux",
+        "location": null
+    },
+    {
+        "repo": "webcompat/web-bugs",
+        "owner": "webcompat",
+        "location": null
+    },
+    {
+        "repo": "woocommerce/woocommerce",
+        "owner": "woocommerce",
+        "location": "Cape Town, South Africa",
+        "latitude": -33.9288301,
+        "longitude": 18.4172197
+    },
+    {
+        "repo": "WordPress/gutenberg",
+        "owner": "WordPress",
+        "location": null
+    },
+    {
+        "repo": "xamarin/xamarin-macios",
+        "owner": "xamarin",
+        "location": "Boston, MA",
+        "latitude": 42.3554334,
+        "longitude": -71.060511
+    },
+    {
+        "repo": "xbmc/xbmc",
+        "owner": "xbmc",
+        "location": null
+    },
+    {
+        "repo": "yt-dlp/yt-dlp",
+        "owner": "yt-dlp",
+        "location": null
+    },
+    {
+        "repo": "zephyrproject-rtos/zephyr",
+        "owner": "zephyrproject-rtos",
+        "location": null
+    },
+    {
+        "repo": "zero-to-mastery/start-here-guidelines",
+        "owner": "zero-to-mastery",
+        "location": null
+    },
+    {
+        "repo": "ziglang/zig",
+        "owner": "ziglang",
+        "location": "Washington, D.C., USA",
+        "latitude": 38.8950368,
+        "longitude": -77.0365427
+    },
+    {
+        "repo": "zulip/zulip",
+        "owner": "zulip",
+        "location": null
+    }
+]

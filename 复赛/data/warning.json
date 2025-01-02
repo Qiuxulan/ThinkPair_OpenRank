@@ -1,0 +1,1754 @@
+[
+    {
+        "project": "AdguardTeam/AdguardFilters",
+        "health_score": 18.27,
+        "activity": 302.84,
+        "code_changes": 1503
+    },
+    {
+        "project": "airbytehq/airbyte",
+        "health_score": 25.61,
+        "activity": 939.58,
+        "code_changes": 2183094
+    },
+    {
+        "project": "alibaba/nacos",
+        "health_score": 19.41,
+        "activity": 181.05,
+        "code_changes": 153472
+    },
+    {
+        "project": "angular/angular",
+        "health_score": 19.68,
+        "activity": 615.19,
+        "code_changes": 530844
+    },
+    {
+        "project": "angular/components",
+        "health_score": 16.58,
+        "activity": 233.85,
+        "code_changes": 202142
+    },
+    {
+        "project": "ankidroid/Anki-Android",
+        "health_score": 17.06,
+        "activity": 201.21,
+        "code_changes": 90931
+    },
+    {
+        "project": "ansible/ansible",
+        "health_score": 11.4,
+        "activity": 234.64,
+        "code_changes": 27800
+    },
+    {
+        "project": "ant-design/ant-design",
+        "health_score": 17.48,
+        "activity": 561.09,
+        "code_changes": 215526
+    },
+    {
+        "project": "apache/airflow",
+        "health_score": 20.88,
+        "activity": 935.09,
+        "code_changes": 730201
+    },
+    {
+        "project": "apache/apisix",
+        "health_score": 11.57,
+        "activity": 154.8,
+        "code_changes": 5644
+    },
+    {
+        "project": "apache/arrow",
+        "health_score": 16.84,
+        "activity": 433.93,
+        "code_changes": 211357
+    },
+    {
+        "project": "apache/beam",
+        "health_score": 14.03,
+        "activity": 403.21,
+        "code_changes": 95182
+    },
+    {
+        "project": "apache/dolphinscheduler",
+        "health_score": 15.67,
+        "activity": 143.28,
+        "code_changes": 25341
+    },
+    {
+        "project": "apache/doris",
+        "health_score": 20.49,
+        "activity": 930.21,
+        "code_changes": 1452949
+    },
+    {
+        "project": "apache/flink",
+        "health_score": 17.82,
+        "activity": 300.58,
+        "code_changes": 264096
+    },
+    {
+        "project": "apache/hudi",
+        "health_score": 20.56,
+        "activity": 271.15,
+        "code_changes": 66447
+    },
+    {
+        "project": "apache/iceberg",
+        "health_score": 17.11,
+        "activity": 475.16,
+        "code_changes": 129550
+    },
+    {
+        "project": "apache/pulsar",
+        "health_score": 14.72,
+        "activity": 176.12,
+        "code_changes": 47813
+    },
+    {
+        "project": "apache/shardingsphere",
+        "health_score": 16.17,
+        "activity": 229.39,
+        "code_changes": 79218
+    },
+    {
+        "project": "apache/spark",
+        "health_score": 20.16,
+        "activity": 518.55,
+        "code_changes": 439602
+    },
+    {
+        "project": "apache/superset",
+        "health_score": 22.03,
+        "activity": 452.33,
+        "code_changes": 1046401
+    },
+    {
+        "project": "apache/tvm",
+        "health_score": 12.64,
+        "activity": 114.29,
+        "code_changes": 15133
+    },
+    {
+        "project": "apple/swift",
+        "health_score": 13.2,
+        "activity": 329.87,
+        "code_changes": 24675
+    },
+    {
+        "project": "appsmithorg/appsmith",
+        "health_score": 18.25,
+        "activity": 496.31,
+        "code_changes": 266952
+    },
+    {
+        "project": "archway-network/testnets",
+        "health_score": 15.19,
+        "activity": 74,
+        "code_changes": 5
+    },
+    {
+        "project": "ArduPilot/ardupilot",
+        "health_score": 17.04,
+        "activity": 326.49,
+        "code_changes": 183272
+    },
+    {
+        "project": "argoproj/argo-cd",
+        "health_score": 18.25,
+        "activity": 724.41,
+        "code_changes": 233005
+    },
+    {
+        "project": "AUTOMATIC1111/stable-diffusion-webui",
+        "health_score": 18.17,
+        "activity": 172.62,
+        "code_changes": 7864
+    },
+    {
+        "project": "Automattic/jetpack",
+        "health_score": 17.03,
+        "activity": 478.63,
+        "code_changes": 196417
+    },
+    {
+        "project": "Automattic/wp-calypso",
+        "health_score": 19.8,
+        "activity": 896.88,
+        "code_changes": 125722
+    },
+    {
+        "project": "aws/aws-cdk",
+        "health_score": 28.92,
+        "activity": 647.51,
+        "code_changes": 2293069
+    },
+    {
+        "project": "aws-amplify/amplify-cli",
+        "health_score": 19.59,
+        "activity": 101.26,
+        "code_changes": 96323
+    },
+    {
+        "project": "azerothcore/azerothcore-wotlk",
+        "health_score": 14.74,
+        "activity": 238.51,
+        "code_changes": 58866
+    },
+    {
+        "project": "Azure/azure-cli",
+        "health_score": 22.63,
+        "activity": 520.59,
+        "code_changes": 1392904
+    },
+    {
+        "project": "Azure/azure-powershell",
+        "health_score": 31.58,
+        "activity": 396.74,
+        "code_changes": 7260158
+    },
+    {
+        "project": "Azure/azure-rest-api-specs",
+        "health_score": 31.09,
+        "activity": 1028.88,
+        "code_changes": 4900187
+    },
+    {
+        "project": "Azure/azure-sdk-for-java",
+        "health_score": 29.0,
+        "activity": 471.01,
+        "code_changes": 5904780
+    },
+    {
+        "project": "Azure/azure-sdk-for-js",
+        "health_score": 18.15,
+        "activity": 343.8,
+        "code_changes": 847717
+    },
+    {
+        "project": "Azure/azure-sdk-for-net",
+        "health_score": 21.48,
+        "activity": 651.5,
+        "code_changes": 1981805
+    },
+    {
+        "project": "Azure/azure-sdk-for-python",
+        "health_score": 24.61,
+        "activity": 710.87,
+        "code_changes": 2583840
+    },
+    {
+        "project": "backstage/backstage",
+        "health_score": 19.81,
+        "activity": 637.76,
+        "code_changes": 205285
+    },
+    {
+        "project": "bevyengine/bevy",
+        "health_score": 20.91,
+        "activity": 704.51,
+        "code_changes": 230066
+    },
+    {
+        "project": "bioconda/bioconda-recipes",
+        "health_score": 15.78,
+        "activity": 649.87,
+        "code_changes": 45463
+    },
+    {
+        "project": "bitcoin/bitcoin",
+        "health_score": 19.66,
+        "activity": 397.31,
+        "code_changes": 46312
+    },
+    {
+        "project": "bitnami/charts",
+        "health_score": 20.14,
+        "activity": 499.39,
+        "code_changes": 76118
+    },
+    {
+        "project": "brave/brave-browser",
+        "health_score": 19.92,
+        "activity": 659.98,
+        "code_changes": 703
+    },
+    {
+        "project": "brave/brave-core",
+        "health_score": 20.82,
+        "activity": 459.26,
+        "code_changes": 1186044
+    },
+    {
+        "project": "ccxt/ccxt",
+        "health_score": 16.29,
+        "activity": 227.77,
+        "code_changes": 208149
+    },
+    {
+        "project": "ceph/ceph",
+        "health_score": 19.04,
+        "activity": 710.08,
+        "code_changes": 561591
+    },
+    {
+        "project": "Chia-Network/chia-blockchain",
+        "health_score": 19.63,
+        "activity": 158.35,
+        "code_changes": 151373
+    },
+    {
+        "project": "cilium/cilium",
+        "health_score": 21.3,
+        "activity": 755.68,
+        "code_changes": 373080
+    },
+    {
+        "project": "CleverRaven/Cataclysm-DDA",
+        "health_score": 17.95,
+        "activity": 714.43,
+        "code_changes": 454717
+    },
+    {
+        "project": "ClickHouse/ClickHouse",
+        "health_score": 20.45,
+        "activity": 1083.74,
+        "code_changes": 429704
+    },
+    {
+        "project": "cloudflare/cloudflare-docs",
+        "health_score": 22.05,
+        "activity": 829.18,
+        "code_changes": 502906
+    },
+    {
+        "project": "cms-sw/cmssw",
+        "health_score": 21.04,
+        "activity": 519.54,
+        "code_changes": 877195
+    },
+    {
+        "project": "cockroachdb/cockroach",
+        "health_score": 21.18,
+        "activity": 878.41,
+        "code_changes": 1391042
+    },
+    {
+        "project": "conan-io/conan-center-index",
+        "health_score": 17.29,
+        "activity": 415.21,
+        "code_changes": 33658
+    },
+    {
+        "project": "conda-forge/staged-recipes",
+        "health_score": 12.53,
+        "activity": 655.49,
+        "code_changes": 74501
+    },
+    {
+        "project": "containers/podman",
+        "health_score": 19.6,
+        "activity": 396.87,
+        "code_changes": 109017
+    },
+    {
+        "project": "coolsnowwolf/lede",
+        "health_score": 16.83,
+        "activity": 213.05,
+        "code_changes": 42503
+    },
+    {
+        "project": "cypress-io/cypress",
+        "health_score": 18.34,
+        "activity": 286.27,
+        "code_changes": 245009
+    },
+    {
+        "project": "darktable-org/darktable",
+        "health_score": 9.68,
+        "activity": 203.87,
+        "code_changes": 112936
+    },
+    {
+        "project": "DataDog/datadog-agent",
+        "health_score": 22.41,
+        "activity": 961.32,
+        "code_changes": 595818
+    },
+    {
+        "project": "dbeaver/dbeaver",
+        "health_score": 20.58,
+        "activity": 484.05,
+        "code_changes": 30809
+    },
+    {
+        "project": "DefinitelyTyped/DefinitelyTyped",
+        "health_score": 0,
+        "activity": 587.7,
+        "code_changes": 114981
+    },
+    {
+        "project": "demisto/content",
+        "health_score": 17.76,
+        "activity": 487.21,
+        "code_changes": 236242
+    },
+    {
+        "project": "denoland/deno",
+        "health_score": 24.67,
+        "activity": 952.2,
+        "code_changes": 128445
+    },
+    {
+        "project": "department-of-veterans-affairs/va.gov-team",
+        "health_score": 21.59,
+        "activity": 1299.73,
+        "code_changes": 4153
+    },
+    {
+        "project": "desktop/desktop",
+        "health_score": 18.13,
+        "activity": 308.98,
+        "code_changes": 17058
+    },
+    {
+        "project": "directus/directus",
+        "health_score": 15.49,
+        "activity": 258.37,
+        "code_changes": 24811
+    },
+    {
+        "project": "docker/docs",
+        "health_score": 14.52,
+        "activity": 280.39,
+        "code_changes": 44219
+    },
+    {
+        "project": "dotnet/aspnetcore",
+        "health_score": 17.65,
+        "activity": 683.98,
+        "code_changes": 73821
+    },
+    {
+        "project": "dotnet/AspNetCore.Docs",
+        "health_score": 15.35,
+        "activity": 175.36,
+        "code_changes": 74313
+    },
+    {
+        "project": "dotnet/docs",
+        "health_score": 12.57,
+        "activity": 453.05,
+        "code_changes": 83092
+    },
+    {
+        "project": "dotnet/efcore",
+        "health_score": 16.71,
+        "activity": 347.84,
+        "code_changes": 85243
+    },
+    {
+        "project": "dotnet/maui",
+        "health_score": 24.24,
+        "activity": 910.49,
+        "code_changes": 572378
+    },
+    {
+        "project": "dotnet/roslyn",
+        "health_score": 15.25,
+        "activity": 416.64,
+        "code_changes": 251762
+    },
+    {
+        "project": "dotnet/runtime",
+        "health_score": 23.68,
+        "activity": 1395.31,
+        "code_changes": 371298
+    },
+    {
+        "project": "elastic/elasticsearch",
+        "health_score": 27.91,
+        "activity": 1362.86,
+        "code_changes": 1837360
+    },
+    {
+        "project": "elastic/kibana",
+        "health_score": 38.75,
+        "activity": 2333.76,
+        "code_changes": 4221398
+    },
+    {
+        "project": "electron/electron",
+        "health_score": 17.17,
+        "activity": 520.33,
+        "code_changes": 148970
+    },
+    {
+        "project": "element-plus/element-plus",
+        "health_score": 18.12,
+        "activity": 333.45,
+        "code_changes": 36848
+    },
+    {
+        "project": "elementor/elementor",
+        "health_score": 16.73,
+        "activity": 451.21,
+        "code_changes": 183493
+    },
+    {
+        "project": "envoyproxy/envoy",
+        "health_score": 19.04,
+        "activity": 618.74,
+        "code_changes": 200283
+    },
+    {
+        "project": "espressif/esp-idf",
+        "health_score": 18.29,
+        "activity": 454.23,
+        "code_changes": 34193
+    },
+    {
+        "project": "ethereum/ethereum-org-website",
+        "health_score": 18.03,
+        "activity": 280.41,
+        "code_changes": 1684275
+    },
+    {
+        "project": "Expensify/App",
+        "health_score": 28.9,
+        "activity": 1755.5,
+        "code_changes": 311939
+    },
+    {
+        "project": "expo/expo",
+        "health_score": 24.28,
+        "activity": 1121.6,
+        "code_changes": 406885
+    },
+    {
+        "project": "facebook/react",
+        "health_score": 17.73,
+        "activity": 462.5,
+        "code_changes": 156805
+    },
+    {
+        "project": "facebook/react-native",
+        "health_score": 24.97,
+        "activity": 928.24,
+        "code_changes": 578591
+    },
+    {
+        "project": "filecoin-project/filecoin-plus-large-datasets",
+        "health_score": 15.17,
+        "activity": 231.47,
+        "code_changes": 4763
+    },
+    {
+        "project": "files-community/Files",
+        "health_score": 18.62,
+        "activity": 211.14,
+        "code_changes": 18434
+    },
+    {
+        "project": "firebase/firebase-android-sdk",
+        "health_score": 19.77,
+        "activity": 165.21,
+        "code_changes": 24500
+    },
+    {
+        "project": "firebase/flutterfire",
+        "health_score": 20.39,
+        "activity": 356.44,
+        "code_changes": 22757
+    },
+    {
+        "project": "firstcontributions/first-contributions",
+        "health_score": 0,
+        "activity": 3032.95,
+        "code_changes": 219973
+    },
+    {
+        "project": "flathub/flathub",
+        "health_score": 20.1,
+        "activity": 366.79,
+        "code_changes": 255394
+    },
+    {
+        "project": "flutter/engine",
+        "health_score": 17.1,
+        "activity": 365.61,
+        "code_changes": 202629
+    },
+    {
+        "project": "flutter/flutter",
+        "health_score": 30.68,
+        "activity": 2304.43,
+        "code_changes": 279396
+    },
+    {
+        "project": "flutter/plugins",
+        "health_score": 14.13,
+        "activity": 292.21,
+        "code_changes": 101144
+    },
+    {
+        "project": "flybywiresim/a32nx",
+        "health_score": 15.19,
+        "activity": 244.66,
+        "code_changes": 13425
+    },
+    {
+        "project": "freddier/hyperblog",
+        "health_score": 3.6,
+        "activity": 68.99,
+        "code_changes": 1808
+    },
+    {
+        "project": "gatsbyjs/gatsby",
+        "health_score": 4.37,
+        "activity": 49.93,
+        "code_changes": 9748
+    },
+    {
+        "project": "gentoo/gentoo",
+        "health_score": 19.78,
+        "activity": 484.93,
+        "code_changes": 138001
+    },
+    {
+        "project": "getsentry/sentry",
+        "health_score": 22.76,
+        "activity": 1166.58,
+        "code_changes": 434377
+    },
+    {
+        "project": "github/codeql",
+        "health_score": 19.81,
+        "activity": 288.41,
+        "code_changes": 627329
+    },
+    {
+        "project": "github/docs",
+        "health_score": 15.89,
+        "activity": 359.19,
+        "code_changes": 574184
+    },
+    {
+        "project": "gitpod-io/gitpod",
+        "health_score": 11.32,
+        "activity": 87.64,
+        "code_changes": 6760
+    },
+    {
+        "project": "go-gitea/gitea",
+        "health_score": 17.35,
+        "activity": 372.01,
+        "code_changes": 57257
+    },
+    {
+        "project": "godotengine/godot",
+        "health_score": 27.91,
+        "activity": 1878.94,
+        "code_changes": 336264
+    },
+    {
+        "project": "golang/go",
+        "health_score": 22.87,
+        "activity": 741.41,
+        "code_changes": 6358
+    },
+    {
+        "project": "google/it-cert-automation-practice",
+        "health_score": 11.7,
+        "activity": 279.05,
+        "code_changes": 2098
+    },
+    {
+        "project": "google-test/signclav2-probe-repo",
+        "health_score": 14.22,
+        "activity": 527.1,
+        "code_changes": 25192
+    },
+    {
+        "project": "gradle/gradle",
+        "health_score": 18.35,
+        "activity": 461.94,
+        "code_changes": 185458
+    },
+    {
+        "project": "grafana/grafana",
+        "health_score": 23.08,
+        "activity": 1611.32,
+        "code_changes": 1067215
+    },
+    {
+        "project": "grafana/loki",
+        "health_score": 19.01,
+        "activity": 448.22,
+        "code_changes": 366361
+    },
+    {
+        "project": "gravitational/teleport",
+        "health_score": 19.52,
+        "activity": 703.1,
+        "code_changes": 914369
+    },
+    {
+        "project": "grpc/grpc",
+        "health_score": 18.08,
+        "activity": 256.85,
+        "code_changes": 518443
+    },
+    {
+        "project": "hashicorp/terraform-provider-aws",
+        "health_score": 20.37,
+        "activity": 771.25,
+        "code_changes": 473618
+    },
+    {
+        "project": "hashicorp/terraform-provider-azurerm",
+        "health_score": 18.09,
+        "activity": 621.58,
+        "code_changes": 370626
+    },
+    {
+        "project": "hashicorp/vault",
+        "health_score": 12.43,
+        "activity": 331.77,
+        "code_changes": 128184
+    },
+    {
+        "project": "helium/denylist",
+        "health_score": 15.21,
+        "activity": 5.45,
+        "code_changes": 64
+    },
+    {
+        "project": "helix-editor/helix",
+        "health_score": 15.21,
+        "activity": 310.07,
+        "code_changes": 116649
+    },
+    {
+        "project": "home-assistant/core",
+        "health_score": 43.67,
+        "activity": 4463.22,
+        "code_changes": 646498
+    },
+    {
+        "project": "home-assistant/frontend",
+        "health_score": 17.02,
+        "activity": 513.25,
+        "code_changes": 109872
+    },
+    {
+        "project": "home-assistant/home-assistant.io",
+        "health_score": 10.65,
+        "activity": 835.46,
+        "code_changes": 225727
+    },
+    {
+        "project": "Homebrew/homebrew-cask",
+        "health_score": 6.68,
+        "activity": 762.45,
+        "code_changes": 45682
+    },
+    {
+        "project": "Homebrew/homebrew-core",
+        "health_score": 18.4,
+        "activity": 1112.49,
+        "code_changes": 135344
+    },
+    {
+        "project": "huggingface/transformers",
+        "health_score": 27.54,
+        "activity": 1382.78,
+        "code_changes": 412719
+    },
+    {
+        "project": "idsb3t1/KEEP-pipeline-tests-resources",
+        "health_score": 15.19,
+        "activity": 0,
+        "code_changes": 0
+    },
+    {
+        "project": "influxdata/telegraf",
+        "health_score": 16.35,
+        "activity": 221.41,
+        "code_changes": 45096
+    },
+    {
+        "project": "IntelRealSense/librealsense",
+        "health_score": 21.64,
+        "activity": 188.14,
+        "code_changes": 105412
+    },
+    {
+        "project": "istio/istio",
+        "health_score": 17.02,
+        "activity": 446.72,
+        "code_changes": 106708
+    },
+    {
+        "project": "JacksonKearl/testissues",
+        "health_score": 15.19,
+        "activity": 87.99,
+        "code_changes": 4521
+    },
+    {
+        "project": "JetBrains/swot",
+        "health_score": 7.52,
+        "activity": 1587.78,
+        "code_changes": 236030
+    },
+    {
+        "project": "jitsi/jitsi-meet",
+        "health_score": 17.67,
+        "activity": 155.49,
+        "code_changes": 211294
+    },
+    {
+        "project": "jlord/patchwork",
+        "health_score": 0,
+        "activity": 391.96,
+        "code_changes": 1359
+    },
+    {
+        "project": "joomla/joomla-cms",
+        "health_score": 18.08,
+        "activity": 335.46,
+        "code_changes": 279491
+    },
+    {
+        "project": "JuliaLang/julia",
+        "health_score": 17.35,
+        "activity": 566.54,
+        "code_changes": 91372
+    },
+    {
+        "project": "JuliaRegistries/General",
+        "health_score": 14.58,
+        "activity": 361.02,
+        "code_changes": 35498
+    },
+    {
+        "project": "keycloak/keycloak",
+        "health_score": 21.12,
+        "activity": 984.08,
+        "code_changes": 73746
+    },
+    {
+        "project": "Koenkk/zigbee2mqtt",
+        "health_score": 20.58,
+        "activity": 1043.8,
+        "code_changes": 86371
+    },
+    {
+        "project": "kubernetes/kubernetes",
+        "health_score": 25.55,
+        "activity": 1620.57,
+        "code_changes": 1095757
+    },
+    {
+        "project": "kubernetes/minikube",
+        "health_score": 16.27,
+        "activity": 188.29,
+        "code_changes": 10008
+    },
+    {
+        "project": "kubernetes/test-infra",
+        "health_score": 15.41,
+        "activity": 313.65,
+        "code_changes": 86556
+    },
+    {
+        "project": "kubernetes/website",
+        "health_score": 13.74,
+        "activity": 795.4,
+        "code_changes": 222746
+    },
+    {
+        "project": "kubevirt/kubevirt",
+        "health_score": 20.93,
+        "activity": 421.26,
+        "code_changes": 207162
+    },
+    {
+        "project": "laravel/framework",
+        "health_score": 13.71,
+        "activity": 579.07,
+        "code_changes": 42255
+    },
+    {
+        "project": "leanprover-community/mathlib",
+        "health_score": 15.17,
+        "activity": 348.94,
+        "code_changes": 67421
+    },
+    {
+        "project": "LeetCode-Feedback/LeetCode-Feedback",
+        "health_score": 8.09,
+        "activity": 722.85,
+        "code_changes": 178
+    },
+    {
+        "project": "lensapp/lens",
+        "health_score": 17.82,
+        "activity": 69.15,
+        "code_changes": 4
+    },
+    {
+        "project": "Lightning-AI/lightning",
+        "health_score": 13.52,
+        "activity": 177.64,
+        "code_changes": 5763
+    },
+    {
+        "project": "llvm/llvm-project",
+        "health_score": 52.65,
+        "activity": 5072.69,
+        "code_changes": 2375379
+    },
+    {
+        "project": "logseq/logseq",
+        "health_score": 12.4,
+        "activity": 105.5,
+        "code_changes": 246420
+    },
+    {
+        "project": "macports/macports-ports",
+        "health_score": 16.34,
+        "activity": 358.5,
+        "code_changes": 42385
+    },
+    {
+        "project": "magento/magento2",
+        "health_score": 21.88,
+        "activity": 329.49,
+        "code_changes": 5508
+    },
+    {
+        "project": "MarlinFirmware/Marlin",
+        "health_score": 14.68,
+        "activity": 120.76,
+        "code_changes": 9203
+    },
+    {
+        "project": "mastodon/mastodon",
+        "health_score": 15.26,
+        "activity": 521.38,
+        "code_changes": 85140
+    },
+    {
+        "project": "matplotlib/matplotlib",
+        "health_score": 16.45,
+        "activity": 273.27,
+        "code_changes": 53745
+    },
+    {
+        "project": "matrix-org/synapse",
+        "health_score": 14.31,
+        "activity": 677.43,
+        "code_changes": 46732
+    },
+    {
+        "project": "mdn/content",
+        "health_score": 11.55,
+        "activity": 631.95,
+        "code_changes": 58289
+    },
+    {
+        "project": "mdn/translated-content",
+        "health_score": 13.65,
+        "activity": 369.92,
+        "code_changes": 73791
+    },
+    {
+        "project": "metabase/metabase",
+        "health_score": 19.92,
+        "activity": 704.12,
+        "code_changes": 598666
+    },
+    {
+        "project": "MetaMask/eth-phishing-detect",
+        "health_score": 17.16,
+        "activity": 452.28,
+        "code_changes": 106291
+    },
+    {
+        "project": "MetaMask/metamask-extension",
+        "health_score": 20.83,
+        "activity": 679.5,
+        "code_changes": 1029948
+    },
+    {
+        "project": "metersphere/metersphere",
+        "health_score": 18.17,
+        "activity": 201.97,
+        "code_changes": 118093
+    },
+    {
+        "project": "microsoft/azuredatastudio",
+        "health_score": 13.15,
+        "activity": 124.54,
+        "code_changes": 21827
+    },
+    {
+        "project": "microsoft/fluentui",
+        "health_score": 20.13,
+        "activity": 330.25,
+        "code_changes": 296348
+    },
+    {
+        "project": "microsoft/onnxruntime",
+        "health_score": 20.49,
+        "activity": 674.76,
+        "code_changes": 366228
+    },
+    {
+        "project": "microsoft/playwright",
+        "health_score": 20.71,
+        "activity": 689.02,
+        "code_changes": 64258
+    },
+    {
+        "project": "microsoft/PowerToys",
+        "health_score": 23.41,
+        "activity": 1119.77,
+        "code_changes": 127503
+    },
+    {
+        "project": "microsoft/terminal",
+        "health_score": 20.54,
+        "activity": 313.55,
+        "code_changes": 23224
+    },
+    {
+        "project": "microsoft/TypeScript",
+        "health_score": 21.31,
+        "activity": 535.64,
+        "code_changes": 202183
+    },
+    {
+        "project": "microsoft/vcpkg",
+        "health_score": 22.46,
+        "activity": 819.1,
+        "code_changes": 50202
+    },
+    {
+        "project": "microsoft/vscode",
+        "health_score": 37.92,
+        "activity": 3282.86,
+        "code_changes": 1055325
+    },
+    {
+        "project": "microsoft/vscode-jupyter",
+        "health_score": 16.6,
+        "activity": 131.99,
+        "code_changes": 39715
+    },
+    {
+        "project": "microsoft/winget-pkgs",
+        "health_score": 29.02,
+        "activity": 2672.14,
+        "code_changes": 1776494
+    },
+    {
+        "project": "microsoft/WSL",
+        "health_score": 17.19,
+        "activity": 468.45,
+        "code_changes": 84
+    },
+    {
+        "project": "MicrosoftDocs/azure-docs",
+        "health_score": 5.62,
+        "activity": 667.14,
+        "code_changes": 9521
+    },
+    {
+        "project": "MicrosoftDocs/microsoft-365-docs",
+        "health_score": 10.02,
+        "activity": 39.41,
+        "code_changes": 243
+    },
+    {
+        "project": "MicrosoftDocs/msteams-docs",
+        "health_score": 17.26,
+        "activity": 186.57,
+        "code_changes": 27239
+    },
+    {
+        "project": "microsoftgraph/microsoft-graph-docs",
+        "health_score": 12.81,
+        "activity": 75.97,
+        "code_changes": 10784
+    },
+    {
+        "project": "mlflow/mlflow",
+        "health_score": 18.42,
+        "activity": 368.83,
+        "code_changes": 236217
+    },
+    {
+        "project": "mozilla-mobile/fenix",
+        "health_score": 14.72,
+        "activity": 101.77,
+        "code_changes": 10111
+    },
+    {
+        "project": "mrdoob/three.js",
+        "health_score": 15.52,
+        "activity": 284.72,
+        "code_changes": 68880
+    },
+    {
+        "project": "mui/material-ui",
+        "health_score": 22.07,
+        "activity": 518.44,
+        "code_changes": 289892
+    },
+    {
+        "project": "mui/mui-x",
+        "health_score": 21.1,
+        "activity": 558.68,
+        "code_changes": 105296
+    },
+    {
+        "project": "neovim/neovim",
+        "health_score": 19.23,
+        "activity": 478.69,
+        "code_changes": 62895
+    },
+    {
+        "project": "newrelic/docs-website",
+        "health_score": 16.79,
+        "activity": 438.29,
+        "code_changes": 523461
+    },
+    {
+        "project": "nextcloud/desktop",
+        "health_score": 16.2,
+        "activity": 318.16,
+        "code_changes": 14816
+    },
+    {
+        "project": "nextcloud/server",
+        "health_score": 19.77,
+        "activity": 689.31,
+        "code_changes": 334042
+    },
+    {
+        "project": "NixOS/nixpkgs",
+        "health_score": 55.32,
+        "activity": 6520.14,
+        "code_changes": 3246147
+    },
+    {
+        "project": "nodejs/node",
+        "health_score": 24.99,
+        "activity": 777.86,
+        "code_changes": 972193
+    },
+    {
+        "project": "nrfconnect/sdk-nrf",
+        "health_score": 21.68,
+        "activity": 889.99,
+        "code_changes": 316138
+    },
+    {
+        "project": "nrwl/nx",
+        "health_score": 20.14,
+        "activity": 751.72,
+        "code_changes": 198008
+    },
+    {
+        "project": "nuxt/framework",
+        "health_score": 14.6,
+        "activity": 487.26,
+        "code_changes": 17964
+    },
+    {
+        "project": "o3de/o3de",
+        "health_score": 17.89,
+        "activity": 113.56,
+        "code_changes": 146967
+    },
+    {
+        "project": "obsproject/obs-studio",
+        "health_score": 18.17,
+        "activity": 265.55,
+        "code_changes": 102094
+    },
+    {
+        "project": "odoo/odoo",
+        "health_score": 31.39,
+        "activity": 2077.25,
+        "code_changes": 1827988
+    },
+    {
+        "project": "open-mmlab/mmdetection",
+        "health_score": 12.14,
+        "activity": 120.1,
+        "code_changes": 27607
+    },
+    {
+        "project": "open-telemetry/opentelemetry-collector-contrib",
+        "health_score": 21.81,
+        "activity": 807.83,
+        "code_changes": 698374
+    },
+    {
+        "project": "OpenAPITools/openapi-generator",
+        "health_score": 14.55,
+        "activity": 480.96,
+        "code_changes": 278296
+    },
+    {
+        "project": "opencv/opencv",
+        "health_score": 15.13,
+        "activity": 280.75,
+        "code_changes": 418662
+    },
+    {
+        "project": "openhab/openhab-addons",
+        "health_score": 17.46,
+        "activity": 348.85,
+        "code_changes": 151234
+    },
+    {
+        "project": "openjdk/jdk",
+        "health_score": 24.84,
+        "activity": 1097.57,
+        "code_changes": 626101
+    },
+    {
+        "project": "openjournals/joss-reviews",
+        "health_score": 23.87,
+        "activity": 888.59,
+        "code_changes": 2
+    },
+    {
+        "project": "openshift/openshift-docs",
+        "health_score": 23.96,
+        "activity": 1440.37,
+        "code_changes": 1560055
+    },
+    {
+        "project": "openshift/release",
+        "health_score": 29.27,
+        "activity": 1881.35,
+        "code_changes": 1809844
+    },
+    {
+        "project": "openssl/openssl",
+        "health_score": 19.15,
+        "activity": 372.23,
+        "code_changes": 89369
+    },
+    {
+        "project": "openvinotoolkit/openvino",
+        "health_score": 24.45,
+        "activity": 729.16,
+        "code_changes": 1003645
+    },
+    {
+        "project": "openwrt/openwrt",
+        "health_score": 20.53,
+        "activity": 660.39,
+        "code_changes": 207385
+    },
+    {
+        "project": "oppia/oppia",
+        "health_score": 16.86,
+        "activity": 253.94,
+        "code_changes": 97941
+    },
+    {
+        "project": "PaddlePaddle/Paddle",
+        "health_score": 19.62,
+        "activity": 689.46,
+        "code_changes": 286599
+    },
+    {
+        "project": "PaddlePaddle/PaddleOCR",
+        "health_score": 18.2,
+        "activity": 198.62,
+        "code_changes": 5796
+    },
+    {
+        "project": "pandas-dev/pandas",
+        "health_score": 17.81,
+        "activity": 440.93,
+        "code_changes": 152600
+    },
+    {
+        "project": "php/php-src",
+        "health_score": 19.12,
+        "activity": 388.8,
+        "code_changes": 44437
+    },
+    {
+        "project": "pingcap/tidb",
+        "health_score": 15.61,
+        "activity": 552.71,
+        "code_changes": 463864
+    },
+    {
+        "project": "PixelExperience/android-issues",
+        "health_score": 15.19,
+        "activity": 266.71,
+        "code_changes": 34512
+    },
+    {
+        "project": "postmanlabs/postman-app-support",
+        "health_score": 15.25,
+        "activity": 199.16,
+        "code_changes": 4632
+    },
+    {
+        "project": "PowerShell/PowerShell",
+        "health_score": 17.5,
+        "activity": 268.79,
+        "code_changes": 50907
+    },
+    {
+        "project": "ppy/osu",
+        "health_score": 18.15,
+        "activity": 374.08,
+        "code_changes": 20851
+    },
+    {
+        "project": "PrestaShop/PrestaShop",
+        "health_score": 16.34,
+        "activity": 289.79,
+        "code_changes": 117651
+    },
+    {
+        "project": "prisma/prisma",
+        "health_score": 14.47,
+        "activity": 413.28,
+        "code_changes": 47243
+    },
+    {
+        "project": "project-chip/connectedhomeip",
+        "health_score": 18.85,
+        "activity": 577.36,
+        "code_changes": 1081554
+    },
+    {
+        "project": "prusa3d/PrusaSlicer",
+        "health_score": 13.87,
+        "activity": 261.55,
+        "code_changes": 4
+    },
+    {
+        "project": "python/cpython",
+        "health_score": 23.39,
+        "activity": 1539.07,
+        "code_changes": 210459
+    },
+    {
+        "project": "pytorch/pytorch",
+        "health_score": 35.21,
+        "activity": 2629.82,
+        "code_changes": 535205
+    },
+    {
+        "project": "qbittorrent/qBittorrent",
+        "health_score": 21.86,
+        "activity": 600.13,
+        "code_changes": 52079
+    },
+    {
+        "project": "qgis/QGIS",
+        "health_score": 16.5,
+        "activity": 489.75,
+        "code_changes": 105545
+    },
+    {
+        "project": "qmk/qmk_firmware",
+        "health_score": 11.82,
+        "activity": 276.31,
+        "code_changes": 164358
+    },
+    {
+        "project": "quarkusio/quarkus",
+        "health_score": 20.42,
+        "activity": 744.55,
+        "code_changes": 100218
+    },
+    {
+        "project": "rails/rails",
+        "health_score": 15.03,
+        "activity": 687.74,
+        "code_changes": 64328
+    },
+    {
+        "project": "rancher/rancher",
+        "health_score": 19.15,
+        "activity": 573.43,
+        "code_changes": 522856
+    },
+    {
+        "project": "rapid7/metasploit-framework",
+        "health_score": 16.05,
+        "activity": 161.2,
+        "code_changes": 16809
+    },
+    {
+        "project": "ray-project/ray",
+        "health_score": 18.28,
+        "activity": 615.1,
+        "code_changes": 149320
+    },
+    {
+        "project": "raycast/extensions",
+        "health_score": 24.82,
+        "activity": 860.92,
+        "code_changes": 957879
+    },
+    {
+        "project": "redis/redis",
+        "health_score": 16.38,
+        "activity": 124.15,
+        "code_changes": 75496
+    },
+    {
+        "project": "remix-run/remix",
+        "health_score": 14.11,
+        "activity": 170.64,
+        "code_changes": 22509
+    },
+    {
+        "project": "renovatebot/renovate",
+        "health_score": 14.82,
+        "activity": 278.44,
+        "code_changes": 38564
+    },
+    {
+        "project": "RocketChat/Rocket.Chat",
+        "health_score": 20.5,
+        "activity": 462.04,
+        "code_changes": 888840
+    },
+    {
+        "project": "RPCS3/rpcs3",
+        "health_score": 17.23,
+        "activity": 223.83,
+        "code_changes": 11043
+    },
+    {
+        "project": "rstudio/rstudio",
+        "health_score": 15.33,
+        "activity": 177.56,
+        "code_changes": 28343
+    },
+    {
+        "project": "ruffle-rs/ruffle",
+        "health_score": 13.7,
+        "activity": 333.98,
+        "code_changes": 44281
+    },
+    {
+        "project": "rust-lang/rust",
+        "health_score": 23.05,
+        "activity": 1833.71,
+        "code_changes": 638015
+    },
+    {
+        "project": "scikit-learn/scikit-learn",
+        "health_score": 16.55,
+        "activity": 385.93,
+        "code_changes": 26204
+    },
+    {
+        "project": "scipy/scipy",
+        "health_score": 17.25,
+        "activity": 325.01,
+        "code_changes": 26195
+    },
+    {
+        "project": "SerenityOS/serenity",
+        "health_score": 15.04,
+        "activity": 111.04,
+        "code_changes": 75573
+    },
+    {
+        "project": "ShadowMario/FNF-PsychEngine",
+        "health_score": 17.03,
+        "activity": 384.84,
+        "code_changes": 2325
+    },
+    {
+        "project": "Skyrat-SS13/Skyrat-tg",
+        "health_score": 7.69,
+        "activity": 14.44,
+        "code_changes": 17147
+    },
+    {
+        "project": "solana-labs/solana",
+        "health_score": 7.53,
+        "activity": 32.8,
+        "code_changes": 25410
+    },
+    {
+        "project": "sourcegraph/sourcegraph",
+        "health_score": 15.14,
+        "activity": 477.88,
+        "code_changes": 56312
+    },
+    {
+        "project": "spack/spack",
+        "health_score": 16.95,
+        "activity": 795.34,
+        "code_changes": 67046
+    },
+    {
+        "project": "spyder-ide/spyder",
+        "health_score": 17.66,
+        "activity": 255.59,
+        "code_changes": 30803
+    },
+    {
+        "project": "storybookjs/storybook",
+        "health_score": 13.97,
+        "activity": 356.22,
+        "code_changes": 122504
+    },
+    {
+        "project": "strapi/strapi",
+        "health_score": 18.36,
+        "activity": 740.32,
+        "code_changes": 103384
+    },
+    {
+        "project": "sveltejs/kit",
+        "health_score": 15.57,
+        "activity": 303.49,
+        "code_changes": 52507
+    },
+    {
+        "project": "symfony/symfony",
+        "health_score": 16.25,
+        "activity": 559.59,
+        "code_changes": 217185
+    },
+    {
+        "project": "systemd/systemd",
+        "health_score": 16.56,
+        "activity": 555.94,
+        "code_changes": 66979
+    },
+    {
+        "project": "tachiyomiorg/tachiyomi",
+        "health_score": 14.79,
+        "activity": 291.22,
+        "code_changes": 26453
+    },
+    {
+        "project": "tachiyomiorg/tachiyomi-extensions",
+        "health_score": 14.28,
+        "activity": 139.41,
+        "code_changes": 876
+    },
+    {
+        "project": "tailscale/tailscale",
+        "health_score": 18.56,
+        "activity": 653.85,
+        "code_changes": 36466
+    },
+    {
+        "project": "taosdata/TDengine",
+        "health_score": 21.11,
+        "activity": 299.66,
+        "code_changes": 1948589
+    },
+    {
+        "project": "taozhiyu/TyProAction",
+        "health_score": 15.18,
+        "activity": 219.87,
+        "code_changes": 45887
+    },
+    {
+        "project": "TeamNewPipe/NewPipe",
+        "health_score": 9.24,
+        "activity": 182.14,
+        "code_changes": 3823
+    },
+    {
+        "project": "tensorflow/tensorflow",
+        "health_score": 21.43,
+        "activity": 586.05,
+        "code_changes": 1446222
+    },
+    {
+        "project": "termux/termux-packages",
+        "health_score": 17.02,
+        "activity": 365.9,
+        "code_changes": 22258
+    },
+    {
+        "project": "tgstation/tgstation",
+        "health_score": 19.75,
+        "activity": 781.08,
+        "code_changes": 311979
+    },
+    {
+        "project": "TP-Lab/tokens",
+        "health_score": 9.53,
+        "activity": 72.2,
+        "code_changes": 2966
+    },
+    {
+        "project": "trinodb/trino",
+        "health_score": 18.01,
+        "activity": 515.32,
+        "code_changes": 363498
+    },
+    {
+        "project": "trustwallet/assets",
+        "health_score": 9.23,
+        "activity": 245.5,
+        "code_changes": 30326
+    },
+    {
+        "project": "type-challenges/type-challenges",
+        "health_score": 9.62,
+        "activity": 144.14,
+        "code_changes": 226
+    },
+    {
+        "project": "uBlockOrigin/uAssets",
+        "health_score": 18.01,
+        "activity": 587.14,
+        "code_changes": 175
+    },
+    {
+        "project": "Ultimaker/Cura",
+        "health_score": 14.48,
+        "activity": 255.67,
+        "code_changes": 141307
+    },
+    {
+        "project": "ultralytics/yolov5",
+        "health_score": 17.11,
+        "activity": 114.13,
+        "code_changes": 1199
+    },
+    {
+        "project": "unifyai/ivy",
+        "health_score": 12.62,
+        "activity": 164.68,
+        "code_changes": 3246
+    },
+    {
+        "project": "ValveSoftware/Dota2-Gameplay",
+        "health_score": 15.88,
+        "activity": 595.04,
+        "code_changes": 18754
+    },
+    {
+        "project": "ValveSoftware/Proton",
+        "health_score": 15.83,
+        "activity": 355.14,
+        "code_changes": 26621
+    },
+    {
+        "project": "vectordotdev/vector",
+        "health_score": 18.66,
+        "activity": 302.09,
+        "code_changes": 30203
+    },
+    {
+        "project": "vercel/next.js",
+        "health_score": 23.09,
+        "activity": 1492.17,
+        "code_changes": 538361
+    },
+    {
+        "project": "vitejs/vite",
+        "health_score": 17.29,
+        "activity": 382.63,
+        "code_changes": 86169
+    },
+    {
+        "project": "void-linux/void-packages",
+        "health_score": 16.88,
+        "activity": 485.68,
+        "code_changes": 22926
+    },
+    {
+        "project": "webcompat/web-bugs",
+        "health_score": 17.26,
+        "activity": 306.15,
+        "code_changes": 57653
+    },
+    {
+        "project": "wjz304/Redpill_CustomBuild",
+        "health_score": 15.18,
+        "activity": 173.56,
+        "code_changes": 8743
+    },
+    {
+        "project": "woocommerce/woocommerce",
+        "health_score": 18.75,
+        "activity": 706.36,
+        "code_changes": 217481
+    },
+    {
+        "project": "WordPress/gutenberg",
+        "health_score": 21.01,
+        "activity": 1042.11,
+        "code_changes": 281806
+    },
+    {
+        "project": "xamarin/xamarin-macios",
+        "health_score": 17.98,
+        "activity": 224.85,
+        "code_changes": 316979
+    },
+    {
+        "project": "xbmc/xbmc",
+        "health_score": 18.46,
+        "activity": 297.14,
+        "code_changes": 73023
+    },
+    {
+        "project": "yt-dlp/yt-dlp",
+        "health_score": 23.58,
+        "activity": 566.79,
+        "code_changes": 9425
+    },
+    {
+        "project": "yuzu-emu/yuzu",
+        "health_score": 14.69,
+        "activity": 452.97,
+        "code_changes": 94578
+    },
+    {
+        "project": "zephyrproject-rtos/zephyr",
+        "health_score": 30.1,
+        "activity": 2289.34,
+        "code_changes": 628611
+    },
+    {
+        "project": "zero-to-mastery/start-here-guidelines",
+        "health_score": 0,
+        "activity": 251.92,
+        "code_changes": 3916
+    },
+    {
+        "project": "ziglang/zig",
+        "health_score": 17.13,
+        "activity": 502.11,
+        "code_changes": 122844
+    },
+    {
+        "project": "zulip/zulip",
+        "health_score": 21.78,
+        "activity": 491.01,
+        "code_changes": 110913
+    }
+]
