@@ -1,9 +1,0 @@
-name: Cloud Native - Wasm - Packaging, Registries & Application Delivery
-type: Tech-2
-data:
-  platforms:
-    - name: GitHub
-      type: Code Hosting
-      repos:
-        - id: 36960321
-          name: opencontainers/runc

@@ -1,9 +1,0 @@
-name: Database - Columnar
-type: Tech-1
-data:
-  platforms:
-    - name: GitHub
-      type: Code Hosting
-      repos:
-        - id: 170496871
-          name: gridgain/gridgain
