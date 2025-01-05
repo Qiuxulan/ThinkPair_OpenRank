@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f0f0;
+            background-color: transparent;
         }
         
         .container {
@@ -22,8 +22,8 @@
         }
         
         #wordcloud-canvas {
-            border: 1px solid #ddd;
-            background-color: white;
+            border: none;
+            background-color: transparent;
         }
         
         .hover-window {
@@ -31,32 +31,44 @@
             position: absolute;
             background-color: rgba(255, 255, 255, 0.95);
             border-radius: 6px;
-            padding: 10px;
+            padding: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            width: 300px;
+            width: 200px;
             font-family: Arial, sans-serif;
         }
         
         .hover-window h3 {
-            margin: 0 0 8px 0;
-            font-size: 16px;
+            margin: 0 0 6px 0;
+            font-size: 12px;
         }
         
         .hover-window p {
-            margin: 0 0 8px 0;
-            font-size: 14px;
+            margin: 0 0 6px 0;
+            font-size: 10px;
+            line-height: 1.4;
         }
         
         .hover-window h4 {
-            margin: 8px 0 4px 0;
-            font-size: 14px;
+            margin: 6px 0 4px 0;
+            font-size: 10px;
         }
         
         .hover-window ul {
             margin: 0;
-            padding-left: 20px;
-            font-size: 13px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px 8px;
+            font-size: 9px;
+        }
+        
+        .hover-window li {
+            flex: 0 0 calc(50% - 4px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     </style>
 </head>
@@ -69,734 +81,297 @@
     <script>
         // 词频数据
         const words = [
-    {text: "API", size: 346.5},
-    {text: "GitHub", size: 337.5},
-    {text: "MIT", size: 148.5},
-    {text: "UI", size: 144.0},
-    {text: "CLI", size: 126.0},
-    {text: "License", size: 90.0},
-    {text: "CI", size: 90.0},
-    {text: "SQL", size: 90.0},
-    {text: "Slack", size: 90.0},
-    {text: "JavaScript", size: 85.5},
-    {text: "CPU", size: 81.0},
-    {text: "Windows", size: 76.5},
-    {text: "SDK", size: 76.5},
-    {text: "HTML", size: 67.5},
-    {text: "Discord", size: 63.0},
-    {text: "Intel", size: 63.0},
-    {text: "Microsoft", size: 63.0},
-    {text: "Kubernetes", size: 63.0},
-    {text: "BSD", size: 58.5},
-    {text: "Apache License", size: 58.5},
-    {text: "the Apache License", size: 58.5},
-    {text: "Docker", size: 54.0},
-    {text: "Google", size: 54.0},
-    {text: "Android", size: 54.0},
-    {text: "Apache", size: 49.5},
-    {text: "GPU", size: 49.5},
-    {text: "Postgres", size: 45.0},
-    {text: "LLM", size: 45.0},
-    {text: "doc", size: 40.5},
-    {text: "AI", size: 40.5},
-    {text: "TypeScript", size: 40.5},
-    {text: "node", size: 39.0},
-    {text: "PDF", size: 36.0},
-    {text: "CMake", size: 36.0},
-    {text: "Python", size: 36.0},
-    {text: "ASF", size: 36.0},
-    {text: "IDE", size: 36.0},
-    {text: "IP", size: 31.5},
-    {text: "PyTorch", size: 31.5},
-    {text: "English", size: 31.5},
-    {text: "the Apache Software Foundation", size: 31.5},
-    {text: "NOTICE", size: 31.5},
-    {text: "PyPI", size: 31.5},
-    {text: "Microsoft Open Source Code of", size: 31.5},
-    {text: "Ethereum", size: 31.5},
-    {text: "python", size: 28.0},
-    {text: "LLVM", size: 27.0},
-    {text: "Linux", size: 27.0},
-    {text: "IRC", size: 27.0},
-    {text: "Apple", size: 27.0},
-    {text: "AMD", size: 27.0},
-    {text: "Elasticsearch", size: 27.0},
-    {text: "VSCode", size: 27.0},
-    {text: "AWS", size: 27.0},
-    {text: "Makefile", size: 22.5},
-    {text: "Continuous Integration", size: 22.5},
-    {text: "CUDA", size: 22.5},
-    {text: "IBM", size: 22.5},
-    {text: "GitHub Actions", size: 22.5},
-    {text: "Community", size: 22.5},
-    {text: "RPC", size: 22.5},
-    {text: "Maven", size: 22.5},
-    {text: "GNU", size: 22.5},
-    {text: "NPM", size: 22.5},
-    {text: "VS Code", size: 22.5},
-    {text: "CSS", size: 22.5},
-    {text: "PHP", size: 22.5},
-    {text: "LangChain", size: 18.0},
-    {text: "Telegram", size: 18.0},
-    {text: "IoT", size: 18.0},
-    {text: "Chrome", size: 18.0},
-    {text: "DevOps", size: 18.0},
-    {text: "GCC", size: 18.0},
-    {text: "Mac", size: 18.0},
-    {text: "Docker Desktop", size: 18.0},
-    {text: "OpenShift", size: 18.0},
-    {text: "StackOverflow", size: 18.0},
-    {text: "Eclipse", size: 18.0},
-    {text: "WordPress", size: 18.0},
-    {text: "LlamaIndex", size: 18.0}
+    { text: "API", size: 346.5 },
+    { text: "GitHub", size: 337.5 },
+    { text: "MIT", size: 148.5 },
+    { text: "UI", size: 144.0 },
+    { text: "CLI", size: 126.0 },
+    { text: "License", size: 105.0 },
+    { text: "CI", size: 105.0 },
+    { text: "Slack", size: 105.0 },
+    { text: "SQL", size: 95.0 },
+    { text: "JavaScript", size: 95.0 },
+    { text: "python", size: 90.0 },
+    { text: "CPU", size: 85.5 },
+    { text: "Windows", size: 85.5 },
+    { text: "SDK", size: 85.5 },
+    { text: "HTML", size: 80.0 },
+    { text: "Discord", size: 70.5 },
+    { text: "Intel", size: 70.5 },
+    { text: "Microsoft", size: 65.0 },
+    { text: "BSD", size: 65.0 },
+    { text: "Apache License", size: 65.0 },
+    { text: "the Apache License", size: 65.0 },
+    { text: "Kubernetes", size: 65.0 },
+    { text: "javascript", size: 57.0 },
+    { text: "typescript", size: 54.0 },
+    { text: "Docker", size: 54.0 },
+    { text: "Google", size: 54.0 },
+    { text: "Apache", size: 49.5 },
+    { text: "GPU", size: 49.5 },
+    { text: "node", size: 45.0 },
+    { text: "LLM", size: 45.0 }
         ];
 
         // 描述数据
         const descriptions ={
-    "API": "The API is a set of APIs that allow you to create and manage your own custom web applications. The API provides a simple way to interact with your web application",
-    "GitHub": "The project is open source and can be used to build applications for the web, mobile, and IoT. It is also open-source and has been tested on",
-    "MIT": "The MIT Technology Review is a quarterly journal of MIT's Department of Computer Science and Engineering. It is published by the MIT Press Office.",
-    "UI": "The UI is a simple, simple interface that allows you to create a user interface for your app. It is designed to be easy to use and to provide a",
-    "CLI": "The CLI is a command line tool that allows you to create and manage your own custom CLI. It is designed to be used by anyone who wants to use a",
-    "License": "The License is available under the terms of The MIT License. See the LICENSE file for more information.",
-    "CI": "The technology is a combination of a computer and a mobile phone. The mobile device is connected to a server and the server is able to send and receive data from",
-    "SQL": "The SQL Server database is a set of tables that are used to store data in a database. The tables are stored in the database and are called tables. In",
-    "Slack": "The Slack is a web-based chat service that allows users to send and receive messages from their Slack accounts. The service is designed to be a \"safe,",
-    "JavaScript": "The JavaScript specification is a set of standards for JavaScript that are used to implement the following features:\n.NET Framework 4.5\n, .NET Core 4",
-    "CPU": "The CPU is a single-core processor that is designed to run on a variety of processors. It is capable of running on any number of different CPUs. The",
-    "Windows": "The Windows 10 Technical Preview is available for download from the Windows Store. It is a preview of Windows 8.1 and Windows Server 2012 R2. The Windows",
-    "SDK": "The SDK is a set of APIs that allow developers to create and use applications that are not only easy to use but also easy for developers and developers alike to build",
-    "HTML": "The HTML is a set of HTML documents that are used to create HTML pages. The HTML document is used for the HTML page. It is the most common type",
-    "Discord": "The Discord is a decentralized, peer-to-peer chat system that allows users to communicate with each other and with other users. It is designed to be a",
-    "Intel": "Intel's new chip is called the \"Intel Core i7-4790K,\" and it's a quad-core processor that's capable of running at up",
-    "Microsoft": "Microsoft is a cloud computing platform that enables users to create, manage, and share data across multiple devices. It is designed to be a \"cloud computing\" platform",
-    "Kubernetes": "Kubernetis is a distributed application platform that allows users to create, manage, and manage their own applications. Kuberta is an open",
-    "BSD": "The Bsd is a set of cryptographic algorithms that are used to encrypt and decrypt data. The Bd is the cryptographic algorithm used by the Bcrypto",
-    "Apache License": "The Apache Software Foundation (ASF) is a nonprofit organization that provides technical support to organizations that provide technical assistance to the Apache software community. The ASF",
-    "the Apache License": "The Apache Software Foundation (ASF) is a nonprofit organization that provides technical support to the development of software. The ASF is responsible for the following",
-    "Docker": "The Docker Engine\n. . .\n (This is a very basic description, but it is very useful for those who want to learn more about Docker.)",
-    "Google": "Google's new search engine will be called Google.com, and it will have a \"Google\" in the title. Google will also have the ability to search",
-    "Android": "The Android platform is a set of APIs that allow developers to build apps that run on top of Android. The Android Platform is an open source project that is designed",
-    "Apache": "The Apache web server is a web application that runs on a server running Apache. It is used to run Apache on the server. The Apache server uses a set",
-    "GPU": "The GPU is a single-core, single core, multi-threaded, high-performance, low-power, open-source, ARM-based,",
-    "Postgres": "The PostgreSQL database is a distributed database that is used to store and retrieve data from a database. The PostSQL database uses a set of algorithms to perform",
-    "LLM": "The LLVM compiler is a set of tools that can be used to compile and run LLV, LLX, and LLJ. It is designed to",
-    "doc": "The document is available for download at http://www.microsoft.com/en-us/library/bb81701(v=vs.85).",
-    "AI": "The AI is a set of algorithms that can be used to perform tasks such as:\n. . .\n, . , , . to compute the number of",
-    "TypeScript": "The following is a list of all the technical details that are required to implement TypeC. The following are the most important ones:\n.NET Core",
-    "node": "The technology nodes are connected to a network of nodes that are responsible for providing the services that the node provides. The nodes provide the service to the user. For",
-    "PDF": "The PDF is a set of instructions for the user to use the software. The instructions are designed to be used in conjunction with the instructions provided in the manual.",
-    "CMake": "The C++ standard defines a set of C functions that are called \"c++ functions\" and are defined in the C header file C.h. The",
-    "Python": "The Python language is a set of Python modules that are used to build and run Python applications. The Python module is used for the Python programming language. It is",
-    "ASF": "The ASDF is a set of rules that govern the use of data in the field of computer science. The rules are designed to ensure that the data is",
-    "IDE": "The IDE is a set of tools that can be used to create a simple, simple program. It is designed to be a very simple and simple way to program",
-    "IP": "The IP is a set of cryptographic keys that are used to encrypt and decrypt the data. The key is then used by the computer to decrypt and store the information",
-    "PyTorch": "PyTorcher is a Python library for generating and manipulating data in a secure manner. It is designed to be used with Python 3.6 and Python",
-    "English": "The technical specification is available for download at http://www.microsoft.com/en-us/library/bb81701(v=vs.85",
-    "the Apache Software Foundation": "The Apache software Foundation is a nonprofit organization that provides technical support to the development of software for the benefit of all users. The Apache Foundation provides software",
-    "NOTICE": "The technical specification is available at http://www.microsoft.com/en-us/library/bb81701(v=vs.85).aspx",
-    "PyPI": "The PyPy project is a Python library for building and running Python applications. It is designed to be a simple, fast, and secure way to build and",
-    "Microsoft Open Source Code of": "The code is available on GitHub.",
-    "Ethereum": "The technical details of Ethereum are described in the technical documentation. The technical specifications are provided in a format that is easy to read and understand. This document is not",
-    "python": "The Python language is a set of Python modules that are used to build and run Python applications. The Python module is used for the Python programming language. It is",
-    "LLVM": "The LLV-based virtual machine is a virtualized system that can be used to perform a variety of tasks. It is designed to be a \"virtual",
-    "Linux": "The Linux Foundation is a nonprofit organization that provides technical support to organizations and individuals interested in developing and maintaining Linux. The Linux foundation is an open source project that is",
-    "IRC": "The technical specification is available at https://github.com/bitcoin/bitcoind/blob/master/doc/crypto/blockchain.md",
-    "Apple": "The company will also provide a list of products and services that will be available to customers. The list will include:\n. . .\n, . , .",
-    "AMD": "AMD's new Radeon R9 290X is a new graphics card that is designed to be a \"head-mounted display\" (HMD) that can be",
-    "Elasticsearch": "The ElasticSearch API is a set of APIs that allow you to query a database of Elastic objects. The API allows you access to the Elastic object's data",
-    "VSCode": "The VCSode is a digital camera that can capture images of objects in a 3D environment. It can also capture video and audio. The V",
-    "AWS": "The AWS API is a set of APIs that allow you to create, manage, and manage your own AWS services. The AWS APIs are designed to be used by",
-    "Makefile": "The software is available for free on the GNU General Public License, version 2.0. The software can be downloaded from the following link: http://www",
-    "Continuous Integration": "The technology is designed to be used in a variety of applications, including:\n. . .\n, . , ., , ,\n ( . )",
-    "CUDA": "The CUDNN is a simple, yet powerful, algorithm that can be used to generate a set of images. It is based on the CUDFNN",
-    "IBM": "The IBM is a computer system that is designed to store information about the world's information. It is the first computer to be designed for the purpose of storing information",
-    "GitHub Actions": "The GitHub Action is a simple, yet powerful tool that allows you to create and manage your GitHub projects. It is also a great way to get started with",
-    "Community": "Provides a summary of all the information that is required to be provided to the community. The community will be able to provide a detailed description and a description for",
-    "RPC": "The RPC is a distributed, peer-to-peer, distributed database that provides a means for users to access and retrieve information from a database. The RPC provides",
-    "Maven": "Maven is a Java library for creating and managing Java applications. It is designed to be a simple, fast, and easy to use Java application. M",
-    "GNU": "The GNU project is a free software project that aims to provide a complete and open source operating system for the GNU system. The GNU Project is an open-source",
-    "NPM": "The NAM is a distributed, peer-to-peer, distributed ledger that enables the creation of new, secure, and scalable digital assets. It is",
-    "VS Code": "The VS code is a set of instructions that are used to create a new VS program. The instructions are written in C++, and are not part of",
-    "CSS": "The CSS is a set of rules that are used to define the content of a page. The rules are defined by the CSS rules. For example, the rules",
-    "PHP": "The PHP language is a set of programming languages that are used to write code. The PHP programming language has been around for a long time, and it is very",
-    "LangChain": "The technology is based on a combination of a blockchain and a distributed ledger. The blockchain is a decentralized ledger that allows for the creation of new transactions. A",
-    "Telegram": "The Telegram app is a service that allows users to send and receive messages from anywhere in the world. It is designed to be a simple, easy to use,",
-    "IoT": "The IoT is a set of technologies that can be used to create a network of connected devices. The IoT can also be a way to connect to a wide range",
-    "Chrome": "The Chrome browser is a browser that runs on a computer that is connected to a network. It is used to access websites, search, and other services. Chrome",
-    "DevOps": "The Devops are a set of tools that are used to manage and manage the Dev Ops. They are designed to be used by the team to help them",
-    "GCC": "The GCC is a set of cryptographic algorithms that are used to encrypt and decrypt data. The cryptographic algorithm is called a \"key\" and is used by the cryptographic",
-    "Mac": "The Mac is a computer that runs on a Mac OS X operating system. It is designed to run on the Mac. The Mac uses a standard operating systems like",
-    "Docker Desktop": "The Docker desktop is a containerized, distributed, and distributed application that runs on a Docker server. It is designed to be a lightweight, lightweight and fast",
-    "OpenShift": "The OpenStack Foundation is a nonprofit organization that provides technical support to organizations that are developing and deploying Open Source software. The Foundation's mission is to provide technical",
-    "StackOverflow": "The Stack Overflow team is currently working on a new feature that will allow users to create and share their own Stack Exchange accounts. The feature will be",
-    "Eclipse": "The Eclipse is a small, lightweight, and lightweight-looking computer that can be used to run a variety of applications. It is designed to be a very versatile",
-    "WordPress": "The WordPress plugin is a WordPress-based web application that allows users to create, edit, and share content on their WordPress site. The WordPress application is designed to",
-    "LlamaIndex": "The technology is based on a combination of a computer and a smartphone. The smartphone is a tablet computer that can be used to access the Internet. It"
+    "API": "An API is a set of protocols and tools that enable different software applications to communicate and interact with each other.",
+    "GitHub": "GitHub is a web-based platform for version control and collaboration using Git, allowing developers to host and review code.",
+    "MIT": "The MIT License is a permissive open-source license allowing users to freely use, modify, and distribute software with minimal restrictions.",
+    "UI": "UI (User Interface) encompasses the visual elements through which users interact with software, including layouts, buttons, and icons.",
+    "CLI": "CLI (Command Line Interface) is a text-based interface that allows users to interact with software by typing commands.",
+    "License": "The License is the MIT License, permitting use, modification, and distribution of the software with proper attribution.",
+    "CI": "CI (Continuous Integration) is a practice where developers frequently merge code changes, triggering automated builds and tests.",
+    "Slack": "Slack is a collaboration platform offering messaging, file sharing, and integrations to enhance team communication and productivity.",
+    "SQL": "SQL is a language used to manage and manipulate relational databases, enabling data querying, updating, and schema management.",
+    "JavaScript": "JavaScript is a programming language for creating interactive and dynamic web content, essential for modern web development.",
+    "python": "Python is a high-level programming language known for its readability and versatility, used in web development, data science, and more.",
+    "CPU": "The CPU (Central Processing Unit) is the primary component that executes instructions and performs calculations in a computer.",
+    "Windows": "Windows is a popular operating system by Microsoft, providing a graphical interface and support for a wide range of applications.",
+    "SDK": "An SDK (Software Development Kit) is a collection of tools and libraries that developers use to create applications for specific platforms.",
+    "HTML": "HTML is the standard markup language for creating and structuring content on the web, defining elements like text, images, and links.",
+    "Discord": "Discord is a communication platform offering text, voice, and video chat, popular among gaming and developer communities.",
+    "Intel": "Intel is a leading technology company known for manufacturing microprocessors and other semiconductor components for various devices.",
+    "Microsoft": "Microsoft is a multinational tech company offering software, services, and devices, including Windows, Office, and Azure cloud services.",
+    "BSD": "BSD refers to a family of permissive open-source licenses allowing redistribution and use with minimal restrictions.",
+    "Apache License": "The Apache License is a permissive open-source license allowing free use, modification, and distribution of software with proper attribution.",
+    "the Apache License": "The Apache License is an open-source license that permits use, modification, and distribution, requiring inclusion of original notices.",
+    "Kubernetes": "Kubernetes is an open-source platform for automating deployment, scaling, and management of containerized applications.",
+    "javascript": "JavaScript is a versatile language for creating interactive web content, essential for front-end development and supported by all browsers.",
+    "typescript": "TypeScript is a superset of JavaScript that adds static typing, enhancing code quality and maintainability for large-scale applications.",
+    "Docker": "Docker is a platform for developing, shipping, and running applications in lightweight, portable containers ensuring consistent environments.",
+    "Google": "Google is a technology company specializing in internet services like search, advertising, cloud computing, and software products.",
+    "Apache": "Apache HTTP Server is a widely used open-source web server software that handles HTTP requests and serves web content efficiently.",
+    "GPU": "A GPU (Graphics Processing Unit) accelerates image and video processing, essential for gaming, graphics design, and parallel computations.",
+    "node": "Node.js is a JavaScript runtime that allows execution of JavaScript on the server side, enabling scalable network applications.",
+    "LLM": "LLM (Large Language Model) refers to advanced AI models trained on vast text data to understand and generate human-like language."
         };
 
         // 相关仓库数据
         const repos = {
     "API": [
-        "dristi-solutions",
-        "airflow",
-        "openvino.genai",
+        "valkey",
         "dtfs2",
-        "diffusers"
+        "ethrex",
+        "azure-rest-api-specs",
+        "runtime"
     ],
     "GitHub": [
-        "spack",
-        "NeMo",
-        "ToolJet",
+        "php-src",
         "dtfs2",
-        "FluidFramework"
+        "runtime",
+        "wiredtiger",
+        "RSSHub-1"
     ],
     "MIT": [
-        "spack",
-        "llama.cpp",
-        "rust",
+        "powdr",
+        "RSSHub-1",
+        "expo",
         "fluentui",
-        "ruff"
+        "emscripten"
     ],
     "UI": [
-        "nextjs-task-system",
+        "dtfs2",
         "airflow",
-        "hyperswitch",
-        "presto",
-        "dtfs2"
+        "flutter",
+        "App",
+        "ladybird"
     ],
     "CLI": [
-        "presto",
-        "llama.cpp",
-        "FluidFramework",
-        "chainlink",
-        "runtime"
+        "ethrex",
+        "runtime",
+        "n8n",
+        "expo",
+        "coder"
     ],
     "License": [
         "airflow",
-        "doris",
         "fluentui",
-        "diffusers",
-        "gutenberg"
+        "kubevirt",
+        "openobserve",
+        "gpt4free"
     ],
     "CI": [
+        "dtfs2",
         "airflow",
-        "dtfs2",
-        "FluidFramework",
-        "atmos",
-        "staged-recipes"
-    ],
-    "SQL": [
-        "metabase",
-        "doris",
-        "presto",
-        "dtfs2",
-        "trino"
-    ],
-    "Slack": [
-        "spack",
-        "metabase",
-        "presto",
-        "grafana",
-        "aws-cdk"
-    ],
-    "JavaScript": [
-        "nextjs-task-system",
-        "presto",
-        "ToolJet",
-        "dtfs2",
+        "aztec-packages",
+        "ppc-2024-autumn",
         "FluidFramework"
     ],
+    "Slack": [
+        "kubevirt",
+        "openobserve",
+        "grafana",
+        "App",
+        "teleport"
+    ],
+    "SQL": [
+        "dtfs2",
+        "openobserve",
+        "risingwave",
+        "datafusion",
+        "trino"
+    ],
+    "JavaScript": [
+        "dtfs2",
+        "vita-min",
+        "flutter",
+        "expo",
+        "FluidFramework"
+    ],
+    "python": [
+        "flink",
+        "airflow",
+        "datafusion",
+        "composio",
+        "cudf"
+    ],
     "CPU": [
-        "openvino",
-        "doris",
-        "unodb",
+        "chainlink",
+        "velox",
+        "Reactant.jl",
         "openvino.genai",
-        "oneDNN"
+        "ecal"
     ],
     "Windows": [
         "php-src",
-        "neovim",
-        "FluidFramework",
-        "gpt4free",
-        "pytorch"
+        "Skript",
+        "lxd",
+        "metamask-extension",
+        "openssl"
     ],
     "SDK": [
-        "juju",
-        "hyperswitch",
-        "expo",
-        "mlrun",
-        "flutter"
+        "ic",
+        "novu",
+        "jaeger",
+        "sdk-nrf",
+        "hyperswitch"
     ],
     "HTML": [
-        "kafka",
-        "stylelint",
         "PrairieLearn",
+        "librarium",
+        "docs.getdbt.com",
         "layout_product-cards",
-        "gutenberg"
+        "layout_moyo-header"
     ],
     "Discord": [
-        "openvino",
-        "expo",
-        "tgstation",
-        "OpenHands",
-        "gitea"
+        "gitea",
+        "Skript",
+        "novu",
+        "roslyn",
+        "diffusers"
     ],
     "Intel": [
-        "openvino",
-        "llvm",
-        "unodb",
         "openvino.genai",
-        "llama.cpp"
+        "velox",
+        "ecal",
+        "zephyr",
+        "flutter"
     ],
     "Microsoft": [
-        "FluidFramework",
-        "velox",
-        "pytorch",
         "openvmm",
-        "fluentui"
-    ],
-    "Kubernetes": [
-        "airflow",
-        "juju",
-        "datahub",
-        "ToolJet",
-        "website"
+        "runtime",
+        "fleet",
+        "velox",
+        "winget-pkgs"
     ],
     "BSD": [
-        "expo",
-        "bevy",
+        "ladybird",
+        "rust",
+        "community.general",
         "RediSearch",
-        "pytorch",
-        "ceph"
+        "Cataclysm-DDA"
     ],
     "Apache License": [
-        "spack",
-        "appsmith",
-        "doris",
+        "rust",
+        "powdr",
+        "hedera-services",
         "datahub",
-        "hedera-services"
+        "ecal"
     ],
     "the Apache License": [
+        "arrow",
+        "iceberg",
         "airflow",
-        "doris",
-        "transformers",
         "diffusers",
-        "gravitino"
+        "zstack"
+    ],
+    "Kubernetes": [
+        "tidb",
+        "airflow",
+        "datahub",
+        "ray",
+        "coder"
+    ],
+    "javascript": [
+        "expo",
+        "stdlib",
+        "composio",
+        "twenty",
+        "storybook"
+    ],
+    "typescript": [
+        "novu",
+        "twenty",
+        "n8n",
+        "storybook",
+        "expo"
     ],
     "Docker": [
         "ignite-3",
-        "NeMo",
-        "risingwave",
-        "llama.cpp",
-        "cal.com"
+        "camunda",
+        "teleport",
+        "cal.com",
+        "staged-recipes"
     ],
     "Google": [
-        "stylelint",
         "Giddh-New-Angular4-App",
-        "flutter",
-        "OpenROAD",
-        "cal.com"
-    ],
-    "Android": [
-        "RSSHub",
-        "expo",
-        "RSSHub-1",
-        "freeCodeCamp",
-        "App"
-    ],
-    "Apache": [
-        "kafka",
-        "doris",
-        "ignite-3",
-        "FreeRDP",
-        "connectedhomeip"
-    ],
-    "GPU": [
-        "openvino",
-        "cudf",
-        "openvino.genai",
-        "NeMo",
-        "MIOpen"
-    ],
-    "Postgres": [
-        "risingwave",
-        "island.is",
-        "chainlink",
-        "cal.com",
-        "vets-api"
-    ],
-    "LLM": [
-        "cody",
-        "openvino.genai",
-        "NeMo",
-        "OtterAI",
-        "llama.cpp"
-    ],
-    "doc": [
-        "llvm",
-        "airflow",
-        "bevy",
-        "woocommerce",
-        "Cataclysm-DDA"
-    ],
-    "AI": [
-        "openvino",
-        "tt-mlir",
-        "NeMo",
-        "gravitino",
-        "tachybase"
-    ],
-    "TypeScript": [
-        "nextjs-task-system",
-        "FluidFramework",
-        "App",
-        "aws-cdk",
-        "engine"
-    ],
-    "node": [
-        "litespace",
-        "ydb",
-        "aztec-packages",
-        "presto",
-        "dtfs2"
-    ],
-    "PDF": [
-        "Daft",
-        "metriport",
-        "docs-cn",
-        "LedgerSMB",
-        "Artemis"
-    ],
-    "CMake": [
-        "unodb",
-        "valkey",
-        "MIOpen",
-        "neovim",
-        "ppc-2024-autumn"
-    ],
-    "Python": [
-        "NeMo",
-        "pytorch",
-        "oppia",
-        "ruff",
-        "partcad"
-    ],
-    "ASF": [
-        "airflow",
-        "doris",
-        "gravitino",
-        "atmos",
-        "flink"
-    ],
-    "IDE": [
-        "presto",
-        "App",
-        "Giddh-New-Angular4-App",
-        "velox",
-        "stackrox"
-    ],
-    "IP": [
-        "juju",
-        "connectedhomeip",
-        "ic",
-        "opentitan",
-        "LedgerSMB"
-    ],
-    "PyTorch": [
-        "openvino",
-        "transformers",
-        "NeMo",
-        "llama.cpp",
-        "triton"
-    ],
-    "English": [
-        "NeMo",
-        "tachybase",
-        "node",
-        "openobserve",
-        "dosbox-x"
-    ],
-    "the Apache Software Foundation": [
-        "airflow",
-        "doris",
-        "gravitino",
-        "atmos",
-        "datafusion"
-    ],
-    "NOTICE": [
-        "airflow",
-        "doris",
-        "gravitino",
-        "atmos",
-        "datafusion"
-    ],
-    "PyPI": [
-        "airflow",
-        "dagster",
-        "mlrun",
-        "staged-recipes",
-        "pennylane"
-    ],
-    "Microsoft Open Source Code of": [
-        "FluidFramework",
-        "openvmm",
-        "fluentui",
-        "winget-pkgs",
-        "azure-sdk-for-java"
-    ],
-    "Ethereum": [
-        "aztec-packages",
-        "feralfile-app",
-        "chainlink",
-        "strata",
-        "ethrex"
-    ],
-    "python": [
-        "spack",
-        "airflow",
-        "zulip",
-        "sentry",
-        "ruff"
-    ],
-    "LLVM": [
-        "llvm",
-        "unodb",
-        "triton",
-        "llvm-project",
-        "emscripten"
-    ],
-    "Linux": [
-        "airflow",
-        "unodb",
-        "osrd",
-        "nixpkgs",
-        "zstack"
-    ],
-    "IRC": [
-        "systemd",
-        "FreeRDP",
-        "nixpkgs",
-        "LedgerSMB",
-        "Cataclysm-DDA"
-    ],
-    "Apple": [
-        "dagster",
-        "velox",
-        "diffusers",
-        "WebKit",
-        "layout_catalog"
-    ],
-    "AMD": [
-        "MIOpen",
-        "llama.cpp",
-        "triton",
-        "vllm",
-        "pytorch"
-    ],
-    "Elasticsearch": [
-        "doris",
-        "ToolJet",
-        "elasticsearch",
-        "openobserve",
-        "integrations"
-    ],
-    "VSCode": [
-        "tgstation",
-        "mlrun",
-        "FluidFramework",
-        "react_dynamic-list-of-todos",
-        "forceteki"
-    ],
-    "AWS": [
-        "hyperswitch",
-        "ToolJet",
-        "island.is",
-        "aws-cdk",
-        "atmos"
-    ],
-    "Makefile": [
-        "valkey",
-        "neovim",
-        "ppc-2024-autumn",
-        "spbspu-labs-2024-aap-a",
-        "cpython"
-    ],
-    "Continuous Integration": [
-        "spbspu-labs-2024-aap-a",
-        "pytorch",
-        "practicum-android-diploma",
-        "gradle",
-        "roslyn"
-    ],
-    "CUDA": [
-        "cudf",
-        "NeMo",
-        "triton",
-        "pytorch",
-        "cccl"
-    ],
-    "IBM": [
-        "vllm",
-        "velox",
-        "ruff",
-        "dosbox-x",
-        "oneDNN"
-    ],
-    "GitHub Actions": [
-        "zulip",
-        "dtfs2",
-        "PrairieLearn",
-        "fleet",
-        "cpython"
-    ],
-    "Community": [
-        "airflow",
-        "OpenHands",
-        "twenty",
-        "openobserve",
-        "mui-x"
-    ],
-    "RPC": [
-        "kafka",
-        "grpc-go",
-        "neovim",
         "arrow",
-        "ethrex"
-    ],
-    "Maven": [
-        "kafka",
-        "presto",
-        "trino",
-        "flink",
-        "Skript"
-    ],
-    "GNU": [
-        "spbspu-labs-2024-aap-a",
-        "reactos",
-        "stdlib",
-        "oneDNN",
-        "gpt4free"
-    ],
-    "NPM": [
-        "dtfs2",
-        "hyperlane-monorepo",
-        "engine",
-        "fyle-mobile-app",
-        "stdlib"
-    ],
-    "VS Code": [
-        "cody",
-        "metamask-extension",
-        "runtime",
-        "partcad",
-        "content"
-    ],
-    "CSS": [
-        "nextjs-task-system",
-        "stylelint",
-        "dtfs2",
-        "Artemis",
-        "layout_moyo-header"
-    ],
-    "PHP": [
-        "php-src",
-        "RediSearch",
-        "eappointment",
-        "symfony",
-        "woocommerce"
-    ],
-    "LangChain": [
-        "openvino",
-        "mlflow",
-        "n8n",
-        "pydantic-ai"
-    ],
-    "Telegram": [
-        "RSSHub",
-        "gno",
-        "RSSHub-1",
-        "nixpkgs"
-    ],
-    "IoT": [
-        "fleet",
-        "zephyr",
-        "Paddle",
-        "risingwave"
-    ],
-    "Chrome": [
-        "App",
         "vita-min",
         "flutter",
-        "LedgerSMB"
+        "diffpy.utils"
     ],
-    "DevOps": [
-        "atmos",
-        "cpython",
-        "symfony",
-        "mlrun"
-    ],
-    "GCC": [
-        "velox",
-        "cpython",
-        "unodb",
-        "oneDNN"
-    ],
-    "Mac": [
-        "cpython",
-        "valkey",
-        "teleport",
-        "gpt4free"
-    ],
-    "Docker Desktop": [
-        "elasticsearch",
-        "metriport",
-        "iceberg",
-        "stackrox"
-    ],
-    "OpenShift": [
-        "openshift-docs",
-        "coder",
-        "stackrox",
-        "ToolJet"
-    ],
-    "StackOverflow": [
-        "azure-sdk-for-java",
-        "azure-sdk-for-js",
-        "OpenHands",
-        "ray"
-    ],
-    "Eclipse": [
+    "Apache": [
         "flink",
-        "kafka",
-        "zstack",
-        "Skript"
-    ],
-    "WordPress": [
+        "ignite-3",
+        "FreeRDP",
         "ruff",
-        "wp-calypso",
-        "jetpack",
-        "gutenberg"
+        "datafusion"
     ],
-    "LlamaIndex": [
-        "openvino",
-        "composio",
-        "mlflow",
+    "GPU": [
+        "openvino.genai",
+        "Reactant.jl",
+        "triton",
+        "cudf",
+        "MIOpen"
+    ],
+    "node": [
+        "ethrex",
+        "dtfs2",
+        "ydb",
+        "starrocks",
+        "chainlink"
+    ],
+    "LLM": [
+        "OtterAI",
+        "openvino.genai",
+        "cody",
+        "mlrun",
         "pydantic-ai"
     ]
         };
 
         // 设置词云布局
-        const width = 800;
-        const height = 800;
+        const width = 200;
+        const height = 250;
 
         const layout = d3.layout.cloud()
             .size([width, height])
             .words(words)
-            .padding(5)
+            .padding(3)
             .rotate(() => 0)
             .font("Impact")
-            .fontSize(d => Math.sqrt(d.size) * 3)
+            .fontSize(d => Math.sqrt(d.size) * 1)
             .on("end", draw);
 
         layout.start();
@@ -844,7 +419,7 @@
                 <p>${description}</p>
                 <h4>相关仓库:</h4>
                 <ul>
-                    ${repoList.map(repo => `<li>${repo}</li>`).join('')}
+                    ${repoList.map(repo => `<li>• ${repo}</li>`).join('')}
                 </ul>
             `;
             
