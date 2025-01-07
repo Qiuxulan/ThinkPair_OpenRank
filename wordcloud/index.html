@@ -362,13 +362,13 @@
         };
 
         // 设置词云布局
-        const width = 200;
-        const height = 250;
+        const width = 300;
+        const height = 400;
 
         const layout = d3.layout.cloud()
             .size([width, height])
             .words(words)
-            .padding(3)
+            .padding(5)
             .rotate(() => 0)
             .font("Impact")
             .fontSize(d => Math.sqrt(d.size) * 1)
