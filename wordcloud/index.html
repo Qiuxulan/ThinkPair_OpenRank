@@ -17,13 +17,22 @@
         }
         
         .container {
+            width: 300px;
+            height: 400px;
             position: relative;
             display: inline-block;
+        }
+        
+        #wordcloud {
+            width: 300px;
+            height: 400px;
         }
         
         #wordcloud-canvas {
             border: none;
             background-color: transparent;
+            width: 300px;
+            height: 400px;
         }
         
         .hover-window {
@@ -371,15 +380,15 @@
             .padding(5)
             .rotate(() => 0)
             .font("Impact")
-            .fontSize(d => Math.sqrt(d.size) * 1)
+            .fontSize(d => Math.sqrt(d.size) * 2)
             .on("end", draw);
 
         layout.start();
 
         function draw(words) {
             const svg = d3.select("#wordcloud").append("svg")
-                .attr("width", width)
-                .attr("height", height)
+                .attr("width", 300)
+                .attr("height", 400)
                 .append("g")
                 .attr("transform", `translate(${width/2},${height/2})`);
 
