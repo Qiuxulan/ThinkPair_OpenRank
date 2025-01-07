@@ -1,0 +1,212 @@
+{
+    "API": [
+        "valkey",
+        "dtfs2",
+        "ethrex",
+        "azure-rest-api-specs",
+        "runtime"
+    ],
+    "GitHub": [
+        "php-src",
+        "dtfs2",
+        "runtime",
+        "wiredtiger",
+        "RSSHub-1"
+    ],
+    "MIT": [
+        "powdr",
+        "RSSHub-1",
+        "expo",
+        "fluentui",
+        "emscripten"
+    ],
+    "UI": [
+        "dtfs2",
+        "airflow",
+        "flutter",
+        "App",
+        "ladybird"
+    ],
+    "CLI": [
+        "ethrex",
+        "runtime",
+        "n8n",
+        "expo",
+        "coder"
+    ],
+    "License": [
+        "airflow",
+        "fluentui",
+        "kubevirt",
+        "openobserve",
+        "gpt4free"
+    ],
+    "CI": [
+        "dtfs2",
+        "airflow",
+        "aztec-packages",
+        "ppc-2024-autumn",
+        "FluidFramework"
+    ],
+    "Slack": [
+        "kubevirt",
+        "openobserve",
+        "grafana",
+        "App",
+        "teleport"
+    ],
+    "SQL": [
+        "dtfs2",
+        "openobserve",
+        "risingwave",
+        "datafusion",
+        "trino"
+    ],
+    "JavaScript": [
+        "dtfs2",
+        "vita-min",
+        "flutter",
+        "expo",
+        "FluidFramework"
+    ],
+    "python": [
+        "flink",
+        "airflow",
+        "datafusion",
+        "composio",
+        "cudf"
+    ],
+    "CPU": [
+        "chainlink",
+        "velox",
+        "Reactant.jl",
+        "openvino.genai",
+        "ecal"
+    ],
+    "Windows": [
+        "php-src",
+        "Skript",
+        "lxd",
+        "metamask-extension",
+        "openssl"
+    ],
+    "SDK": [
+        "ic",
+        "novu",
+        "jaeger",
+        "sdk-nrf",
+        "hyperswitch"
+    ],
+    "HTML": [
+        "PrairieLearn",
+        "librarium",
+        "docs.getdbt.com",
+        "layout_product-cards",
+        "layout_moyo-header"
+    ],
+    "Discord": [
+        "gitea",
+        "Skript",
+        "novu",
+        "roslyn",
+        "diffusers"
+    ],
+    "Intel": [
+        "openvino.genai",
+        "velox",
+        "ecal",
+        "zephyr",
+        "flutter"
+    ],
+    "Microsoft": [
+        "openvmm",
+        "runtime",
+        "fleet",
+        "velox",
+        "winget-pkgs"
+    ],
+    "BSD": [
+        "ladybird",
+        "rust",
+        "community.general",
+        "RediSearch",
+        "Cataclysm-DDA"
+    ],
+    "Apache License": [
+        "rust",
+        "powdr",
+        "hedera-services",
+        "datahub",
+        "ecal"
+    ],
+    "the Apache License": [
+        "arrow",
+        "iceberg",
+        "airflow",
+        "diffusers",
+        "zstack"
+    ],
+    "Kubernetes": [
+        "tidb",
+        "airflow",
+        "datahub",
+        "ray",
+        "coder"
+    ],
+    "javascript": [
+        "expo",
+        "stdlib",
+        "composio",
+        "twenty",
+        "storybook"
+    ],
+    "typescript": [
+        "novu",
+        "twenty",
+        "n8n",
+        "storybook",
+        "expo"
+    ],
+    "Docker": [
+        "ignite-3",
+        "camunda",
+        "teleport",
+        "cal.com",
+        "staged-recipes"
+    ],
+    "Google": [
+        "Giddh-New-Angular4-App",
+        "arrow",
+        "vita-min",
+        "flutter",
+        "diffpy.utils"
+    ],
+    "Apache": [
+        "flink",
+        "ignite-3",
+        "FreeRDP",
+        "ruff",
+        "datafusion"
+    ],
+    "GPU": [
+        "openvino.genai",
+        "Reactant.jl",
+        "triton",
+        "cudf",
+        "MIOpen"
+    ],
+    "node": [
+        "ethrex",
+        "dtfs2",
+        "ydb",
+        "starrocks",
+        "chainlink"
+    ],
+    "LLM": [
+        "OtterAI",
+        "openvino.genai",
+        "cody",
+        "mlrun",
+        "pydantic-ai"
+    ]
+}
