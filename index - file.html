@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: transparent;
+        }
+        
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        #wordcloud-canvas {
+            border: none;
+            background-color: transparent;
+        }
+        
+        .hover-window {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 6px;
+            padding: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 200px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .hover-window h3 {
+            margin: 0 0 6px 0;
+            font-size: 12px;
+        }
+        
+        .hover-window p {
+            margin: 0 0 6px 0;
+            font-size: 10px;
+            line-height: 1.4;
+        }
+        
+        .hover-window h4 {
+            margin: 6px 0 4px 0;
+            font-size: 10px;
+        }
+        
+        .hover-window ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px 8px;
+            font-size: 9px;
+        }
+        
+        .hover-window li {
+            flex: 0 0 calc(50% - 4px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="wordcloud"></div>
+        <div id="hover-window" class="hover-window"></div>
+    </div>
+
+    <script>
+        // 声明变量
+        let words = [];
+        let descriptions = {};
+        let repos = {};
+
+        // 设置词云布局
+        const width = 200;
+        const height = 250;
+
+        // 定义更新函数
+        function updateWordCloud() {
+            Promise.all([
+                fetch('final_count.json?' + new Date().getTime()),  // 添加时间戳防止缓存
+                fetch('fetch_topic-description.json?' + new Date().getTime()),
+                fetch('final_details.json?' + new Date().getTime())
+            ])
+            .then(responses => Promise.all(responses.map(res => res.json())))
+            .then(([countData, descData, detailsData]) => {
+                // 清除旧的词云
+                d3.select("#wordcloud").selectAll("svg").remove();
+                
+                // 更新数据
+                words = Object.entries(countData).map(([text, size]) => ({
+                    text,
+                    size
+                }));
+                descriptions = descData;
+                repos = detailsData;
+
+                // 重新生成词云
+                const layout = d3.layout.cloud()
+                    .size([width, height])
+                    .words(words)
+                    .padding(3)
+                    .rotate(() => 0)
+                    .font("Impact")
+                    .fontSize(d => Math.sqrt(d.size) * 1)
+                    .on("end", draw);
+
+                layout.start();
+            })
+            .catch(error => {
+                console.error('Error updating data:', error);
+            });
+        }
+
+        // 初始加载
+        updateWordCloud();
+
+        // 设置定期更新（每24小时）
+        setInterval(updateWordCloud, 24 * 60 * 60 * 1000);
+
+        function draw(words) {
+            const svg = d3.select("#wordcloud").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", `translate(${width/2},${height/2})`);
+
+            // 定义颜色列表
+            const color_list = [
+                "#00FFFF",  // 青绿色
+                "#7FFF00",  // 亮绿色
+                "#A8D5BA",  // 柔和浅绿色
+                "#40E0D0",  // 蓝绿色
+                "#E0FFFF",  // 浅蓝白色
+                "#98FB98",  // 薄荷绿
+                "#87CEEB",  // 柔和湖蓝色
+                "#ADD8E6",  // 亮天蓝色
+                "#F0FFFF"   // 青白色
+            ];
+
+            svg.selectAll("text")
+                .data(words)
+                .enter().append("text")
+                .style("font-size", d => `${d.size}px`)
+                .style("font-family", "Impact")
+                .style("fill", (d, i) => color_list[i % color_list.length])
+                .attr("text-anchor", "middle")
+                .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
+                .text(d => d.text)
+                .on("mouseover", showTooltip)
+                .on("mouseout", hideTooltip);
+        }
+
+        function showTooltip(event, d) {
+            const hoverWindow = document.getElementById('hover-window');
+            const description = descriptions[d.text] || '暂无描述';
+            const repoList = repos[d.text] || [];
+            
+            hoverWindow.innerHTML = `
+                <h3>${d.text}</h3>
+                <p>${description}</p>
+                <h4>相关仓库:</h4>
+                <ul>
+                    ${repoList.map(repo => `<li>• ${repo}</li>`).join('')}
+                </ul>
+            `;
+            
+            // 获取词云容器的位置
+            const container = document.querySelector('.container');
+            const containerRect = container.getBoundingClientRect();
+            
+            // 获取当前文字元素的位置
+            const textElement = event.target;
+            const textRect = textElement.getBoundingClientRect();
+            
+            // 计算悬浮框的位置
+            const tooltipX = textRect.right - containerRect.left + 5; // 文字右侧偏移5像素
+            const tooltipY = textRect.top - containerRect.top; // 与文字顶部对齐
+            
+            hoverWindow.style.left = `${tooltipX}px`;
+            hoverWindow.style.top = `${tooltipY}px`;
+            hoverWindow.style.display = 'block';
+        }
+
+        function hideTooltip() {
+            document.getElementById('hover-window').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

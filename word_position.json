@@ -1,0 +1,272 @@
+{
+    "API": {
+        "x": 90,
+        "y": 71,
+        "width": 100,
+        "height": 50
+    },
+    "GitHub": {
+        "x": 56,
+        "y": 42,
+        "width": 100,
+        "height": 50
+    },
+    "MIT": {
+        "x": 24,
+        "y": 96,
+        "width": 100,
+        "height": 50
+    },
+    "UI": {
+        "x": 152,
+        "y": 78,
+        "width": 100,
+        "height": 50
+    },
+    "CLI": {
+        "x": 35,
+        "y": 47,
+        "width": 100,
+        "height": 50
+    },
+    "License": {
+        "x": 175,
+        "y": 76,
+        "width": 100,
+        "height": 50
+    },
+    "CI": {
+        "x": 144,
+        "y": 111,
+        "width": 100,
+        "height": 50
+    },
+    "Slack": {
+        "x": 130,
+        "y": 88,
+        "width": 100,
+        "height": 50
+    },
+    "SQL": {
+        "x": 85,
+        "y": 55,
+        "width": 100,
+        "height": 50
+    },
+    "JavaScript": {
+        "x": 43,
+        "y": 112,
+        "width": 100,
+        "height": 50
+    },
+    "python": {
+        "x": 94,
+        "y": 135,
+        "width": 100,
+        "height": 50
+    },
+    "CPU": {
+        "x": 83,
+        "y": 141,
+        "width": 100,
+        "height": 50
+    },
+    "Windows": {
+        "x": 25,
+        "y": 49,
+        "width": 100,
+        "height": 50
+    },
+    "SDK": {
+        "x": 120,
+        "y": 85,
+        "width": 100,
+        "height": 50
+    },
+    "HTML": {
+        "x": 117,
+        "y": 108,
+        "width": 100,
+        "height": 50
+    },
+    "Discord": {
+        "x": 142,
+        "y": 77,
+        "width": 100,
+        "height": 50
+    },
+    "Intel": {
+        "x": 102,
+        "y": 145,
+        "width": 100,
+        "height": 50
+    },
+    "Microsoft": {
+        "x": 155,
+        "y": 106,
+        "width": 100,
+        "height": 50
+    },
+    "BSD": {
+        "x": 168,
+        "y": 121,
+        "width": 100,
+        "height": 50
+    },
+    "Apache License": {
+        "x": 83,
+        "y": 108,
+        "width": 100,
+        "height": 50
+    },
+    "the Apache License": {
+        "x": 84,
+        "y": 71,
+        "width": 100,
+        "height": 50
+    },
+    "Kubernetes": {
+        "x": 146,
+        "y": 47,
+        "width": 100,
+        "height": 50
+    },
+    "javascript": {
+        "x": 171,
+        "y": 100,
+        "width": 100,
+        "height": 50
+    },
+    "typescript": {
+        "x": 162,
+        "y": 113,
+        "width": 100,
+        "height": 50
+    },
+    "Docker": {
+        "x": 119,
+        "y": 70,
+        "width": 100,
+        "height": 50
+    },
+    "Google": {
+        "x": 29,
+        "y": 146,
+        "width": 100,
+        "height": 50
+    },
+    "Apache": {
+        "x": 94,
+        "y": 39,
+        "width": 100,
+        "height": 50
+    },
+    "GPU": {
+        "x": 151,
+        "y": 53,
+        "width": 100,
+        "height": 50
+    },
+    "node": {
+        "x": 91,
+        "y": 161,
+        "width": 100,
+        "height": 50
+    },
+    "LLM": {
+        "x": 55,
+        "y": 131,
+        "width": 100,
+        "height": 50
+    },
+    "react": {
+        "x": 18,
+        "y": 145,
+        "width": 100,
+        "height": 50
+    },
+    "Postgres": {
+        "x": 17,
+        "y": 45,
+        "width": 100,
+        "height": 50
+    },
+    "doc": {
+        "x": 98,
+        "y": 70,
+        "width": 100,
+        "height": 50
+    },
+    "AI": {
+        "x": 64,
+        "y": 37,
+        "width": 100,
+        "height": 50
+    },
+    "TypeScript": {
+        "x": 66,
+        "y": 52,
+        "width": 100,
+        "height": 50
+    },
+    "java": {
+        "x": 106,
+        "y": 113,
+        "width": 100,
+        "height": 50
+    },
+    "sql": {
+        "x": 48,
+        "y": 101,
+        "width": 100,
+        "height": 50
+    },
+    "go": {
+        "x": 140,
+        "y": 44,
+        "width": 100,
+        "height": 50
+    },
+    "CMake": {
+        "x": 109,
+        "y": 143,
+        "width": 100,
+        "height": 50
+    },
+    "Python": {
+        "x": 92,
+        "y": 90,
+        "width": 100,
+        "height": 50
+    },
+    "English": {
+        "x": 83,
+        "y": 41,
+        "width": 100,
+        "height": 50
+    },
+    "ASF": {
+        "x": 96,
+        "y": 94,
+        "width": 100,
+        "height": 50
+    },
+    "database": {
+        "x": 25,
+        "y": 160,
+        "width": 100,
+        "height": 50
+    },
+    "PDF": {
+        "x": 19,
+        "y": 157,
+        "width": 100,
+        "height": 50
+    },
+    "IP": {
+        "x": 51,
+        "y": 116,
+        "width": 100,
+        "height": 50
+    }
+}
