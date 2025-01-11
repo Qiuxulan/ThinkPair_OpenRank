@@ -1,0 +1,1462 @@
+{
+    "ai": [
+        "n8n",
+        "openvino",
+        "composio",
+        "ClickHouse",
+        "mlflow",
+        "cody"
+    ],
+    "automation": [
+        "n8n",
+        "airflow",
+        "appsmith",
+        "atmos",
+        "prefect"
+    ],
+    "cli": [
+        "n8n",
+        "atmos",
+        "OpenHands",
+        "clients"
+    ],
+    "docker": [
+        "n8n",
+        "ToolJet",
+        "eappointment"
+    ],
+    "low-code": [
+        "n8n",
+        "appsmith",
+        "ToolJet"
+    ],
+    "no-code": [
+        "n8n",
+        "ToolJet"
+    ],
+    "node": [
+        "n8n",
+        "stdlib",
+        "node"
+    ],
+    "self-hosted": [
+        "n8n",
+        "appsmith",
+        "ToolJet",
+        "tachybase",
+        "airbyte"
+    ],
+    "typescript": [
+        "n8n",
+        "talawa-admin",
+        "twenty",
+        "appsmith",
+        "composio",
+        "novu",
+        "azure-sdk-for-js",
+        "posthog",
+        "ToolJet",
+        "trezor-suite",
+        "cal.com",
+        "aws-cdk",
+        "expo",
+        "engine",
+        "oppia",
+        "clients",
+        "metriport",
+        "storybook"
+    ],
+    "workflow": [
+        "n8n",
+        "airflow",
+        "dagster",
+        "camunda",
+        "atmos",
+        "mlrun",
+        "prefect"
+    ],
+    "workflow-automation": [
+        "n8n",
+        "dagster",
+        "temporal"
+    ],
+    "hacktoberfest": [
+        "nixpkgs",
+        "core",
+        "kibana",
+        "rust",
+        "openshift-docs",
+        "care_fe",
+        "twenty",
+        "Skript",
+        "appsmith",
+        "sentry",
+        "roslyn",
+        "space-station-14",
+        "pennylane",
+        "transformers",
+        "runtime",
+        "jaeger",
+        "grafana",
+        "cloudflare-docs",
+        "diffusers",
+        "iceberg",
+        "composio",
+        "kubevirt",
+        "grpc-go",
+        "novu",
+        "woocommerce",
+        "hyperswitch",
+        "ClickHouse",
+        "community.general",
+        "documentation",
+        "vets-website",
+        "Cataclysm-DDA",
+        "azure-sdk-for-js",
+        "ToolJet",
+        "hedera-services",
+        "tgstation",
+        "home-assistant.io",
+        "freeCodeCamp",
+        "wiredtiger",
+        "mui-x",
+        "vets-api",
+        "homebrew-core",
+        "aws-cdk",
+        "lxd",
+        "staged-recipes",
+        "tidb",
+        "sunpy",
+        "gentoo",
+        "rotki",
+        "tldr",
+        "sonic-mgmt",
+        "talawa-api",
+        "reactos",
+        "emscripten",
+        "gradle",
+        "cockroach",
+        "sentry-docs",
+        "oppia",
+        "gitea",
+        "azure-sdk-for-java",
+        "winget-pkgs",
+        "stackrox",
+        "symfony",
+        "gno",
+        "jetpack",
+        "docs-cn"
+    ],
+    "linux": [
+        "nixpkgs",
+        "systemd",
+        "node",
+        "spack",
+        "gentoo",
+        "tldr"
+    ],
+    "home-automation": [
+        "core",
+        "ProxmoxVE"
+    ],
+    "internet-of-things": [
+        "core",
+        "connectedhomeip"
+    ],
+    "iot": [
+        "core",
+        "zephyr",
+        "connectedhomeip",
+        "ignite-3"
+    ],
+    "mqtt": [
+        "core",
+        "ProxmoxVE"
+    ],
+    "python": [
+        "core",
+        "odoo",
+        "pytorch",
+        "airflow",
+        "ray",
+        "spark",
+        "ruff",
+        "sentry",
+        "pennylane",
+        "dagster",
+        "Paddle",
+        "datafusion",
+        "transformers",
+        "zulip",
+        "partcad",
+        "composio",
+        "flink",
+        "scipy",
+        "posthog",
+        "spack",
+        "cudf",
+        "sunpy",
+        "mlrun",
+        "oppia",
+        "pydantic-ai",
+        "prefect",
+        "airbyte"
+    ],
+    "embedded": [
+        "zephyr",
+        "nuttx"
+    ],
+    "mcu": [
+        "zephyr",
+        "nuttx"
+    ],
+    "microcontroller": [
+        "zephyr",
+        "nuttx"
+    ],
+    "real-time": [
+        "zephyr",
+        "doris",
+        "nuttx",
+        "risingwave"
+    ],
+    "rtos": [
+        "zephyr",
+        "nuttx"
+    ],
+    "management": [
+        "odoo",
+        "rotki"
+    ],
+    "browser": [
+        "WebKit",
+        "azure-sdk-for-js",
+        "ladybird"
+    ],
+    "ios": [
+        "WebKit",
+        "app-monorepo",
+        "feralfile-app",
+        "expo",
+        "flutter"
+    ],
+    "javascript": [
+        "WebKit",
+        "twenty",
+        "stdlib",
+        "appsmith",
+        "content",
+        "zulip",
+        "composio",
+        "wp-calypso",
+        "novu",
+        "azure-sdk-for-js",
+        "posthog",
+        "ToolJet",
+        "freeCodeCamp",
+        "node",
+        "expo",
+        "engine",
+        "oppia",
+        "clients",
+        "storybook"
+    ],
+    "macos": [
+        "WebKit",
+        "node",
+        "spack",
+        "tldr",
+        "flutter"
+    ],
+    "web": [
+        "WebKit",
+        "twenty",
+        "trezor-suite",
+        "app-monorepo",
+        "expo",
+        "oppia",
+        "flutter"
+    ],
+    "elasticsearch": [
+        "kibana",
+        "elasticsearch",
+        "openobserve",
+        "grafana"
+    ],
+    "kibana": [
+        "kibana",
+        "openobserve"
+    ],
+    "metrics": [
+        "kibana",
+        "openobserve",
+        "datadog-agent",
+        "grafana"
+    ],
+    "observability": [
+        "kibana",
+        "openobserve",
+        "datadog-agent",
+        "jaeger",
+        "prefect"
+    ],
+    "autograd": [
+        "pytorch",
+        "pennylane"
+    ],
+    "deep-learning": [
+        "pytorch",
+        "ray",
+        "openvino",
+        "pennylane",
+        "Paddle",
+        "transformers",
+        "diffusers",
+        "oneDNN"
+    ],
+    "gpu": [
+        "pytorch",
+        "cudf",
+        "cccl"
+    ],
+    "machine-learning": [
+        "pytorch",
+        "airflow",
+        "ray",
+        "pennylane",
+        "Paddle",
+        "transformers",
+        "mlflow",
+        "mlrun"
+    ],
+    "neural-network": [
+        "pytorch",
+        "pennylane",
+        "Paddle"
+    ],
+    "java": [
+        "elasticsearch",
+        "ray",
+        "Skript",
+        "jdk",
+        "spark",
+        "appsmith",
+        "camunda",
+        "trino",
+        "flink",
+        "presto",
+        "gradle",
+        "azure-sdk-for-java",
+        "airbyte"
+    ],
+    "search-engine": [
+        "elasticsearch",
+        "RediSearch"
+    ],
+    "compiler": [
+        "rust",
+        "enso",
+        "lfortran"
+    ],
+    "language": [
+        "rust",
+        "enso"
+    ],
+    "rust": [
+        "rust",
+        "ruff",
+        "datafusion",
+        "bevy",
+        "hyperswitch",
+        "ClickHouse",
+        "openvmm",
+        "ethrex",
+        "risingwave"
+    ],
+    "apache": [
+        "airflow",
+        "zulip",
+        "iceberg"
+    ],
+    "data-engineering": [
+        "airflow",
+        "dagster",
+        "mlrun",
+        "prefect",
+        "airbyte",
+        "risingwave"
+    ],
+    "data-integration": [
+        "airflow",
+        "dagster",
+        "airbyte"
+    ],
+    "data-orchestrator": [
+        "airflow",
+        "dagster"
+    ],
+    "data-pipelines": [
+        "airflow",
+        "dagster"
+    ],
+    "data-science": [
+        "airflow",
+        "ray",
+        "dagster",
+        "trino",
+        "cudf",
+        "mlrun",
+        "prefect"
+    ],
+    "elt": [
+        "airflow",
+        "doris",
+        "airbyte"
+    ],
+    "etl": [
+        "airflow",
+        "doris",
+        "dagster",
+        "airbyte",
+        "risingwave"
+    ],
+    "mlops": [
+        "airflow",
+        "vllm",
+        "dagster",
+        "mlrun"
+    ],
+    "orchestration": [
+        "airflow",
+        "dagster",
+        "hyperswitch",
+        "atmos",
+        "prefect"
+    ],
+    "scheduler": [
+        "airflow",
+        "dagster"
+    ],
+    "workflow-engine": [
+        "airflow",
+        "camunda",
+        "temporal",
+        "prefect"
+    ],
+    "game-development": [
+        "godot",
+        "bevy"
+    ],
+    "game-engine": [
+        "godot",
+        "bevy"
+    ],
+    "gamedev": [
+        "godot",
+        "bevy"
+    ],
+    "open-source": [
+        "godot",
+        "twenty",
+        "bevy",
+        "hyperswitch",
+        "eappointment",
+        "cal.com",
+        "fleet",
+        "talawa-api",
+        "metriport"
+    ],
+    "llama": [
+        "tt-metal",
+        "vllm",
+        "llama.cpp"
+    ],
+    "llm": [
+        "tt-metal",
+        "vllm",
+        "composio",
+        "OpenHands"
+    ],
+    "ml": [
+        "tt-metal",
+        "mlflow"
+    ],
+    "stable-diffusion": [
+        "tt-metal",
+        "openvino",
+        "diffusers"
+    ],
+    "documentation": [
+        "openshift-docs",
+        "content",
+        "translated-content",
+        "documentation",
+        "home-assistant.io",
+        "tldr",
+        "librarium",
+        "sentry-docs",
+        "camunda-docs",
+        "storybook"
+    ],
+    "distributed": [
+        "ray",
+        "ydb",
+        "FluidFramework"
+    ],
+    "llm-serving": [
+        "ray",
+        "vllm"
+    ],
+    "optimization": [
+        "ray",
+        "pennylane"
+    ],
+    "pytorch": [
+        "ray",
+        "vllm",
+        "pennylane",
+        "transformers",
+        "diffusers"
+    ],
+    "tensorflow": [
+        "ray",
+        "pennylane",
+        "transformers"
+    ],
+    "graphql": [
+        "talawa-admin",
+        "twenty",
+        "talawa-api"
+    ],
+    "react": [
+        "talawa-admin",
+        "twenty",
+        "appsmith",
+        "wp-calypso",
+        "novu",
+        "posthog",
+        "freeCodeCamp",
+        "mui-x",
+        "app-monorepo",
+        "expo",
+        "fluentui",
+        "apps",
+        "jetpack",
+        "storybook"
+    ],
+    "healthcare": [
+        "care_fe",
+        "metriport"
+    ],
+    "good-first-issue": [
+        "twenty",
+        "openvino",
+        "gradle"
+    ],
+    "monorepo": [
+        "twenty",
+        "hyperlane-monorepo"
+    ],
+    "nestjs": [
+        "twenty",
+        "ToolJet"
+    ],
+    "postgresql": [
+        "twenty",
+        "metabase",
+        "hyperswitch",
+        "cal.com",
+        "airbyte",
+        "risingwave"
+    ],
+    "reactjs": [
+        "twenty",
+        "novu",
+        "woocommerce",
+        "ToolJet"
+    ],
+    "kafka": [
+        "kafka",
+        "redpanda",
+        "risingwave"
+    ],
+    "scala": [
+        "kafka",
+        "spark",
+        "flink"
+    ],
+    "cuda": [
+        "vllm",
+        "cudf",
+        "cccl"
+    ],
+    "gpt": [
+        "vllm",
+        "OpenHands"
+    ],
+    "inference": [
+        "vllm",
+        "openvino"
+    ],
+    "llmops": [
+        "vllm",
+        "composio"
+    ],
+    "model-serving": [
+        "vllm",
+        "mlrun"
+    ],
+    "transformer": [
+        "vllm",
+        "transformers"
+    ],
+    "data-catalog": [
+        "gravitino",
+        "datahub"
+    ],
+    "datalake": [
+        "gravitino",
+        "trino",
+        "starrocks"
+    ],
+    "lakehouse": [
+        "gravitino",
+        "doris",
+        "presto",
+        "starrocks"
+    ],
+    "metadata": [
+        "gravitino",
+        "dagster",
+        "datahub"
+    ],
+    "analytics": [
+        "openobserve",
+        "dagster",
+        "metabase",
+        "trino",
+        "grafana",
+        "ClickHouse",
+        "posthog",
+        "rotki",
+        "starrocks",
+        "risingwave"
+    ],
+    "apm": [
+        "openobserve",
+        "sentry"
+    ],
+    "datadog": [
+        "openobserve",
+        "datadog-agent",
+        "documentation"
+    ],
+    "grafana": [
+        "openobserve",
+        "grafana"
+    ],
+    "jaeger": [
+        "openobserve",
+        "jaeger"
+    ],
+    "monitoring": [
+        "openobserve",
+        "datadog-agent",
+        "sentry",
+        "grafana"
+    ],
+    "opentelemetry": [
+        "openobserve",
+        "jaeger",
+        "opentelemetry-collector-contrib"
+    ],
+    "prometheus": [
+        "openobserve",
+        "grafana"
+    ],
+    "wordpress": [
+        "gutenberg",
+        "wp-calypso",
+        "woocommerce",
+        "jetpack"
+    ],
+    "wordpress-plugin": [
+        "gutenberg",
+        "jetpack"
+    ],
+    "gradle": [
+        "Skript",
+        "gradle"
+    ],
+    "big-data": [
+        "spark",
+        "datafusion",
+        "trino",
+        "flink",
+        "ClickHouse",
+        "ignite-3",
+        "presto",
+        "starrocks",
+        "risingwave"
+    ],
+    "jdbc": [
+        "spark",
+        "trino"
+    ],
+    "spark": [
+        "spark",
+        "doris"
+    ],
+    "sql": [
+        "spark",
+        "ydb",
+        "doris",
+        "datafusion",
+        "trino",
+        "flink",
+        "ClickHouse",
+        "ignite-3",
+        "presto",
+        "tidb",
+        "cockroach",
+        "starrocks",
+        "risingwave"
+    ],
+    "cloud-native": [
+        "ydb",
+        "tidb",
+        "risingwave"
+    ],
+    "cpp": [
+        "ydb",
+        "scylladb",
+        "ClickHouse",
+        "unodb",
+        "cudf",
+        "cccl",
+        "OpenROAD",
+        "redpanda",
+        "oneDNN"
+    ],
+    "database": [
+        "ydb",
+        "doris",
+        "metabase",
+        "scylladb",
+        "trino",
+        "ignite-3",
+        "valkey",
+        "tidb",
+        "cockroach",
+        "starrocks",
+        "risingwave"
+    ],
+    "dbms": [
+        "ydb",
+        "ClickHouse"
+    ],
+    "distributed-database": [
+        "ydb",
+        "trino",
+        "ClickHouse",
+        "tidb",
+        "cockroach",
+        "starrocks",
+        "risingwave"
+    ],
+    "distributed-sql-database": [
+        "ydb",
+        "ignite-3"
+    ],
+    "distributed-tracing": [
+        "datadog-agent",
+        "jaeger"
+    ],
+    "go": [
+        "datadog-agent",
+        "teleport",
+        "kubernetes",
+        "grafana",
+        "grpc-go",
+        "lxd",
+        "tidb",
+        "redpanda",
+        "cosmos-sdk",
+        "coder",
+        "cockroach",
+        "gitea"
+    ],
+    "open-telemetry": [
+        "datadog-agent",
+        "opentelemetry-collector-contrib"
+    ],
+    "tracing": [
+        "datadog-agent",
+        "jaeger"
+    ],
+    "js": [
+        "stdlib",
+        "composio",
+        "node",
+        "jetpack"
+    ],
+    "library": [
+        "stdlib",
+        "FreeRDP",
+        "lfortran",
+        "oneDNN"
+    ],
+    "math": [
+        "stdlib",
+        "freeCodeCamp"
+    ],
+    "nodejs": [
+        "stdlib",
+        "wp-calypso",
+        "novu",
+        "azure-sdk-for-js",
+        "ToolJet",
+        "freeCodeCamp",
+        "node",
+        "talawa-api",
+        "tachybase",
+        "clients"
+    ],
+    "scientific-computing": [
+        "stdlib",
+        "scipy",
+        "spack"
+    ],
+    "standard": [
+        "stdlib",
+        "connectedhomeip"
+    ],
+    "generative-ai": [
+        "openvino",
+        "NeMo"
+    ],
+    "natural-language-processing": [
+        "openvino",
+        "transformers"
+    ],
+    "nlp": [
+        "openvino",
+        "transformers"
+    ],
+    "speech-recognition": [
+        "openvino",
+        "transformers"
+    ],
+    "admin-dashboard": [
+        "appsmith",
+        "tachybase"
+    ],
+    "crud": [
+        "appsmith",
+        "tachybase"
+    ],
+    "developer-tools": [
+        "appsmith",
+        "composio",
+        "OpenHands"
+    ],
+    "internal-tools": [
+        "appsmith",
+        "ToolJet",
+        "tachybase"
+    ],
+    "low-code-framework": [
+        "appsmith",
+        "ToolJet"
+    ],
+    "workflows": [
+        "appsmith",
+        "temporal",
+        "tachybase"
+    ],
+    "golang": [
+        "teleport",
+        "grpc-go",
+        "chainlink",
+        "cosmos-sdk",
+        "coder",
+        "gitea",
+        "temporal",
+        "gno",
+        "juju"
+    ],
+    "kubernetes": [
+        "teleport",
+        "kubernetes",
+        "kubevirt",
+        "ceph",
+        "ToolJet",
+        "redpanda",
+        "mlrun",
+        "librarium",
+        "stackrox",
+        "juju"
+    ],
+    "postgres": [
+        "teleport",
+        "metabase",
+        "grafana",
+        "risingwave"
+    ],
+    "rdp": [
+        "teleport",
+        "FreeRDP"
+    ],
+    "security": [
+        "teleport",
+        "stackrox"
+    ],
+    "linter": [
+        "ruff",
+        "stylelint"
+    ],
+    "python3": [
+        "ruff",
+        "zulip"
+    ],
+    "styleguide": [
+        "ruff",
+        "storybook"
+    ],
+    "devops": [
+        "sentry",
+        "atmos",
+        "gitea",
+        "juju"
+    ],
+    "tag-production": [
+        "sentry",
+        "sentry-docs"
+    ],
+    "c-sharp": [
+        "space-station-14",
+        "Delta-v"
+    ],
+    "game": [
+        "space-station-14",
+        "Cataclysm-DDA",
+        "tgstation",
+        "eternum",
+        "Delta-v"
+    ],
+    "ss13": [
+        "space-station-14",
+        "tgstation",
+        "Delta-v"
+    ],
+    "ss14": [
+        "space-station-14",
+        "Delta-v"
+    ],
+    "jax": [
+        "pennylane",
+        "transformers",
+        "diffusers"
+    ],
+    "collaboration": [
+        "FluidFramework",
+        "zulip"
+    ],
+    "datastructure": [
+        "FluidFramework",
+        "leetcode-study"
+    ],
+    "microsoft": [
+        "FluidFramework",
+        "fluentui"
+    ],
+    "realtime": [
+        "FluidFramework",
+        "redpanda"
+    ],
+    "bigquery": [
+        "doris",
+        "airbyte"
+    ],
+    "delta-lake": [
+        "doris",
+        "trino",
+        "starrocks"
+    ],
+    "hadoop": [
+        "doris",
+        "trino",
+        "presto"
+    ],
+    "hive": [
+        "doris",
+        "trino",
+        "presto"
+    ],
+    "hudi": [
+        "doris",
+        "starrocks"
+    ],
+    "iceberg": [
+        "doris",
+        "trino",
+        "iceberg",
+        "starrocks"
+    ],
+    "olap": [
+        "doris",
+        "datafusion",
+        "ClickHouse",
+        "starrocks"
+    ],
+    "query-engine": [
+        "doris",
+        "datafusion",
+        "trino"
+    ],
+    "redshift": [
+        "doris",
+        "airbyte"
+    ],
+    "snowflake": [
+        "doris",
+        "airbyte"
+    ],
+    "chrome": [
+        "metamask-extension",
+        "clients"
+    ],
+    "ethereum": [
+        "metamask-extension",
+        "chainlink",
+        "app-monorepo",
+        "rotki",
+        "optimism",
+        "ethrex"
+    ],
+    "extension": [
+        "metamask-extension",
+        "apps"
+    ],
+    "firefox": [
+        "metamask-extension",
+        "clients"
+    ],
+    "cryptography": [
+        "openssl",
+        "bitcoin",
+        "trezor-suite"
+    ],
+    "business-intelligence": [
+        "metabase",
+        "grafana",
+        "dataease"
+    ],
+    "dashboard": [
+        "metabase",
+        "grafana"
+    ],
+    "data": [
+        "metabase",
+        "presto",
+        "prefect",
+        "airbyte"
+    ],
+    "data-analysis": [
+        "metabase",
+        "dataease",
+        "cudf",
+        "airbyte"
+    ],
+    "data-visualization": [
+        "metabase",
+        "grafana",
+        "dataease"
+    ],
+    "mysql": [
+        "metabase",
+        "grafana",
+        "tidb",
+        "airbyte"
+    ],
+    "slack": [
+        "metabase",
+        "zulip"
+    ],
+    "c-plus-plus": [
+        "scylladb",
+        "unodb",
+        "Cataclysm-DDA",
+        "bitcoin"
+    ],
+    "nosql": [
+        "scylladb",
+        "valkey"
+    ],
+    "seastar": [
+        "scylladb",
+        "redpanda"
+    ],
+    "css": [
+        "content",
+        "novu",
+        "stylelint"
+    ],
+    "html": [
+        "content",
+        "novu",
+        "storybook"
+    ],
+    "learning": [
+        "content",
+        "Artemis",
+        "oppia",
+        "Anki-Android"
+    ],
+    "mdn": [
+        "content",
+        "translated-content"
+    ],
+    "arrow": [
+        "datafusion",
+        "cudf",
+        "arrow"
+    ],
+    "dataframe": [
+        "datafusion",
+        "cudf"
+    ],
+    "grpc": [
+        "camunda",
+        "grpc-go"
+    ],
+    "microservices": [
+        "camunda",
+        "grpc-go",
+        "redpanda"
+    ],
+    "cncf": [
+        "kubernetes",
+        "jaeger",
+        "envoy"
+    ],
+    "containers": [
+        "kubernetes",
+        "lxd",
+        "redpanda",
+        "stackrox",
+        "juju"
+    ],
+    "android": [
+        "FreeRDP",
+        "app-monorepo",
+        "feralfile-app",
+        "tldr",
+        "expo",
+        "Anki-Android",
+        "flutter"
+    ],
+    "c": [
+        "FreeRDP",
+        "systemd",
+        "neovim",
+        "reactos"
+    ],
+    "flax": [
+        "transformers",
+        "diffusers"
+    ],
+    "electron": [
+        "zulip",
+        "trezor-suite",
+        "app-monorepo",
+        "clients"
+    ],
+    "react-native": [
+        "zulip",
+        "app-monorepo",
+        "expo",
+        "storybook"
+    ],
+    "distributed-systems": [
+        "trino",
+        "ethrex",
+        "temporal"
+    ],
+    "presto": [
+        "trino",
+        "presto"
+    ],
+    "docs": [
+        "cloudflare-docs",
+        "sentry-docs"
+    ],
+    "assessment": [
+        "PrairieLearn",
+        "Artemis"
+    ],
+    "3d": [
+        "partcad",
+        "engine"
+    ],
+    "flink": [
+        "flink",
+        "risingwave"
+    ],
+    "redux": [
+        "wp-calypso",
+        "app-monorepo"
+    ],
+    "nanoservices": [
+        "grpc-go",
+        "envoy"
+    ],
+    "bitcoin": [
+        "strata",
+        "bitcoin",
+        "trezor-suite",
+        "app-monorepo",
+        "rotki"
+    ],
+    "php": [
+        "woocommerce",
+        "eappointment",
+        "symfony",
+        "jetpack"
+    ],
+    "high-performance": [
+        "ceph",
+        "hyperswitch"
+    ],
+    "s3": [
+        "ceph",
+        "airbyte"
+    ],
+    "redis": [
+        "hyperswitch",
+        "RediSearch",
+        "valkey"
+    ],
+    "api": [
+        "neovim",
+        "metriport"
+    ],
+    "mpp": [
+        "ClickHouse",
+        "starrocks"
+    ],
+    "cloud": [
+        "atmos",
+        "ignite-3",
+        "azure-rest-api-specs"
+    ],
+    "terraform": [
+        "atmos",
+        "coder"
+    ],
+    "blockchain": [
+        "chainlink",
+        "polkadot-sdk",
+        "app-monorepo",
+        "sui",
+        "rotki",
+        "cosmos-sdk",
+        "ethrex",
+        "hyperlane-monorepo",
+        "gno"
+    ],
+    "frontend": [
+        "vets-website",
+        "expo",
+        "tiny-engine"
+    ],
+    "platform": [
+        "vets-website",
+        "vets-api"
+    ],
+    "artificial-intelligence": [
+        "OpenHands",
+        "Artemis"
+    ],
+    "openai": [
+        "OpenHands",
+        "ToolJet"
+    ],
+    "education": [
+        "Artemis",
+        "freeCodeCamp",
+        "librarium",
+        "oppia",
+        "Anki-Android"
+    ],
+    "azure": [
+        "azure-sdk-for-js",
+        "azure-rest-api-specs",
+        "azure-sdk-for-java"
+    ],
+    "azure-sdk": [
+        "azure-sdk-for-js",
+        "azure-sdk-for-java"
+    ],
+    "cryptocurrency": [
+        "bitcoin",
+        "trezor-suite",
+        "cosmos-sdk"
+    ],
+    "p2p": [
+        "bitcoin",
+        "ethrex"
+    ],
+    "wallet": [
+        "trezor-suite",
+        "app-monorepo"
+    ],
+    "corgis": [
+        "tgstation",
+        "envoy"
+    ],
+    "oneapi": [
+        "llvm",
+        "oneDNN"
+    ],
+    "sycl": [
+        "llvm",
+        "oneDNN"
+    ],
+    "home-assistant": [
+        "home-assistant.io",
+        "ProxmoxVE"
+    ],
+    "nextjs": [
+        "cal.com",
+        "apps"
+    ],
+    "tailwindcss": [
+        "cal.com",
+        "apps"
+    ],
+    "ruby": [
+        "vets-api",
+        "homebrew-core"
+    ],
+    "windows": [
+        "node",
+        "tldr",
+        "reactos",
+        "flutter"
+    ],
+    "hpc": [
+        "spack",
+        "cccl"
+    ],
+    "cache": [
+        "ignite-3",
+        "valkey"
+    ],
+    "expo": [
+        "app-monorepo",
+        "expo"
+    ],
+    "mobile": [
+        "app-monorepo",
+        "expo",
+        "flutter"
+    ],
+    "native": [
+        "app-monorepo",
+        "expo"
+    ],
+    "universal": [
+        "app-monorepo",
+        "expo"
+    ],
+    "lxc": [
+        "lxd",
+        "ProxmoxVE"
+    ],
+    "web3": [
+        "eternum",
+        "gno"
+    ],
+    "serverless": [
+        "tidb",
+        "risingwave"
+    ],
+    "tidb": [
+        "tidb",
+        "docs-cn"
+    ],
+    "dart": [
+        "feralfile-app",
+        "flutter"
+    ],
+    "flutter": [
+        "feralfile-app",
+        "flutter"
+    ],
+    "smart-contracts": [
+        "sui",
+        "gno"
+    ],
+    "stream-processing": [
+        "redpanda",
+        "risingwave"
+    ],
+    "rollup": [
+        "optimism",
+        "ethrex"
+    ],
+    "tendermint": [
+        "cosmos-sdk",
+        "gno"
+    ],
+    "app-framework": [
+        "expo",
+        "flutter"
+    ],
+    "framework": [
+        "expo",
+        "symfony"
+    ],
+    "web-framework": [
+        "expo",
+        "flutter"
+    ],
+    "components": [
+        "fluentui",
+        "storybook"
+    ],
+    "kotlin": [
+        "gradle",
+        "Anki-Android"
+    ],
+    "interpreter": [
+        "enso",
+        "gno"
+    ],
+    "interactive": [
+        "lfortran",
+        "oppia"
+    ],
+    "angular": [
+        "oppia",
+        "clients",
+        "storybook"
+    ],
+    "vue": [
+        "gitea",
+        "storybook"
+    ],
+    "desktop": [
+        "clients",
+        "flutter"
+    ],
+    "real-time-analytics": [
+        "starrocks",
+        "risingwave"
+    ],
+    "pipeline": [
+        "prefect",
+        "airbyte"
+    ]
+}

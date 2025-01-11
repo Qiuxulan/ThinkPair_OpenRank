@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenMonitor可视化大屏</title>
+    <!-- 引入 Chart.js 库用于图表绘制 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- 引入 Tippy.js 库用于美化工具提示（可选） -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <style>
+        /* 现有的CSS样式保持不变 */
+        body {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .header {
+            text-align: center;
+            padding: 1rem;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e0f2fe;
+            margin: 0;
+        }
+        .timestamp {
+            font-size: 1rem;
+            color: #bfdbfe;
+            margin-top: 0.5rem;
+        }
+        .main {
+            display: flex;
+            padding: 1rem;
+            gap: 1rem;
+            height: calc(100vh - 80px);
+        }
+        .sidebar {
+            background: rgba(30, 58, 138, 0.4);
+            backdrop-filter: blur(8px);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow: hidden;
+            max-height: 100%;
+        }
+        .left-sidebar {
+            width: 16rem;
+        }
+        .right-sidebar {
+            width: 16rem;
+        }
+        .sidebar-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #e0f2fe;
+        }
+        .sidebar-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            cursor: grab;
+        }
+        .sidebar-content.grabbing {
+            cursor: grabbing;
+        }
+        #global-rankings, #cn-rankings {
+            height: 25vh;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: #3b82f6 rgba(0, 0, 0, 0.5);
+        }
+        #global-rankings::-webkit-scrollbar, #cn-rankings::-webkit-scrollbar {
+            width: 8px;
+        }
+        #global-rankings::-webkit-scrollbar-track, #cn-rankings::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        #global-rankings::-webkit-scrollbar-thumb, #cn-rankings::-webkit-scrollbar-thumb {
+            background-color: #3b82f6;
+            border-radius: 4px;
+        }
+        .sidebar-item {
+            background: rgba(30, 58, 138, 0.85);
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.85rem;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.2s, background 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-item:hover {
+            transform: scale(1.02);
+            background: rgba(30, 58, 138, 0.95);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .project-button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            text-align: left;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+        .project-button:hover {
+            color: #f0f0f0;
+        }
+        .search-input, .sort-select {
+            width: 100%;
+            padding: 0.3rem;
+            height: 1.5rem;
+            border-radius: 0.25rem;
+            border: none;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+        .pagination {
+            display: none;
+        }
+        .map-container {
+            flex: 1;
+            padding: 0 2rem;
+            position: relative;
+            border-radius: 0.5rem;
+        }
+        .map-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #e0f2fe;
+        }
+        .map-wrapper {
+            position: relative;
+            width: 100%;
+            height: 600px;
+        }
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0.5rem;
+        }
+        @media (max-width: 1200px) {
+            .main {
+                flex-direction: column;
+                height: auto;
+            }
+            .sidebar {
+                width: 100%;
+                max-height: none;
+            }
+            .map-container {
+                padding: 1rem 0;
+            }
+        }
+        #loading, #loading-cn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #e0f2fe;
+            font-size: 1.5rem;
+            display: none;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: #001542;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #e9e0e0;
+            width: 80%;
+            border-radius: 0.5rem;
+            color: #ffffff;
+        }
+        .close-button {
+            color: #ffffff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+        .charts-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .charts-container canvas {
+            width: 100% !important;
+            max-height: 400px;
+        }
+        .stats-container {
+            display: flex; /* 启用 Flexbox 布局 */
+            flex-wrap: wrap; /* 允许子元素换行 */
+            gap: 1rem; /* 子元素之间的间隔 */
+            margin-top: 2rem; /* 顶部外边距 */
+            justify-content: center; /* 子元素在主轴上居中对齐 */
+        }
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* 边框 */
+            border-radius: 0.5rem; /* 圆角 */
+            padding: 1rem; /* 内边距 */
+            width: 150px; /* 固定宽度，可根据需要调整 */
+            text-align: center; /* 文字居中 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 阴影 */
+            transition: transform 0.2s, background 0.3s; /* 过渡效果 */
+        }
+        .stat-box:hover {
+            transform: scale(1.05); /* 鼠标悬停时放大 */
+            background: rgba(255, 255, 255, 0.2); /* 背景变深 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 阴影加深 */
+        }
+        .stat-label {
+            font-size: 1rem; /* 字体大小 */
+            font-weight: bold; /* 加粗 */
+            color: #e0f2fe; /* 字体颜色 */
+            margin-bottom: 0.5rem; /* 下边距 */
+        }
+        .stat-value {
+            font-size: 1.5rem; /* 字体大小 */
+            color: #eeea06; /* 字体颜色 */
+        }
+        .alert-module {
+            margin-bottom: 2rem;
+            height: 40vh; /* 固定高度 */
+            overflow-y: auto; /* 启用垂直滚动 */
+            background: rgba(30, 58, 138, 0.6); /* 背景颜色稍微加深 */
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        .alert-module h3.sidebar-subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #e0f2fe;
+            text-align: center;
+        }
+
+        .alert-module select.sort-select {
+            width: 100%;
+            padding: 0.3rem;
+            height: 1.5rem;
+            border-radius: 0.25rem;
+            border: none;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+        /* 风险项目列表样式 */
+        .risk-projects {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .risk-project {
+            background: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            color: #ffffff;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .risk-project:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 新增样式：显示预警表格时的过渡效果 */
+        .alert-table.show {
+            display: table;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* 预警描述样式 */
+        .alert-container.warning {
+            background-color: rgba(229, 62, 62, 0.2);
+            border-left: 4px solid #e53e3e;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-container.error {
+            background-color: rgba(221, 107, 32, 0.2);
+            border-left: 4px solid #dd6b20;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-container.success {
+            background-color: rgba(56, 161, 105, 0.2);
+            border-left: 4px solid #38a169;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        /* 新增样式：左下角词云容器 */
+        .wordcloud-container {
+            width: 100%;
+            height: 800px; /* 根据需要调整高度 */
+            margin-top: 0.5rem; /* 与其他模块间隔 */
+        }
+
+        /* 确保iframe占满容器 */
+        .wordcloud-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0rem;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">OpenMonitor</h1>
+            <h1 class="title">基于 GitHub 和 OpenDigger的开源健康监测大屏与技术词云</h1>
+            <div class="timestamp" id="timestamp"></div>
+        </header>
+
+        <!-- Main content -->
+        <main class="main">
+            <!-- 左侧边栏 -->
+            <aside class="sidebar left-sidebar" aria-label="左侧边栏">
+                <!-- 健康风险项目预警机构（项目预警模块） -->
+                <div class="mb-4 alert-module">
+                    <h2 class="sidebar-title">风险项目预警</h2>
+                    <select id="alert-dimension" class="sort-select">
+                        <option value="">-- 请选择维度 --</option>
+                        <option value="health">健康度</option>
+                        <option value="activity">项目活跃度</option>
+                        <option value="code_changes">代码改变量</option>
+                        <!-- 可以根据需要添加更多选项 -->
+                    </select>
+                    <div id="risk-projects" class="risk-projects">
+                        <!-- 动态填充风险项目 -->
+                    </div>
+                </div>
+
+                <!-- 项目技术热点词云 -->
+                <div class="mb-4 wordcloud-container">
+                    <h2 class="sidebar-title">项目技术热点词云</h2>
+                    <iframe src="https://think-pair-open-rank.vercel.app/" title="项目技术与仓库热点词云" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+                </div>
+            </aside>
+
+            <!-- 中间地图 -->
+            <div class="map-container">
+                <h1 class="map-title">全球top300开源仓库分布图</h1>
+                <div class="map-wrapper">
+                    <iframe src="https://openmonitor-map.vercel.app/" class="map-iframe" title="OpenMonitor Map" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+                </div>
+                <div id="loading">加载中...</div>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <aside class="sidebar right-sidebar" aria-label="右侧边栏">
+                <!-- 全球项目健康度排名总览表 -->
+                <div class="mb-4">
+                    <h2 class="sidebar-title">全球项目健康度排名总览表</h2>
+                    <input type="text" id="global-search" placeholder="搜索全球项目..." class="search-input">
+                    <select id="global-sort" class="sort-select">
+                        <option value="health_desc">健康分数高到低</option>
+                        <option value="health_asc">健康分数低到高</option>
+                        <option value="name_asc">项目名称 A-Z</option>
+                        <option value="name_desc">项目名称 Z-A</option>
+                    </select>
+                    <div class="sidebar-content" id="global-rankings"></div>
+                </div>
+                
+                <!-- 中国项目健康度排名总览表 -->
+                <div class="mb-4">
+                    <h2 class="sidebar-title">中国项目健康度排名总览表</h2>
+                    <input type="text" id="cn-search" placeholder="搜索中国项目..." class="search-input">
+                    <select id="cn-sort" class="sort-select">
+                        <option value="health_desc">健康分数高到低</option>
+                        <option value="health_asc">健康分数低到高</option>
+                        <option value="name_asc">项目名称 A-Z</option>
+                        <option value="name_desc">项目名称 Z-A</option>
+                    </select>
+                    <div class="sidebar-content" id="cn-rankings"></div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- 模态窗口 -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">项目名称</h2>
+            <div class="charts-container">
+                <canvas id="time-series-chart"></canvas>
+                <canvas id="rose-ring-chart"></canvas>
+            </div>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <p class="stat-label">当月提交 PR 数量</p>
+                    <p class="stat-value" id="pr-count">0</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-label">当月提交 Issue 数量</p>
+                    <p class="stat-value" id="issue-count">0</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-label">当月活跃贡献者数量</p>
+                    <p class="stat-value" id="contributor-count">0</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-label">当月 Stars 数量</p>
+                    <p class="stat-value" id="stars-count">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 更新时间戳
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('timestamp').textContent = now.toLocaleString('zh-CN', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+        }
+        updateTimestamp();
+        setInterval(updateTimestamp, 1000);
+
+        let riskAlertData = [];  // 初始化为空数组，用于存储数据
+
+        // 使用 fetch 获取外部 JSON 文件数据
+        fetch('warning.json')  
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();  // 解析 JSON 数据
+            })
+            .then(data => {
+                riskAlertData = data;  // 将数据存储到 riskAlertData 变量中
+                console.log(riskAlertData);  // 输出数据以验证
+                // 你可以在这里继续使用 riskAlertData 数据，进行渲染等操作
+            })
+            .catch(error => {
+                console.error("Error loading risk-alert-data.json:", error);  // 错误处理
+            });
+
+    document.getElementById('alert-dimension').addEventListener('change', function() {
+        const dimension = this.value;
+        const riskProjectsContainer = document.getElementById('risk-projects');
+        riskProjectsContainer.innerHTML = ''; // 清空之前的内容
+
+        if (!dimension) {
+            // 如果未选择维度，则不显示任何内容
+            return;
+        }
+
+        let riskProjects = [];
+
+        switch(dimension) {
+            case 'health':
+                // 健康度低于20的项目视为有风险
+                riskProjects = riskAlertData.filter(project => project.health_score < 15);
+                break;
+            case 'activity':
+                // 项目活跃度低于250的项目视为有风险
+                riskProjects = riskAlertData.filter(project => project.activity < 250);
+                break;
+            case 'code_changes':
+                // 代码改变量低于15000的项目视为有风险
+                riskProjects = riskAlertData.filter(project => project.code_changes < 15000);
+                break;
+            // 可以根据需要添加更多维度
+            default:
+                riskProjects = [];
+        }
+
+        if (riskProjects.length > 0) {
+            riskProjects.forEach(project => {
+                const projectDiv = document.createElement('div');
+                projectDiv.classList.add('risk-project');
+
+                // 项目名称
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = project.project;
+
+                // 风险值
+                const valueSpan = document.createElement('span');
+                let value = 0;
+                switch(dimension) {
+                    case 'health':
+                        value = project.health_score;
+                        break;
+                    case 'activity':
+                        value = project.activity;
+                        break;
+                    case 'code_changes':
+                        value = project.code_changes;
+                        break;
+                    default:
+                        value = 0;
+                }
+                valueSpan.textContent = `${value}`;
+
+                projectDiv.appendChild(nameSpan);
+                projectDiv.appendChild(valueSpan);
+
+                riskProjectsContainer.appendChild(projectDiv);
+            });
+        } else {
+            const noRiskDiv = document.createElement('div');
+            noRiskDiv.classList.add('risk-project');
+            noRiskDiv.textContent = '暂无风险项目。';
+            riskProjectsContainer.appendChild(noRiskDiv);
+        }
+    });
+        let projectDetails = {};  // 初始化为空对象，用于存储数据
+
+        // 使用 fetch 获取外部 JSON 文件数据
+        fetch('project-details.json')  // 根据实际路径引用文件
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();  // 解析 JSON 数据
+            })
+            .then(data => {
+                projectDetails = data;  // 将数据存储到 projectDetails 变量中
+                console.log(projectDetails);  // 输出数据以验证
+                // 你可以在这里继续使用 projectDetails 数据，进行渲染等操作
+            })
+            .catch(error => {
+                console.error("Error loading project-details.json:", error);  // 错误处理
+            });
+    
+
+        // 获取项目详细数据的函数
+        function getProjectDetails(repoName) {
+            return projectDetails[repoName];
+        }
+
+        // 获取模态元素和关闭按钮
+        const modal = document.getElementById('project-modal');
+        const closeButton = document.querySelector('.close-button');
+
+        // 关闭模态窗口的函数
+        function closeModal() {
+            modal.style.display = 'none';
+            // 销毁现有的图表实例以防止重复渲染
+            if (window.timeSeriesChart) window.timeSeriesChart.destroy();
+            if (window.roseRingChart) window.roseRingChart.destroy();
+        }
+
+        // 当用户点击关闭按钮时关闭模态窗口
+        closeButton.addEventListener('click', closeModal);
+
+        // 当用户点击模态窗口外部时关闭模态窗口
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        });
+
+        // 加载并显示全球项目健康度排名
+        function loadHealthData() {
+            try {
+                // 假设 healthData 已经嵌入
+                let healthData = [];  // 初始化为空数组，用于存储数据
+
+                // 使用 fetch 获取外部 JSON 文件数据
+                fetch('health_scores.json')  
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Network response was not ok");
+                        }
+                        return response.json();  // 解析 JSON 数据
+                    })
+                    .then(data => {
+                        healthData = data;  // 将数据存储到 healthData 变量中
+                        console.log(healthData);  // 输出数据以验证
+                        // 你可以在这里继续使用 healthData 数据，进行渲染等操作
+                    })
+                    .catch(error => {
+                        console.error("Error loading health-data.json:", error);  // 错误处理
+                    });
+
+                console.log('healthData:', healthData);
+
+                // 按 health_score 降序排序
+                const sortedHealthData = [...healthData].sort((a, b) => b.health_score - a.health_score);
+
+                // 获取前300个项目进行全球展示
+                const topGlobalProjects = sortedHealthData.slice(0, 300);
+
+                // 使用模板字符串生成 HTML，并添加按钮而非链接
+                const globalRankingsHTML = topGlobalProjects.map((project, index) => `
+                    <div class="sidebar-item">
+                        <button class="project-button" data-project="${project.project}">
+                            ${index + 1}. ${project.project} - Health Score: ${project.health_score.toFixed(2)}
+                        </button>
+                    </div>
+                `).join('');
+                document.getElementById('global-rankings').innerHTML = globalRankingsHTML;
+
+                // 添加点击事件监听器到所有项目按钮
+                document.querySelectorAll('#global-rankings .project-button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const projectKey = button.getAttribute('data-project');
+                        openProjectModal(projectKey);
+                    });
+                });
+
+                return sortedHealthData;
+            } catch (error) {
+                console.error('Error loading health data:', error);
+                document.getElementById('global-rankings').textContent = '加载数据失败。';
+                return [];
+            }
+        }
+
+        // 加载并显示中国项目健康度排名
+        function loadCnHealthData() {
+            try {
+                let cnhealthData = [];  // 初始化为空数组，用于存储数据
+
+                // 使用 fetch 获取外部 JSON 文件数据
+                fetch('cn_health_scores.json')  
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Network response was not ok");
+                        }
+                        return response.json();  // 解析 JSON 数据
+                    })
+                    .then(data => {
+                        healthData = data;  // 将数据存储到 healthData 变量中
+                        console.log(cnhealthData);  // 输出数据以验证
+                        // 你可以在这里继续使用 healthData 数据，进行渲染等操作
+                    })
+                    .catch(error => {
+                        console.error("Error loading health-data.json:", error);  // 错误处理
+                    });
+
+                console.log('cnHealthData:', cnHealthData);
+
+                // 按 health_score 降序排序
+                const sortedCnHealthData = [...cnHealthData].sort((a, b) => b.health_score - a.health_score);
+
+                // 获取前300个项目进行中国展示
+                const topCnProjects = sortedCnHealthData.slice(0, 300);
+
+                // 使用模板字符串生成 HTML，并添加按钮而非链接
+                const cnRankingsHTML = topCnProjects.map((project, index) => `
+                    <div class="sidebar-item">
+                        <button class="project-button" data-project="${project.project}">
+                            ${index + 1}. ${project.project} - Health Score: ${project.health_score.toFixed(2)}
+                        </button>
+                    </div>
+                `).join('');
+                document.getElementById('cn-rankings').innerHTML = cnRankingsHTML;
+
+                // 添加点击事件监听器到所有项目按钮
+                document.querySelectorAll('#cn-rankings .project-button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const projectKey = button.getAttribute('data-project');
+                        openProjectModal(projectKey);
+                    });
+                });
+
+                return sortedCnHealthData;
+            } catch (error) {
+                console.error('Error loading China health data:', error);
+                document.getElementById('cn-rankings').textContent = '加载数据失败。';
+                return [];
+            }
+        }
+
+        // 打开项目模态窗口并渲染数据
+        function openProjectModal(projectKey) {
+            const details = getProjectDetails(projectKey);
+            if (!details) {
+                alert('没有找到该项目的详细数据。');
+                return;
+            }
+
+            // 设置模态窗口标题
+            document.getElementById('modal-title').textContent = projectKey;
+
+            // 设置统计数据
+            document.getElementById('pr-count').textContent = details.stats.prCount;
+            document.getElementById('issue-count').textContent = details.stats.issueCount;
+            document.getElementById('contributor-count').textContent = details.stats.contributorCount;
+            document.getElementById('stars-count').textContent = details.stats.starsCount;
+
+            // 准备 timeSeriesData 用于图表
+            const timeSeriesLabels = ["2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10"];
+            const timeSeriesData = {
+                activity: [
+                    details["activity.json"]["2024-05"],
+                    details["activity.json"]["2024-06"],
+                    details["activity.json"]["2024-07"],
+                    details["activity.json"]["2024-08"],
+                    details["activity.json"]["2024-09"],
+                    details["activity.json"]["2024-10"]
+                ],
+                stars: [
+                    details["stars.json"]["2024-05"],
+                    details["stars.json"]["2024-06"],
+                    details["stars.json"]["2024-07"],
+                    details["stars.json"]["2024-08"],
+                    details["stars.json"]["2024-09"],
+                    details["stars.json"]["2024-10"]
+                ],
+                issue_duration: [
+                    details["issue_resolution_duration.json"]["2024-05"],
+                    details["issue_resolution_duration.json"]["2024-06"],
+                    details["issue_resolution_duration.json"]["2024-07"],
+                    details["issue_resolution_duration.json"]["2024-08"],
+                    details["issue_resolution_duration.json"]["2024-09"],
+                    details["issue_resolution_duration.json"]["2024-10"]
+                ],
+                pr_duration: [
+                    details["change_request_resolution_duration.json"]["2024-05"],
+                    details["change_request_resolution_duration.json"]["2024-06"],
+                    details["change_request_resolution_duration.json"]["2024-07"],
+                    details["change_request_resolution_duration.json"]["2024-08"],
+                    details["change_request_resolution_duration.json"]["2024-09"],
+                    details["change_request_resolution_duration.json"]["2024-10"]
+                ],
+                new_contributors: [
+                    details["new_contributors.json"]["2024-05"] || 0,
+                    details["new_contributors.json"]["2024-06"] || 0,
+                    details["new_contributors.json"]["2024-07"] || 0,
+                    details["new_contributors.json"]["2024-08"] || 0,
+                    details["new_contributors.json"]["2024-09"] || 0,
+                    details["new_contributors.json"]["2024-10"] || 0
+                ]
+            };
+            // 最小-最大归一化函数
+            function minMaxNormalize(data) {
+                const min = Math.min(...data);
+                const max = Math.max(...data);
+                return data.map(value => (value - min) / (max - min));
+            }
+            const normalizedTimeSeriesData = {
+                activity: minMaxNormalize(timeSeriesData.activity),
+                stars: minMaxNormalize(timeSeriesData.stars),
+                issue_duration: minMaxNormalize(timeSeriesData.issue_duration),
+                pr_duration: minMaxNormalize(timeSeriesData.pr_duration),
+                new_contributors: minMaxNormalize(timeSeriesData.new_contributors)
+            };
+            
+            // 渲染时序变化图
+            const timeCtx = document.getElementById('time-series-chart').getContext('2d');
+        window.timeSeriesChart = new Chart(timeCtx, {
+            type: 'line',
+            data: {
+                labels: timeSeriesLabels,
+                datasets: [
+                    {
+                        label: "activity",
+                        data: normalizedTimeSeriesData.activity,
+                        borderColor: "#00FFFF",
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: "stars",
+                        data: normalizedTimeSeriesData.stars,
+                        borderColor: "#FF5733",
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: "issue_duration",
+                        data: normalizedTimeSeriesData.issue_duration,
+                        borderColor: "#3399FF",
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: "pr_duration",
+                        data: normalizedTimeSeriesData.pr_duration,
+                        borderColor: "#FF33E7",
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: "new_contributors",
+                        data: normalizedTimeSeriesData.new_contributors,
+                        borderColor: "#FFFF33",
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '健康度计算各指标的时序变化（归一化）'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.dataset.label;
+                                const rawValue = timeSeriesData[label];
+                                const normalizedValue = context.parsed.y.toFixed(2);
+                                return `${label}: ${normalizedValue} (原始值: ${rawValue[context.dataIndex]})`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '归一化值 (0-1)'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value;
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: '月份'
+                        }
+                    }
+                }
+            }
+        });
+
+            // 渲染玫瑰环形图
+            const roseCtx = document.getElementById('rose-ring-chart').getContext('2d');
+            window.roseRingChart = new Chart(roseCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: details.roseRingData.labels,
+                    datasets: [
+                        {
+                            label: '当月指标评分',
+                            data: details.roseRingData.scores,
+                            backgroundColor: [
+                                "#00FFFF",
+                                "#7FFF00", // 板岩蓝
+                                "#98FB98", // 浅海蓝
+                                "#ADD8E6", // 浅珊瑚橙
+                                "#F0FFFF", // 紫丁香色
+                                '#3cb371'  // 中海绿色
+                            ],
+                            borderWidth: 1
+                        },
+                        {
+                            label: '指标权重',
+                            data: details.roseRingData.weights,
+                            backgroundColor: [
+                                'rgba(255, 127, 80, 0.3)',   // 珊瑚橙（透明）
+                                'rgba(106, 90, 205, 0.3)',  // 板岩蓝（透明）
+                                'rgba(32, 178, 170, 0.3)',  // 浅海蓝（透明）
+                                'rgba(255, 160, 122, 0.3)', // 浅珊瑚橙（透明）
+                                'rgba(147, 112, 219, 0.3)', // 紫丁香色（透明）
+                                'rgba(60, 179, 113, 0.3)'   // 中海绿色（透明）
+                            ],
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '当月各指标评分与权重'
+                        }
+                    }
+                }
+            });
+
+            // 显示模态窗口
+            modal.style.display = 'block';
+        }
+
+        // 获取颜色函数（如果需要动态颜色）
+        function getColor(label) {
+            const colors = {
+                "activity": "#ff6384",
+                "stars": "#36a2eb",
+                "issue_duration": "#cc65fe",
+                "pr_duration": "#ffce56",
+                "new_contributors": "#4bc0c0"
+            };
+            return colors[label] || '#000000';
+        }
+
+        // 获取背景颜色函数（如果需要动态颜色）
+        function getBackgroundColors(count, isWeights = false) {
+            const baseColors = [
+                '#f87171',
+                '#34d399',
+                '#60a5fa',
+                '#fbbf24',
+                '#a78bfa',
+                '#f472b6'
+            ];
+            if (isWeights) {
+                return baseColors.slice(0, count).map(color => {
+                    // 为权重添加透明度
+                    return color.replace('#', 'rgba(').replace(')', ', 0.2)');
+                });
+            } else {
+                return baseColors.slice(0, count);
+            }
+        }
+
+        // 实现鼠标拖拉滚动（通用函数）
+        function enableDragScroll(element) {
+            let isDown = false;
+            let startX;
+            let startY;
+            let scrollTopStart;
+
+            element.addEventListener('mousedown', (e) => {
+                isDown = true;
+                element.classList.add('grabbing');
+                startX = e.pageX - element.offsetLeft;
+                startY = e.pageY - element.offsetTop;
+                scrollTopStart = element.scrollTop;
+                e.preventDefault(); // 防止选中文本
+            });
+
+            element.addEventListener('mouseleave', () => {
+                isDown = false;
+                element.classList.remove('grabbing');
+            });
+
+            element.addEventListener('mouseup', () => {
+                isDown = false;
+                element.classList.remove('grabbing');
+            });
+
+            element.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const y = e.pageY - element.offsetTop;
+                const walk = (y - startY) * 1; // 调整乘数以控制滚动速度
+                element.scrollTop = scrollTopStart - walk;
+            });
+        }
+
+        // 添加搜索功能
+        function addSearchFunctionality(searchInputId, rankingsData, rankingsElementId) {
+            const searchInput = document.getElementById(searchInputId);
+            const rankingsElement = document.getElementById(rankingsElementId);
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                const filteredProjects = rankingsData.filter(project => project.project.toLowerCase().includes(query));
+                const sortedFiltered = filteredProjects.sort((a, b) => b.health_score - a.health_score).slice(0, 300); // 调整数量为300
+
+                const rankingsHTML = sortedFiltered.map((project, index) => `
+                    <div class="sidebar-item">
+                        <button class="project-button" data-project="${project.project}">
+                            ${index + 1}. ${project.project} - Health Score: ${project.health_score.toFixed(2)}
+                        </button>
+                    </div>
+                `).join('');
+                rankingsElement.innerHTML = rankingsHTML;
+
+                // 重新添加点击事件监听器
+                document.querySelectorAll(`#${rankingsElementId} .project-button`).forEach(button => {
+                    button.addEventListener('click', () => {
+                        const projectKey = button.getAttribute('data-project');
+                        openProjectModal(projectKey);
+                    });
+                });
+            });
+        }
+
+        // 添加排序功能
+        function addSortFunctionality(sortSelectId, rankingsData, rankingsElementId) {
+            const sortSelect = document.getElementById(sortSelectId);
+            const rankingsElement = document.getElementById(rankingsElementId);
+
+            sortSelect.addEventListener('change', function() {
+                const sortValue = this.value;
+                let sortedData = [...rankingsData];
+
+                switch(sortValue) {
+                    case 'health_desc':
+                        sortedData.sort((a, b) => b.health_score - a.health_score);
+                        break;
+                    case 'health_asc':
+                        sortedData.sort((a, b) => a.health_score - b.health_score);
+                        break;
+                    case 'name_asc':
+                        sortedData.sort((a, b) => a.project.localeCompare(b.project));
+                        break;
+                    case 'name_desc':
+                        sortedData.sort((a, b) => b.project.localeCompare(a.project));
+                        break;
+                    default:
+                        break;
+                }
+
+                // 获取前300个项目进行展示
+                const topProjects = sortedData.slice(0, 300);
+
+                const rankingsHTML = topProjects.map((project, index) => `
+                    <div class="sidebar-item">
+                        <button class="project-button" data-project="${project.project}">
+                            ${index + 1}. ${project.project} - Health Score: ${project.health_score.toFixed(2)}
+                        </button>
+                    </div>
+                `).join('');
+                rankingsElement.innerHTML = rankingsHTML;
+
+                // 重新添加点击事件监听器
+                document.querySelectorAll(`#${rankingsElementId} .project-button`).forEach(button => {
+                    button.addEventListener('click', () => {
+                        const projectKey = button.getAttribute('data-project');
+                        openProjectModal(projectKey);
+                    });
+                });
+            });
+        }
+
+        // 主函数
+        function main() {
+            // 加载全球健康数据并更新排名表
+            const sortedHealthData = loadHealthData();
+
+            // 加载中国健康数据并更新排名表
+            const sortedCnHealthData = loadCnHealthData();
+
+            // 启用鼠标拖拉滚动（全局和中国排名表）
+            const globalRankings = document.getElementById('global-rankings');
+            enableDragScroll(globalRankings);
+
+            const cnRankings = document.getElementById('cn-rankings');
+            enableDragScroll(cnRankings);
+
+            // 添加搜索功能
+            addSearchFunctionality('global-search', sortedHealthData, 'global-rankings');
+            addSearchFunctionality('cn-search', sortedCnHealthData, 'cn-rankings');
+
+            // 添加排序功能
+            addSortFunctionality('global-sort', sortedHealthData, 'global-rankings');
+            addSortFunctionality('cn-sort', sortedCnHealthData, 'cn-rankings');
+        }
+
+        // 执行主函数
+        main();
+    </script>
+</body>
+</html>
